@@ -1,0 +1,544 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img [ref=e7]
+        - link "Recent work" [ref=e10] [cursor=pointer]:
+          - /url: /design
+          - paragraph [ref=e11]: Recent work
+    - main [ref=e12]:
+      - generic [ref=e16]:
+        - paragraph [ref=e18]: Helped raise $440M+ in 2025. 70+ completed projects.
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - heading "A full-stack design and dev partner for high-growth startups" [level=1] [ref=e21]:
+              - text: A full-stack design and dev
+              - text: partner for high-growth startups
+            - paragraph [ref=e22]: A quality-obsessed design and development partner that moves fast and actually get things shipped.
+          - generic [ref=e23]:
+            - link "Book Intro Call" [ref=e24] [cursor=pointer]:
+              - /url: /intro
+              - generic:
+                - generic:
+                  - img
+              - text: Book Intro Call
+            - link "Send Message" [ref=e25] [cursor=pointer]:
+              - /url: https://t.me/jeremiahb_x
+              - generic:
+                - generic:
+                  - img
+              - text: Send Message
+      - region "Showcase gallery" [ref=e26]:
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - link "Showcase image 1" [ref=e32]:
+              - /url: /showcase-large/1.png
+              - img "Showcase project 1" [ref=e34] [cursor=pointer]
+            - link "Showcase image 2" [ref=e36]:
+              - /url: /showcase-large/2.png
+              - img "Showcase project 2" [ref=e38] [cursor=pointer]
+            - link "Showcase image 3" [ref=e40]:
+              - /url: /showcase-large/3.png
+              - img "Showcase project 3" [ref=e42] [cursor=pointer]
+            - link "Showcase image 4" [ref=e44]:
+              - /url: /showcase-large/4.png
+              - img "Showcase project 4" [ref=e46] [cursor=pointer]
+            - link "Showcase image 5" [ref=e48]:
+              - /url: /showcase-large/5.png
+              - img "Showcase project 5" [ref=e50] [cursor=pointer]
+            - link "Showcase image 7" [ref=e52]:
+              - /url: /showcase-large/7.png
+              - img "Showcase project 7" [ref=e54] [cursor=pointer]
+            - link "Showcase image 8" [ref=e56]:
+              - /url: /showcase-large/8.png
+              - img "Showcase project 8" [ref=e58] [cursor=pointer]
+            - link "Showcase image 9" [ref=e60]:
+              - /url: /showcase-large/9.png
+              - img "Showcase project 9" [ref=e62] [cursor=pointer]
+            - link "Showcase image 10" [ref=e64]:
+              - /url: /showcase-large/10.png
+              - img "Showcase project 10" [ref=e66] [cursor=pointer]
+            - link "Showcase image 11" [ref=e68]:
+              - /url: /showcase-large/11.png
+              - img "Showcase project 11" [ref=e70] [cursor=pointer]
+            - link "Showcase image 12" [ref=e72]:
+              - /url: /showcase-large/12.png
+              - img "Showcase project 12" [ref=e74] [cursor=pointer]
+            - link "Showcase image 13" [ref=e76]:
+              - /url: /showcase-large/13.png
+              - img "Showcase project 13" [ref=e78] [cursor=pointer]
+            - link "Showcase image 14" [ref=e80]:
+              - /url: /showcase-large/14.png
+              - img "Showcase project 14" [ref=e82] [cursor=pointer]
+            - link "Showcase image 15" [ref=e84]:
+              - /url: /showcase-large/15.png
+              - img "Showcase project 15" [ref=e86] [cursor=pointer]
+            - link "Showcase image 16" [ref=e88]:
+              - /url: /showcase-large/16.png
+              - img "Showcase project 16" [ref=e90] [cursor=pointer]
+            - link "Showcase image 17" [ref=e92]:
+              - /url: /showcase-large/17.png
+              - img "Showcase project 17" [ref=e94] [cursor=pointer]
+            - link "Showcase image 18" [ref=e96]:
+              - /url: /showcase-large/18.png
+              - img "Showcase project 18" [ref=e98] [cursor=pointer]
+            - link "Showcase image 19" [ref=e100]:
+              - /url: /showcase-large/19.png
+              - img "Showcase project 19" [ref=e102] [cursor=pointer]
+            - link "Showcase image 20" [ref=e104]:
+              - /url: /showcase-large/20.png
+              - img "Showcase project 20" [ref=e106] [cursor=pointer]
+            - link "Showcase image 21" [ref=e108]:
+              - /url: /showcase-large/21.png
+              - img "Showcase project 21" [ref=e110] [cursor=pointer]
+            - link "Showcase image 22" [ref=e112]:
+              - /url: /showcase-large/22.png
+              - img "Showcase project 22" [ref=e114] [cursor=pointer]
+          - generic [ref=e115]:
+            - link "Showcase image 1" [ref=e117]:
+              - /url: /showcase-large/1.png
+              - img "Showcase project 1" [ref=e119] [cursor=pointer]
+            - link "Showcase image 2" [ref=e121]:
+              - /url: /showcase-large/2.png
+              - img "Showcase project 2" [ref=e123] [cursor=pointer]
+            - link "Showcase image 3" [ref=e125]:
+              - /url: /showcase-large/3.png
+              - img "Showcase project 3" [ref=e127] [cursor=pointer]
+            - link "Showcase image 4" [ref=e129]:
+              - /url: /showcase-large/4.png
+              - img "Showcase project 4" [ref=e131] [cursor=pointer]
+            - link "Showcase image 5" [ref=e133]:
+              - /url: /showcase-large/5.png
+              - img "Showcase project 5" [ref=e135] [cursor=pointer]
+            - link "Showcase image 7" [ref=e137]:
+              - /url: /showcase-large/7.png
+              - img "Showcase project 7" [ref=e139] [cursor=pointer]
+            - link "Showcase image 8" [ref=e141]:
+              - /url: /showcase-large/8.png
+              - img "Showcase project 8" [ref=e143] [cursor=pointer]
+            - link "Showcase image 9" [ref=e145]:
+              - /url: /showcase-large/9.png
+              - img "Showcase project 9" [ref=e147] [cursor=pointer]
+            - link "Showcase image 10" [ref=e149]:
+              - /url: /showcase-large/10.png
+              - img "Showcase project 10" [ref=e151] [cursor=pointer]
+            - link "Showcase image 11" [ref=e153]:
+              - /url: /showcase-large/11.png
+              - img "Showcase project 11" [ref=e155] [cursor=pointer]
+            - link "Showcase image 12" [ref=e157]:
+              - /url: /showcase-large/12.png
+              - img "Showcase project 12" [ref=e159] [cursor=pointer]
+            - link "Showcase image 13" [ref=e161]:
+              - /url: /showcase-large/13.png
+              - img "Showcase project 13" [ref=e163] [cursor=pointer]
+            - link "Showcase image 14" [ref=e165]:
+              - /url: /showcase-large/14.png
+              - img "Showcase project 14" [ref=e167] [cursor=pointer]
+            - link "Showcase image 15" [ref=e169]:
+              - /url: /showcase-large/15.png
+              - img "Showcase project 15" [ref=e171] [cursor=pointer]
+            - link "Showcase image 16" [ref=e173]:
+              - /url: /showcase-large/16.png
+              - img "Showcase project 16" [ref=e175] [cursor=pointer]
+            - link "Showcase image 17" [ref=e177]:
+              - /url: /showcase-large/17.png
+              - img "Showcase project 17" [ref=e179] [cursor=pointer]
+            - link "Showcase image 18" [ref=e181]:
+              - /url: /showcase-large/18.png
+              - img "Showcase project 18" [ref=e183] [cursor=pointer]
+            - link "Showcase image 19" [ref=e185]:
+              - /url: /showcase-large/19.png
+              - img "Showcase project 19" [ref=e187] [cursor=pointer]
+            - link "Showcase image 20" [ref=e189]:
+              - /url: /showcase-large/20.png
+              - img "Showcase project 20" [ref=e191] [cursor=pointer]
+            - link "Showcase image 21" [ref=e193]:
+              - /url: /showcase-large/21.png
+              - img "Showcase project 21" [ref=e195] [cursor=pointer]
+            - link "Showcase image 22" [ref=e197]:
+              - /url: /showcase-large/22.png
+              - img "Showcase project 22" [ref=e199] [cursor=pointer]
+      - generic [ref=e203]:
+        - heading "Trusted by startups and industry leaders." [level=2] [ref=e204]
+        - generic [ref=e205]:
+          - img "Company logo 1" [ref=e206]
+          - img "Company logo 2" [ref=e207]
+          - img "Company logo 3" [ref=e208]
+          - img "Company logo 4" [ref=e209]
+          - img "Company logo 5" [ref=e210]
+          - img "Company logo 6" [ref=e211]
+          - generic [ref=e213]: 30+ More
+      - generic [ref=e217]:
+        - heading "Why kargul.studio" [level=2] [ref=e218]
+        - generic [ref=e219]:
+          - generic [ref=e220]:
+            - generic [ref=e222]: Your browser does not support the video tag.
+            - generic [ref=e223]:
+              - heading "Quality obsessed" [level=3] [ref=e224]
+              - paragraph [ref=e225]: We operate with a single standard. If it's not world-class, it doesn't ship.
+          - generic [ref=e226]:
+            - generic [ref=e228]: Your browser does not support the video tag.
+            - generic [ref=e229]:
+              - heading "Senior talent only" [level=3] [ref=e230]
+              - paragraph [ref=e231]:
+                - text: You work directly with senior talent.
+                - text: No juniors. No outsourcing.
+          - generic [ref=e232]:
+            - generic [ref=e234]: Your browser does not support the video tag.
+            - generic [ref=e235]:
+              - heading "1:1 dev implementation" [level=3] [ref=e236]
+              - paragraph [ref=e237]: Our senior frontend development team delivers true 1:1, pixel‑perfect builds.
+          - generic [ref=e238]:
+            - generic [ref=e240]: Your browser does not support the video tag.
+            - generic [ref=e241]:
+              - heading "Dedicated PM" [level=3] [ref=e242]
+              - paragraph [ref=e243]: A single point of contact, fully invested in the project's success.
+          - generic [ref=e244]:
+            - generic [ref=e246]: Your browser does not support the video tag.
+            - generic [ref=e247]:
+              - heading "Illustration, motion, and more" [level=3] [ref=e248]
+              - paragraph [ref=e249]: Illustration and animation designed to make your product feel alive.
+      - generic [ref=e253]:
+        - heading "Testimonials" [level=2] [ref=e254]
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - img "ostium logo" [ref=e258]
+              - paragraph [ref=e259]: Just writing to tell you what a pleasure it is to work with Kargul. The team was ultra responsive and turned design requests around quickly!
+            - generic [ref=e260]:
+              - img "Blake Hunsicker avatar" [ref=e261]
+              - heading "Blake Hunsicker" [level=3] [ref=e262]
+          - generic [ref=e263]:
+            - generic [ref=e264]:
+              - img "listkit logo" [ref=e265]
+              - paragraph [ref=e266]: Marcel and the team delivered an exceptional ListKit redesign. insanely fast and clean! Highly recommend them to founders looking for world-class UI/UX.
+            - generic [ref=e267]:
+              - img "Oliver Schmalholz avatar" [ref=e268]
+              - heading "Oliver Schmalholz" [level=3] [ref=e269]
+          - generic [ref=e270]:
+            - generic [ref=e271]:
+              - img "sideshift logo" [ref=e272]
+              - paragraph [ref=e273]: With Marcel and his team, we shipped 2 web apps, a website, and a world-class app in under 3 months. The design of the app was just insane. Super fast iteration and communication was always on point.
+            - generic [ref=e274]:
+              - img "Nick Lawton avatar" [ref=e275]
+              - heading "Nick Lawton" [level=3] [ref=e276]
+          - generic [ref=e277]:
+            - generic [ref=e278]:
+              - img "lattice logo" [ref=e279]
+              - paragraph [ref=e280]: Working with Kargul Studio has been incredible. They move fast, deliver beautiful interfaces, and go beyond design by collaborating closely on UX and product thinking. They're reliable, communicative, and take real ownership of their work. We truly see them as a partner in our business.
+            - generic [ref=e281]:
+              - img "Christian Yeghnazar avatar" [ref=e282]
+              - heading "Christian Yeghnazar" [level=3] [ref=e283]
+          - generic [ref=e284]:
+            - generic [ref=e285]:
+              - img "agentArcade logo" [ref=e286]
+              - paragraph [ref=e287]: I didn't expect such a big difference, but the new Trade Arcade site feels like a completely different company. Everything flows better and the animations are clean and polished. The process was smooth, feedback was heard, and execution was spot on. Really happy with the result.
+            - generic [ref=e288]:
+              - generic [ref=e289]: J
+              - heading "Joe Morris" [level=3] [ref=e290]
+          - generic [ref=e291]:
+            - generic [ref=e292]:
+              - img "txtcart logo" [ref=e293]
+              - paragraph [ref=e294]: Marcel and team are highly professional, fast, and attentive. They consistently deliver high-quality work and are great to collaborate with. Would recommend them to any SaaS team.
+            - generic [ref=e295]:
+              - img "Kyle Bigley avatar" [ref=e296]
+              - heading "Kyle Bigley" [level=3] [ref=e297]
+      - generic [ref=e301]:
+        - heading "Tools we've mastered" [level=2] [ref=e302]
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - img "Figma logo" [ref=e306]
+            - img "Framer logo" [ref=e307]
+            - img "Webflow logo" [ref=e308]
+            - img "Next.js logo" [ref=e309]
+            - img "Tailwind CSS logo" [ref=e310]
+            - img "Adobe After Effects icon" [ref=e311]
+            - img "Lottie logo" [ref=e312]
+            - img "Adobe Illustrator icon" [ref=e313]
+            - img "Rive logo" [ref=e314]
+          - generic [ref=e315]:
+            - img "Figma logo" [ref=e316]
+            - img "Framer logo" [ref=e317]
+            - img "Webflow logo" [ref=e318]
+            - img "Next.js logo" [ref=e319]
+            - img "Tailwind CSS logo" [ref=e320]
+            - img "Adobe After Effects icon" [ref=e321]
+            - img "Lottie logo" [ref=e322]
+            - img "Adobe Illustrator icon" [ref=e323]
+            - img "Rive logo" [ref=e324]
+      - generic [ref=e328]:
+        - heading "Team" [level=2] [ref=e329]
+        - generic [ref=e330]:
+          - generic [ref=e331]:
+            - img "Marcel avatar" [ref=e333]
+            - generic [ref=e334]:
+              - heading "Marcel" [level=3] [ref=e335]
+              - paragraph [ref=e336]: Founder & Designer
+          - generic [ref=e337]:
+            - img "Jeremiah avatar" [ref=e339]
+            - generic [ref=e340]:
+              - heading "Jeremiah" [level=3] [ref=e341]
+              - paragraph [ref=e342]: Head of Sales
+          - generic [ref=e343]:
+            - img "Deniz avatar" [ref=e345]
+            - generic [ref=e346]:
+              - heading "Deniz" [level=3] [ref=e347]
+              - paragraph [ref=e348]: Project Manager
+          - generic [ref=e349]:
+            - img "Erşad avatar" [ref=e351]
+            - generic [ref=e352]:
+              - heading "Erşad" [level=3] [ref=e353]
+              - paragraph [ref=e354]: Product Designer
+          - generic [ref=e355]:
+            - img "Pawel avatar" [ref=e357]
+            - generic [ref=e358]:
+              - heading "Pawel" [level=3] [ref=e359]
+              - paragraph [ref=e360]: Illustration Designer
+          - generic [ref=e361]:
+            - img "Darius avatar" [ref=e363]
+            - generic [ref=e364]:
+              - heading "Darius" [level=3] [ref=e365]
+              - paragraph [ref=e366]: Illustration Designer
+          - generic [ref=e367]:
+            - img "Ruben avatar" [ref=e369]
+            - generic [ref=e370]:
+              - heading "Ruben" [level=3] [ref=e371]
+              - paragraph [ref=e372]: Head of Branding
+          - generic [ref=e373]:
+            - img "Emre avatar" [ref=e375]
+            - generic [ref=e376]:
+              - heading "Emre" [level=3] [ref=e377]
+              - paragraph [ref=e378]: Product Designer
+          - generic [ref=e379]:
+            - img "Halil avatar" [ref=e381]
+            - generic [ref=e382]:
+              - heading "Halil" [level=3] [ref=e383]
+              - paragraph [ref=e384]: Product Designer
+          - generic [ref=e385]:
+            - img "Choirul avatar" [ref=e387]
+            - generic [ref=e388]:
+              - heading "Choirul" [level=3] [ref=e389]
+              - paragraph [ref=e390]: Product Designer
+          - generic [ref=e391]:
+            - img "Vipul avatar" [ref=e393]
+            - generic [ref=e394]:
+              - heading "Vipul" [level=3] [ref=e395]
+              - paragraph [ref=e396]: Frontend Developer
+          - generic [ref=e397]:
+            - img "Karan avatar" [ref=e399]
+            - generic [ref=e400]:
+              - heading "Karan" [level=3] [ref=e401]
+              - paragraph [ref=e402]: Frontend Developer
+          - generic [ref=e403]:
+            - img "Vishesh avatar" [ref=e405]
+            - generic [ref=e406]:
+              - heading "Vishesh" [level=3] [ref=e407]
+              - paragraph [ref=e408]: Brand Designer
+          - generic [ref=e409]:
+            - img "Kacper avatar" [ref=e411]
+            - generic [ref=e412]:
+              - heading "Kacper" [level=3] [ref=e413]
+              - paragraph [ref=e414]: Motion Designer
+        - generic [ref=e416]: And 5+ more
+      - generic [ref=e420]:
+        - heading "Pricing" [level=2] [ref=e422]
+        - generic [ref=e423]:
+          - generic [ref=e424]:
+            - generic [ref=e428]:
+              - button "product" [ref=e429] [cursor=pointer]
+              - button "landing" [active] [ref=e431] [cursor=pointer]: landing
+              - button "full site" [ref=e432] [cursor=pointer]
+              - button "brand" [ref=e433] [cursor=pointer]
+            - generic [ref=e435]:
+              - generic [ref=e437]:
+                - generic [ref=e438]:
+                  - generic [ref=e439]:
+                    - generic [ref=e440]: Flat Fee
+                    - button "Toggle dev" [ref=e637] [cursor=pointer]:
+                      - generic [ref=e641]: Toggle dev
+                  - generic [ref=e441]:
+                    - generic [ref=e442]: $
+                    - generic [ref=e443]:
+                      - generic [ref=e444]:
+                        - generic [ref=e445]: "0"
+                        - generic [ref=e446]: "1"
+                        - generic [ref=e447]: "2"
+                        - generic [ref=e448]: "3"
+                        - generic [ref=e449]: "4"
+                        - generic [ref=e450]: "5"
+                        - generic [ref=e451]: "6"
+                        - generic [ref=e452]: "7"
+                        - generic [ref=e453]: "8"
+                        - generic [ref=e454]: "9"
+                      - generic [ref=e455]:
+                        - generic [ref=e456]: "0"
+                        - generic [ref=e457]: "1"
+                        - generic [ref=e458]: "2"
+                        - generic [ref=e459]: "3"
+                        - generic [ref=e460]: "4"
+                        - generic [ref=e461]: "5"
+                        - generic [ref=e462]: "6"
+                        - generic [ref=e463]: "7"
+                        - generic [ref=e464]: "8"
+                        - generic [ref=e465]: "9"
+                      - generic [ref=e466]: ","
+                      - generic [ref=e467]:
+                        - generic [ref=e468]: "0"
+                        - generic [ref=e469]: "1"
+                        - generic [ref=e470]: "2"
+                        - generic [ref=e471]: "3"
+                        - generic [ref=e472]: "4"
+                        - generic [ref=e473]: "5"
+                        - generic [ref=e474]: "6"
+                        - generic [ref=e475]: "7"
+                        - generic [ref=e476]: "8"
+                        - generic [ref=e477]: "9"
+                      - generic [ref=e478]:
+                        - generic [ref=e479]: "0"
+                        - generic [ref=e480]: "1"
+                        - generic [ref=e481]: "2"
+                        - generic [ref=e482]: "3"
+                        - generic [ref=e483]: "4"
+                        - generic [ref=e484]: "5"
+                        - generic [ref=e485]: "6"
+                        - generic [ref=e486]: "7"
+                        - generic [ref=e487]: "8"
+                        - generic [ref=e488]: "9"
+                      - generic [ref=e489]:
+                        - generic [ref=e490]: "0"
+                        - generic [ref=e491]: "1"
+                        - generic [ref=e492]: "2"
+                        - generic [ref=e493]: "3"
+                        - generic [ref=e494]: "4"
+                        - generic [ref=e495]: "5"
+                        - generic [ref=e496]: "6"
+                        - generic [ref=e497]: "7"
+                        - generic [ref=e498]: "8"
+                        - generic [ref=e499]: "9"
+                - generic [ref=e501]:
+                  - generic [ref=e502]:
+                    - img [ref=e504]
+                    - generic [ref=e505]: Single page
+                  - generic [ref=e506]:
+                    - img [ref=e508]
+                    - generic [ref=e509]: 3 full design concepts
+                  - generic [ref=e510]:
+                    - img [ref=e512]
+                    - generic [ref=e513]: Full copywriting
+                  - generic [ref=e514]:
+                    - img [ref=e516]
+                    - generic [ref=e517]: 2-4 week delivery
+                  - generic [ref=e518]:
+                    - img [ref=e520]
+                    - generic [ref=e521]: Figma + rive/lottie
+                  - generic [ref=e522]:
+                    - img [ref=e524]
+                    - generic [ref=e525]: Framer/Webflow/NextJS
+              - link "Book Intro Call" [ref=e527] [cursor=pointer]:
+                - /url: /intro
+                - generic:
+                  - generic:
+                    - img
+                - text: Book Intro Call
+          - generic [ref=e528]:
+            - generic [ref=e529]:
+              - generic [ref=e532]: Most Popular
+              - generic [ref=e533]:
+                - generic [ref=e535]:
+                  - generic [ref=e536]:
+                    - generic [ref=e537]: Design/dev retainer
+                    - generic [ref=e538]: $10,000/mo
+                  - generic [ref=e539]:
+                    - generic [ref=e540]:
+                      - img [ref=e542]
+                      - generic [ref=e543]: 1 request at a time
+                    - generic [ref=e544]:
+                      - img [ref=e546]
+                      - generic [ref=e547]: Flexible, evolving scope
+                    - generic [ref=e548]:
+                      - img [ref=e550]
+                      - generic [ref=e551]: Daily updates mon-fri
+                    - generic [ref=e552]:
+                      - img [ref=e554]
+                      - generic [ref=e555]: Dedicated project manager
+                - link "Book Intro Call" [ref=e557] [cursor=pointer]:
+                  - /url: /intro
+                  - generic:
+                    - generic:
+                      - img
+                  - text: Book Intro Call
+            - generic [ref=e559]:
+              - generic [ref=e560]:
+                - generic [ref=e561]: 1 week trial
+                - generic [ref=e562]: $2,500
+              - link "Send Message" [ref=e563] [cursor=pointer]:
+                - /url: https://t.me/jeremiahb_x
+                - generic:
+                  - generic:
+                    - img
+                - text: Send Message
+      - generic [ref=e567]:
+        - heading "FAQs" [level=2] [ref=e568]
+        - generic [ref=e569]:
+          - button "Do you accept crypto? Yes, we accept crypto payments. USDT is preferred, but we can accommodate other major cryptocurrencies upon request." [expanded] [ref=e570] [cursor=pointer]:
+            - generic [ref=e571]:
+              - heading "Do you accept crypto?" [level=3] [ref=e572]
+              - img [ref=e575]
+            - region [ref=e576]:
+              - paragraph [ref=e577]: Yes, we accept crypto payments. USDT is preferred, but we can accommodate other major cryptocurrencies upon request.
+          - button "Do you offer frontend dev?" [ref=e578] [cursor=pointer]:
+            - generic [ref=e579]:
+              - heading "Do you offer frontend dev?" [level=3] [ref=e580]
+              - img [ref=e583]
+          - button "Why kargul.studio?" [ref=e584] [cursor=pointer]:
+            - generic [ref=e585]:
+              - heading "Why kargul.studio?" [level=3] [ref=e586]
+              - img [ref=e589]
+          - button "Who will we work with?" [ref=e590] [cursor=pointer]:
+            - generic [ref=e591]:
+              - heading "Who will we work with?" [level=3] [ref=e592]
+              - img [ref=e595]
+          - button "How do we work together?" [ref=e596] [cursor=pointer]:
+            - generic [ref=e597]:
+              - heading "How do we work together?" [level=3] [ref=e598]
+              - img [ref=e601]
+          - button "What if priorities change?" [ref=e602] [cursor=pointer]:
+            - generic [ref=e603]:
+              - heading "What if priorities change?" [level=3] [ref=e604]
+              - img [ref=e607]
+          - button "Can you work with our team?" [ref=e608] [cursor=pointer]:
+            - generic [ref=e609]:
+              - heading "Can you work with our team?" [level=3] [ref=e610]
+              - img [ref=e613]
+          - button "Who owns the work?" [ref=e614] [cursor=pointer]:
+            - generic [ref=e615]:
+              - heading "Who owns the work?" [level=3] [ref=e616]
+              - img [ref=e619]
+      - generic [ref=e623]:
+        - generic [ref=e624]:
+          - heading "Let's build something cool" [level=2] [ref=e625]
+          - generic [ref=e626]:
+            - link "Book Intro Call" [ref=e627] [cursor=pointer]:
+              - /url: /intro
+              - generic:
+                - generic:
+                  - img
+              - text: Book Intro Call
+            - link "Send Message" [ref=e628] [cursor=pointer]:
+              - /url: https://t.me/jeremiahb_x
+              - generic:
+                - generic:
+                  - img
+              - text: Send Message
+        - generic [ref=e629]:
+          - generic [ref=e630]:
+            - link "jeremiah@kargul.studio" [ref=e631] [cursor=pointer]:
+              - /url: mailto:jeremiah@kargul.studio
+            - link "Twitter/X" [ref=e632] [cursor=pointer]:
+              - /url: https://twitter.com/kargulstudio
+            - link "LinkedIn" [ref=e633] [cursor=pointer]:
+              - /url: https://linkedin.com/company/kargulstudio
+          - paragraph [ref=e634]: © 2026. Kargul Studio
+  - alert [ref=e635]

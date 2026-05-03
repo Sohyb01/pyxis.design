@@ -1,5 +1,6 @@
 // import "@/app/css/website-only.css";
 
+import CustomCursor from "@/components/custom/CustomCursor";
 import WebsiteNavbar from "@/components/custom/WebsiteNavbar";
 
 export default function RootLayout({
@@ -22,6 +23,8 @@ export default function RootLayout({
           height={100}
         />
       </Link> */}
+      <CustomCursor />
+
       {children}
     </main>
   );

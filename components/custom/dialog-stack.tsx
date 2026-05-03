@@ -289,7 +289,7 @@ export const DialogStackTitle = ({
 }: DialogStackTitleProps) => (
   <h2
     className={cn(
-      "font-semibold text-lg leading-none tracking-tight",
+      "font-semibold text-lg",
       className,
     )}
     {...(props as any)}

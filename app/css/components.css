@@ -25,7 +25,7 @@
   @apply gap-2 w-full justify-start items-center text-detail text-start;
 }
 .sidebar-group-label{
-  @apply uppercase text-detail tracking-[2px] text-muted-foreground font-extrabold
+  @apply uppercase text-detail text-muted-foreground font-extrabold
 }
 
 .dashboard-tab-wrapper {

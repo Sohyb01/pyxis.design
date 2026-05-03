@@ -1,0 +1,280 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Pyxis Logomark" [ref=e5] [cursor=pointer]:
+          - /url: /#
+          - img "Pyxis Logomark" [ref=e7]
+        - link "Recent work" [ref=e8] [cursor=pointer]:
+          - /url: /work
+          - text: Recent work
+          - img
+      - button "Resources (coming soon)" [disabled]
+    - main [ref=e9]:
+      - generic [ref=e11]:
+        - heading "Full-stack design and dev partner for high-growth startups" [level=1] [ref=e12]:
+          - text: Full-stack design and dev partner
+          - text: for high-growth startups
+        - paragraph [ref=e13]: A quality-obsessed product studio that gets things shipped.
+        - generic [ref=e14]:
+          - link "Book a call" [ref=e15] [cursor=pointer]:
+            - /url: https://calendly.com/suhaybm/strategy-call
+            - generic [ref=e16]:
+              - text: Book a call
+              - img [ref=e17]
+          - generic [ref=e18]:
+            - text: Send message
+            - link "X" [ref=e19] [cursor=pointer]:
+              - /url: https://x.com/minviablemuslim
+              - img
+            - link "Telegram" [ref=e20] [cursor=pointer]:
+              - /url: http://t.me/minimumviablemuslim
+              - img
+      - region "Showcase gallery" [ref=e21]:
+        - generic [ref=e22]:
+          - heading "Showcase gallery" [level=2] [ref=e23]
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e29]: Showcase 1
+              - generic [ref=e33]: Showcase 2
+              - generic [ref=e37]: Showcase 3
+              - generic [ref=e41]: Showcase 4
+              - generic [ref=e45]: Showcase 5
+              - generic [ref=e49]: Showcase 6
+              - generic [ref=e53]: Showcase 7
+              - generic [ref=e57]: Showcase 8
+              - generic [ref=e61]: Showcase 9
+              - generic [ref=e65]: Showcase 10
+              - generic [ref=e69]: Showcase 11
+              - generic [ref=e73]: Showcase 12
+              - generic [ref=e77]: Showcase 13
+              - generic [ref=e81]: Showcase 14
+              - generic [ref=e85]: Showcase 15
+              - generic [ref=e89]: Showcase 16
+              - generic [ref=e93]: Showcase 17
+              - generic [ref=e97]: Showcase 18
+              - generic [ref=e101]: Showcase 19
+              - generic [ref=e105]: Showcase 20
+            - generic [ref=e106]:
+              - generic [ref=e110]: Showcase 1
+              - generic [ref=e114]: Showcase 2
+              - generic [ref=e118]: Showcase 3
+              - generic [ref=e122]: Showcase 4
+              - generic [ref=e126]: Showcase 5
+              - generic [ref=e130]: Showcase 6
+              - generic [ref=e134]: Showcase 7
+              - generic [ref=e138]: Showcase 8
+              - generic [ref=e142]: Showcase 9
+              - generic [ref=e146]: Showcase 10
+              - generic [ref=e150]: Showcase 11
+              - generic [ref=e154]: Showcase 12
+              - generic [ref=e158]: Showcase 13
+              - generic [ref=e162]: Showcase 14
+              - generic [ref=e166]: Showcase 15
+              - generic [ref=e170]: Showcase 16
+              - generic [ref=e174]: Showcase 17
+              - generic [ref=e178]: Showcase 18
+              - generic [ref=e182]: Showcase 19
+              - generic [ref=e186]: Showcase 20
+      - generic [ref=e188]:
+        - heading "Why us?" [level=2] [ref=e189]
+        - generic [ref=e190]:
+          - article [ref=e191]:
+            - img [ref=e192]
+            - heading "Quality focused" [level=3] [ref=e193]
+            - paragraph [ref=e194]: Every surface is reviewed with care, from first wireframe to final handoff.
+          - article [ref=e195]:
+            - img [ref=e196]
+            - heading "Precise builds" [level=3] [ref=e197]
+            - paragraph [ref=e198]: Design systems, responsive states, and interaction details are done perfectly.
+          - article [ref=e199]:
+            - img [ref=e200]
+            - heading "Motion and brand" [level=3] [ref=e201]
+            - paragraph [ref=e202]: Illustration, animation, and polish are used to make the products feel alive.
+        - generic [ref=e203]:
+          - link "Book a call" [ref=e204] [cursor=pointer]:
+            - /url: https://calendly.com/suhaybm/strategy-call
+            - generic [ref=e205]:
+              - text: Book a call
+              - img [ref=e206]
+          - generic [ref=e207]:
+            - text: Send message
+            - link "X" [ref=e208] [cursor=pointer]:
+              - /url: https://x.com/minviablemuslim
+              - img
+            - link "Telegram" [ref=e209] [cursor=pointer]:
+              - /url: http://t.me/minimumviablemuslim
+              - img
+      - generic [ref=e211]:
+        - heading "Testimonials" [level=2] [ref=e213]
+        - generic [ref=e214]:
+          - article [ref=e215]:
+            - paragraph [ref=e217]: The team moved quickly, stayed thoughtful, and gave every revision a level of craft that made the launch feel calm.
+            - generic [ref=e222]:
+              - paragraph [ref=e223]: Maya Reed
+              - paragraph [ref=e224]: Ostara
+          - article [ref=e225]:
+            - paragraph [ref=e227]: They turned a messy product story into a focused interface and shipped the details without dragging the process out.
+            - generic [ref=e232]:
+              - paragraph [ref=e233]: Owen Hart
+              - paragraph [ref=e234]: Listlane
+          - article [ref=e235]:
+            - paragraph [ref=e237]: Fast communication, strong taste, and a rare ability to translate product complexity into something people understand.
+            - generic [ref=e242]:
+              - paragraph [ref=e243]: Nico Lane
+              - paragraph [ref=e244]: Sidespark
+          - article [ref=e245]:
+            - paragraph [ref=e247]: Our new site feels sharper and easier to use. The process was direct, collaborative, and refreshingly organized.
+            - generic [ref=e252]:
+              - paragraph [ref=e253]: Clara Voss
+              - paragraph [ref=e254]: Aurora
+          - article [ref=e255]:
+            - paragraph [ref=e257]: They helped us bring a complex AI workflow into a simple dashboard without losing the depth our users needed.
+            - generic [ref=e262]:
+              - paragraph [ref=e263]: Jon Morris
+              - paragraph [ref=e264]: Delta AI
+          - article [ref=e265]:
+            - paragraph [ref=e267]: The sprint gave us a polished launch path, clean component decisions, and a site our team could build on.
+            - generic [ref=e272]:
+              - paragraph [ref=e273]: Kai Riley
+              - paragraph [ref=e274]: Taskcart
+      - generic [ref=e277]:
+        - heading "Tools we use every day" [level=2] [ref=e279]
+        - generic [ref=e281]:
+          - generic [ref=e282]: Figma
+          - generic [ref=e283]: Next.js
+          - generic [ref=e284]: Tailwind
+          - generic [ref=e285]: Rive
+          - generic [ref=e286]: Illustrator
+      - generic [ref=e288]:
+        - heading "Team" [level=2] [ref=e290]
+        - generic [ref=e291]:
+          - article [ref=e292]:
+            - generic [ref=e296]:
+              - heading "Suhayb" [level=3] [ref=e297]
+              - paragraph [ref=e298]: Web Designer, Full-stack dev
+          - article [ref=e299]:
+            - generic [ref=e303]:
+              - heading "Jonah" [level=3] [ref=e304]
+              - paragraph [ref=e305]: Brand designer & strategist
+      - generic [ref=e307]:
+        - heading "Pricing" [level=2] [ref=e308]
+        - generic [ref=e309]:
+          - generic [ref=e310]:
+            - generic [ref=e311]:
+              - button "Product" [ref=e312]
+              - button "Landing" [ref=e313]
+              - button "Full Site" [ref=e314]
+              - button "Brand" [ref=e315]
+            - article [ref=e316]:
+              - generic [ref=e317]:
+                - generic [ref=e318]: Custom scope
+                - generic [ref=e319]: $10,000+
+              - list [ref=e321]:
+                - listitem [ref=e322]:
+                  - img [ref=e324]
+                  - generic [ref=e326]: Custom website features
+                - listitem [ref=e327]:
+                  - img [ref=e329]
+                  - generic [ref=e331]: Deep UX research
+                - listitem [ref=e332]:
+                  - img [ref=e334]
+                  - generic [ref=e336]: Pixel-perfect development
+                - listitem [ref=e337]:
+                  - img [ref=e339]
+                  - generic [ref=e341]: Rapid iteration and feedback cycles
+                - listitem [ref=e342]:
+                  - img [ref=e344]
+                  - generic [ref=e346]: Figma + PNG handoff
+              - link "Book Intro Call" [ref=e347] [cursor=pointer]:
+                - /url: https://calendly.com/suhaybm/strategy-call
+                - img [ref=e348]
+                - text: Book Intro Call
+          - generic [ref=e349]:
+            - article [ref=e350]:
+              - generic [ref=e351]: Limited slots
+              - generic [ref=e352]:
+                - generic [ref=e353]:
+                  - paragraph [ref=e354]: Design/dev retainer
+                  - heading "$10,000/mo" [level=3] [ref=e355]
+                - list [ref=e357]:
+                  - listitem [ref=e358]:
+                    - img [ref=e360]
+                    - generic [ref=e362]: 1 request at a time
+                  - listitem [ref=e363]:
+                    - img [ref=e365]
+                    - generic [ref=e367]: Flexible, evolving scope
+                  - listitem [ref=e368]:
+                    - img [ref=e370]
+                    - generic [ref=e372]: Daily updates mon-fri
+              - link "Book Intro Call" [ref=e373] [cursor=pointer]:
+                - /url: https://calendly.com/suhaybm/strategy-call
+                - img [ref=e374]
+                - text: Book Intro Call
+            - article [ref=e375]:
+              - paragraph [ref=e376]: Something else in mind?
+              - generic [ref=e378]:
+                - text: Send message
+                - link "X" [ref=e379] [cursor=pointer]:
+                  - /url: https://x.com/minviablemuslim
+                  - img
+                - link "Telegram" [ref=e380] [cursor=pointer]:
+                  - /url: http://t.me/minimumviablemuslim
+                  - img
+      - generic [ref=e383]:
+        - heading "FAQs" [level=2] [ref=e385]
+        - generic [ref=e386]:
+          - generic [ref=e387] [cursor=pointer]:
+            - heading "Can we pay with crypto?" [level=3] [ref=e388]:
+              - button "Can we pay with crypto?" [expanded] [ref=e389]:
+                - text: Can we pay with crypto?
+                - img
+            - region "Can we pay with crypto?" [ref=e390]:
+              - generic [ref=e391]: Yes. Standard invoices are available, and crypto payments can be arranged for teams that prefer them.
+          - heading "Is frontend implementation included?" [level=3] [ref=e393] [cursor=pointer]:
+            - button "Is frontend implementation included?" [ref=e394]:
+              - text: Is frontend implementation included?
+              - img
+          - heading "What makes the process different?" [level=3] [ref=e396] [cursor=pointer]:
+            - button "What makes the process different?" [ref=e397]:
+              - text: What makes the process different?
+              - img
+          - heading "Who will we work with?" [level=3] [ref=e399] [cursor=pointer]:
+            - button "Who will we work with?" [ref=e400]:
+              - text: Who will we work with?
+              - img
+          - heading "How does collaboration work?" [level=3] [ref=e402] [cursor=pointer]:
+            - button "How does collaboration work?" [ref=e403]:
+              - text: How does collaboration work?
+              - img
+          - heading "What if priorities change?" [level=3] [ref=e405] [cursor=pointer]:
+            - button "What if priorities change?" [ref=e406]:
+              - text: What if priorities change?
+              - img
+          - heading "Who owns the final work?" [level=3] [ref=e408] [cursor=pointer]:
+            - button "Who owns the final work?" [ref=e409]:
+              - text: Who owns the final work?
+              - img
+      - generic [ref=e411]:
+        - heading "Let's build something sharp" [level=2] [ref=e412]
+        - generic [ref=e413]:
+          - link "Book a call" [ref=e414] [cursor=pointer]:
+            - /url: https://calendly.com/suhaybm/strategy-call
+            - generic [ref=e415]:
+              - text: Book a call
+              - img [ref=e416]
+          - generic [ref=e417]:
+            - text: Send message
+            - link "X" [ref=e418] [cursor=pointer]:
+              - /url: https://x.com/minviablemuslim
+              - img
+            - link "Telegram" [ref=e419] [cursor=pointer]:
+              - /url: http://t.me/minimumviablemuslim
+              - img
+        - generic [ref=e420]:
+          - generic [ref=e421]: hello@example.studio
+          - link "Twitter/X" [ref=e422] [cursor=pointer]:
+            - /url: https://x.com/minviablemuslim
+          - generic [ref=e423]: © 2026 pyxis.studio
+  - button "Open Next.js Dev Tools" [ref=e429] [cursor=pointer]:
+    - img [ref=e430]

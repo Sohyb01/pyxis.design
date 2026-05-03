@@ -8,6 +8,7 @@ import { PricingSection } from "../PricingSection";
 import CheckoutRedirect from "./CheckoutRedirect";
 import { eq } from "drizzle-orm";
 import { buttonVariants } from "@/components/ui/button";
+import { redirect } from "next/navigation";
 
 export default async function Home({
   searchParams,
@@ -15,6 +16,12 @@ export default async function Home({
   searchParams: Promise<{ variantId?: string }>;
 }) {
   const { variantId } = await searchParams;
+
+  const shouldRedirectHome: boolean = true;
+
+  if (shouldRedirectHome) {
+    redirect("/");
+  }
 
   if (variantId) {
     return (

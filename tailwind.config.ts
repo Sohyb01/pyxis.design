@@ -8,36 +8,122 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: "var(--font-sans)",
+      mono: "var(--font-mono)",
+      serif: "var(--font-serif)",
+      mayeka: "var(--font-mayeka)",
+    },
     fontSize: {
+      xl: [
+        "1.25rem",
+        {
+          lineHeight: "1.75rem",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "2xl": [
+        "1.5rem",
+        {
+          lineHeight: "2rem",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "3xl": [
+        "1.875rem",
+        {
+          lineHeight: "2.25rem",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "4xl": [
+        "2.25rem",
+        {
+          lineHeight: "2.5rem",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "5xl": [
+        "3rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "6xl": [
+        "3.75rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "7xl": [
+        "4.5rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "8xl": [
+        "6rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      "9xl": [
+        "8rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
       h1: [
         "48px",
         {
           lineHeight: "48px",
-          letterSpacing: "-2px",
-          fontWeight: "700",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
         },
       ],
       h2: [
-        "30px",
+        "40px",
         {
-          lineHeight: "36px",
-          letterSpacing: "-1.5px",
+          lineHeight: "40px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "600",
         },
       ],
       h3: [
-        "24px",
+        "30px",
         {
-          lineHeight: "32px",
-          letterSpacing: "-1px",
+          lineHeight: "36px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "600",
         },
       ],
       h4: [
+        "24px",
+        {
+          lineHeight: "32px",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "600",
+        },
+      ],
+      h5: [
         "20px",
         {
           lineHeight: "28px",
-          letterSpacing: "-1px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "600",
         },
       ],
@@ -45,6 +131,7 @@ const config: Config = {
         "18px",
         {
           lineHeight: "28px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "600",
         },
       ],
@@ -52,7 +139,7 @@ const config: Config = {
         "20px",
         {
           lineHeight: "28px",
-          letterSpacing: "-1px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "600",
         },
       ],
@@ -60,6 +147,7 @@ const config: Config = {
         "16px",
         {
           lineHeight: "28px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -67,6 +155,7 @@ const config: Config = {
         "16px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -74,6 +163,7 @@ const config: Config = {
         "16px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "500",
         },
       ],
@@ -81,6 +171,7 @@ const config: Config = {
         "16px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -88,6 +179,7 @@ const config: Config = {
         "14px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -95,6 +187,7 @@ const config: Config = {
         "14px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "500",
         },
       ],
@@ -102,6 +195,7 @@ const config: Config = {
         "14px",
         {
           lineHeight: "20px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -109,6 +203,7 @@ const config: Config = {
         "14px",
         {
           lineHeight: "20px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "500",
         },
       ],
@@ -116,6 +211,7 @@ const config: Config = {
         "14px",
         {
           lineHeight: "20px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "600",
         },
       ],
@@ -123,27 +219,31 @@ const config: Config = {
         "14px",
         {
           lineHeight: "14px",
-          fontWeight: "500",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "400",
         },
       ],
       detail: [
         "12px",
         {
           lineHeight: "20px",
-          fontWeight: "500",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "400",
         },
       ],
       badge: [
         "12px",
         {
           lineHeight: "16px",
-          fontWeight: "600",
+          letterSpacing: "var(--tracking-normal)",
+          fontWeight: "400",
         },
       ],
       blockquote: [
         "16px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -151,6 +251,7 @@ const config: Config = {
         "16px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "700",
         },
       ],
@@ -158,6 +259,7 @@ const config: Config = {
         "16px",
         {
           lineHeight: "24px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -165,7 +267,7 @@ const config: Config = {
         "12px",
         {
           lineHeight: "20px",
-          letterSpacing: "1px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "400",
         },
       ],
@@ -173,15 +275,19 @@ const config: Config = {
         "24px",
         {
           lineHeight: "24px",
-          letterSpacing: "-1px",
+          letterSpacing: "var(--tracking-normal)",
           fontWeight: "600",
         },
       ],
     },
+    letterSpacing: {
+      normal: "var(--tracking-normal)",
+    },
     container: {
       center: true,
+      padding: "8px",
       screens: {
-        lg: "1120px",
+        lg: "1280px",
       },
     },
     screens: {
@@ -191,91 +297,89 @@ const config: Config = {
     },
     extend: {
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        shade: "hsl(var(--shade))",
-        shade_blue: "hsl(var(--shade-blue))",
-        whatsapp: "var(--whatsapp-green)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "var(--popover)",
+          foreground: "var(--popover-foreground)",
         },
-        // BB Black & White
-        bb_black: "hsl(var(--bb_black))",
-        bb_white: "hsl(var(--bb_white))",
-        // BB Light foreground always
-        bb_blue: {
-          DEFAULT: "hsl(var(--bb_blue))",
-          foreground: "hsl(var(--bb_white))",
+        primary: {
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
         },
-        bb_pink: {
-          DEFAULT: "hsl(var(--bb_pink))",
-          foreground: "hsl(var(--bb_white))",
-        },
-        bb_rose: {
-          DEFAULT: "hsl(var(--bb_rose))",
-          foreground: "hsl(var(--bb_white))",
-        },
-        bb_purple: {
-          DEFAULT: "hsl(var(--bb_purple))",
-          foreground: "hsl(var(--bb_white))",
-        },
-        // BB Dark foreground always
-        bb_lime: {
-          DEFAULT: "hsl(var(--bb_lime))",
-          foreground: "hsl(var(--bb_black))",
-        },
-        bb_yellow: {
-          DEFAULT: "hsl(var(--bb_yellow))",
-          foreground: "hsl(var(--bb_black))",
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
         },
-        success: {
-          DEFAULT: "hsl(var(--success))",
-          foreground: "hsl(var(--success-foreground))",
-        },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--border))", // made same as border
-        ring: "hsl(var(--ring))",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
         chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+          "1": "var(--chart-1)",
+          "2": "var(--chart-2)",
+          "3": "var(--chart-3)",
+          "4": "var(--chart-4)",
+          "5": "var(--chart-5)",
         },
         sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "bb_blue-foreground": "hsl(var(--sidebar-bb_blue-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+          DEFAULT: "var(--sidebar)",
+          foreground: "var(--sidebar-foreground)",
+          primary: "var(--sidebar-primary)",
+          "primary-foreground": "var(--sidebar-primary-foreground)",
+          accent: "var(--sidebar-accent)",
+          "accent-foreground": "var(--sidebar-accent-foreground)",
+          border: "var(--sidebar-border)",
+          ring: "var(--sidebar-ring)",
         },
+        "color-1": "var(--color-1)",
+        "color-2": "var(--color-2)",
+        "color-3": "var(--color-3)",
+        "color-4": "var(--color-4)",
+        "color-5": "var(--color-5)",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 2px)",
+        lg: "var(--radius)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
+        "3xl": "calc(var(--radius) + 12px)",
+        "4xl": "calc(var(--radius) + 16px)",
+      },
+      boxShadow: {
+        "2xs": "var(--shadow-2xs)",
+        xs: "var(--shadow-xs)",
+        sm: "var(--shadow-sm)",
+        DEFAULT: "var(--shadow)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        xl: "var(--shadow-xl)",
+        "2xl": "var(--shadow-2xl)",
       },
       keyframes: {
+        rainbow: {
+          "0%": { backgroundPosition: "0%" },
+          "100%": { backgroundPosition: "200%" },
+        },
+        gradient: {
+          to: { backgroundPosition: "var(--bg-size, 300%) 0" },
+        },
         marquee_ar: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(50%)" },
@@ -302,6 +406,8 @@ const config: Config = {
         },
       },
       animation: {
+        rainbow: "rainbow var(--speed, 2s) infinite linear",
+        gradient: "gradient 8s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee_ar: "marquee_ar 30s linear infinite",
