@@ -123,7 +123,7 @@ export default async function WorkPage() {
         }}
       />
       <WorkArchiveSection archiveImages={archiveImages} />
-      <FooterCta showArrow showLinkedIn twitterHref="#" />
+      <FooterCta />
     </main>
   );
 }
