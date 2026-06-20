@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    creator: "@minviablemuslim",
+    creator: "@minimumviableme",
     images: [socialImage.twitterPath],
   },
 };

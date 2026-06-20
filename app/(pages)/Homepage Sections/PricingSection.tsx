@@ -8,6 +8,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { CtaActions } from "@/components/custom/CtaActions";
+import { TextEffect } from "@/components/motion/text-effect";
 
 const BOOK_CALL_HREF = "https://calendly.com/suhaybm/strategy-call";
 
@@ -84,15 +85,34 @@ function MeetIcon() {
   );
 }
 
-function FeatureList({ features }: { features: readonly string[] }) {
+function FeatureList({
+  features,
+  animationKey,
+}: {
+  features: readonly string[];
+  animationKey?: string;
+}) {
   return (
     <ul className="flex flex-col gap-2.5 text-subtle text-muted-foreground">
-      {features.map((feature) => (
+      {features.map((feature, index) => (
         <li key={feature} className="flex items-center gap-1.5">
           <span className="flex size-3.5 shrink-0 items-center justify-center text-foreground">
             <Check className="size-3.5" />
           </span>
-          <span>{feature}</span>
+          {animationKey ? (
+            <TextEffect
+              key={`${animationKey}-${index}-${feature}`}
+              as="span"
+              per="word"
+              preset="slide"
+              speedReveal={1.35}
+              speedSegment={1.25}
+            >
+              {feature}
+            </TextEffect>
+          ) : (
+            <span>{feature}</span>
+          )}
         </li>
       ))}
     </ul>
@@ -155,12 +175,23 @@ export function PricingSection() {
                 <span className="text-sm font-medium text-muted-foreground">
                   {selectedOption.title}
                 </span>
-                <span className="text-2xl font-bold text-foreground">
+                <TextEffect
+                  key={`${selectedOption.key}-${selectedOption.price}`}
+                  as="span"
+                  per="char"
+                  preset="slide"
+                  speedReveal={1.6}
+                  speedSegment={1.25}
+                  className="text-2xl font-bold text-foreground"
+                >
                   {selectedOption.price}
-                </span>
+                </TextEffect>
               </div>
               <div className="mt-4">
-                <FeatureList features={selectedOption.features} />
+                <FeatureList
+                  features={selectedOption.features}
+                  animationKey={selectedOption.key}
+                />
               </div>
               <CtaActions showMessage={false} className="mt-7 me-auto" />
             </article>

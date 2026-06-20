@@ -41,10 +41,10 @@ function TelegramLogo() {
 }
 
 const socialLinks = [
-  { label: "X", href: "https://x.com/minviablemuslim", icon: XLogo },
+  { label: "X", href: "https://x.com/minimumviableme", icon: XLogo },
   {
     label: "Telegram",
-    href: "http://t.me/minimumviablemuslim",
+    href: "http://t.me/minimumviableme",
     icon: TelegramLogo,
   },
 ];

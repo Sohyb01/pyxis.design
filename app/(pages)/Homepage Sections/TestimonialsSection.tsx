@@ -8,9 +8,18 @@ const testimonialQuotes = [
   "Fast communication, strong taste, and a rare ability to translate product complexity into something people understand.",
   "Our new site feels sharper and easier to use. The process was direct, collaborative, and refreshingly organized.",
   "They helped us bring a complex AI workflow into a simple dashboard without losing the depth our users needed.",
+  "They gave Albetar a fast, clear storefront for laptops, desktops, hardware, and custom builds, making technical products easier to browse, compare, and buy.",
 ];
 
-const testimonials = trustedByLogos.map((company, index) => ({
+const testimonialCompanies = [
+  ...trustedByLogos,
+  {
+    name: "Albetar Store",
+    src: "/logos/albetar.svg",
+  },
+];
+
+const testimonials = testimonialCompanies.map((company, index) => ({
   ...company,
   quote: testimonialQuotes[index],
 }));
