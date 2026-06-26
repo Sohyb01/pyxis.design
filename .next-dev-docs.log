@@ -1,0 +1,26 @@
+
+> sim-starter-saas-template@0.1.0 dev
+> next dev --port 3000
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.2:3000
+- Environments: .env
+
+✓ Starting...
+Creating turbopack project {
+  dir: 'D:\\Programs\\VSCode\\Client Work\\Pyxis\\pyxis',
+  testMode: true
+}
+✓ Ready in 8.1s
+○ Compiling /docs ...
+ GET /docs 200 in 17.3s (compile: 15.2s, render: 2.2s)
+✓ Compiled in 298ms
+✓ Compiled in 260ms
+ GET /docs 200 in 621ms (compile: 251ms, render: 370ms)
+✓ Compiled in 359ms
+✓ Compiled in 328ms
+ GET /docs 200 in 625ms (compile: 223ms, render: 402ms)
+ GET /docs 200 in 128ms (compile: 21ms, render: 107ms)
+ GET /docs 200 in 84ms (compile: 8ms, render: 77ms)
+ GET /en 404 in 1652ms (compile: 1505ms, render: 147ms)

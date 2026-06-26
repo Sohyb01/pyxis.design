@@ -37,7 +37,7 @@ export function ShowcaseGallerySection() {
               {showcaseItems.map((item) => (
                 <div
                   key={item.src}
-                  className="aspect-5/3 z-1 w-[300px] md:w-[500px] lg:w-[700px] rounded-xl overflow-hidden relative no-scrollbar shadow-lg"
+                  className="aspect-5/3 z-1 w-[300px] md:w-[500px] lg:w-[700px] rounded-xl overflow-hidden relative no-scrollbar"
                 >
                   <Image
                     src={item.src}

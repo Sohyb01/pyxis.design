@@ -4,7 +4,7 @@ import Image from "next/image";
 export function GainingTrustSection() {
   return (
     <section className="w-full relative">
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-y-4 w-full justify-center px-4 md:py-20 gap-4">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-y-4 w-full justify-center px-4 md:py-20 gap-x-8">
         <div className="relative size-20 lg:size-50 opacity-10 ms-auto">
           <Image src="/logos/logomark-black.svg" fill alt="" />
         </div>

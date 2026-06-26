@@ -23,7 +23,7 @@ const pricingOptions = [
       "Deep UX research",
       "Pixel-perfect development",
       "Rapid iteration and feedback cycles",
-      "Figma + PNG handoff",
+      "Maintenance included",
     ],
   },
   {
@@ -70,7 +70,7 @@ const pricingOptions = [
 const retainerFeatures = [
   "1 request at a time",
   "Flexible, evolving scope",
-  "Daily updates mon-fri",
+  "Daily updates (even on weekends)",
 ];
 
 function MeetIcon() {
