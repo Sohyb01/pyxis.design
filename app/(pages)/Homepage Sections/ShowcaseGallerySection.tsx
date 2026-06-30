@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const showcaseItems = Array.from({ length: 12 }, (_, index) => ({
+const showcaseItems = Array.from({ length: 18 }, (_, index) => ({
   src: `/projects/marquee/${index + 1}.png`,
   alt: `Project showcase ${index + 1}`,
 }));
@@ -37,13 +37,13 @@ export function ShowcaseGallerySection() {
               {showcaseItems.map((item) => (
                 <div
                   key={item.src}
-                  className="aspect-5/3 z-1 w-[300px] md:w-[500px] lg:w-[700px] rounded-xl overflow-hidden relative no-scrollbar"
+                  className="aspect-video object-center z-1 w-[300px] md:w-[500px] lg:w-[700px] rounded-xl overflow-hidden relative no-scrollbar"
                 >
                   <Image
                     src={item.src}
                     alt={item.alt}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                 </div>
               ))}
