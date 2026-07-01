@@ -25,8 +25,8 @@ export const siteConfig = {
 };
 
 export const socialImage = {
-  width: 1200,
-  height: 630,
-  openGraphPath: "/opengraph-image",
-  twitterPath: "/twitter-image",
+  width: 2400,
+  height: 1280,
+  openGraphPath: "/new%20opengraph%20image.png",
+  twitterPath: "/new%20opengraph%20image.png",
 };

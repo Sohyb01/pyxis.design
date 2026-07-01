@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { siteConfig } from "./seo";
+import { siteConfig, socialImage } from "./seo";
 import "./globals.css";
 import "./css/components.css";
 import "./css/backgrounds.css";
@@ -26,6 +26,28 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: "/",
+    siteName: siteConfig.name,
+    type: "website",
+    images: [
+      {
+        url: socialImage.openGraphPath,
+        width: socialImage.width,
+        height: socialImage.height,
+        alt: siteConfig.ogAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    creator: "@minimumviableme",
+    images: [socialImage.twitterPath],
+  },
   authors: [{ name: "Pyxis Studio", url: siteConfig.url }],
   creator: "Pyxis Studio",
   publisher: "Pyxis Studio",
