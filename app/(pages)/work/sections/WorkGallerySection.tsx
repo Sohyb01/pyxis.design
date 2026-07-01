@@ -22,7 +22,7 @@ export default function WorkGallerySection({
           {visibleImages.map((item) => (
             <div
               key={item.id}
-              className="relative z-1 aspect-16/9 overflow-hidden rounded-lg border border-border/95 bg-card shadow-lg no-scrollbar"
+              className="relative z-1 aspect-16/9 overflow-hidden rounded-lg border border-border/95 bg-card no-scrollbar"
             >
               <Image
                 src={item.src}

@@ -203,7 +203,7 @@ export function PricingSection() {
                 variant="ghost"
                 className="absolute right-5 top-5 text-muted-foreground"
               >
-                (1/2 slots available)
+                (Limited slots)
               </Badge>
               <div>
                 <div className="pr-28">

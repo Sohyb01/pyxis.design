@@ -50,7 +50,7 @@ export function CustomCursor() {
     <>
       {/* Main cursor dot */}
       <motion.div
-        className="pointer-events-none fixed left-0 top-0 z-[10000] h-3 w-3 rounded-full bg-white mix-blend-difference"
+        className="pointer-events-none fixed left-0 top-0 z-[10000] h-3 w-3 rounded-full bg-white mix-blend-difference max-md:hidden"
         animate={{
           x: position.x - 6,
           y: position.y - 6,
