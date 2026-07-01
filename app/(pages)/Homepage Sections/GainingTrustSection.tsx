@@ -4,7 +4,7 @@ import Image from "next/image";
 export function GainingTrustSection() {
   return (
     <section className="w-full relative">
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-y-4 w-full justify-center px-4 py-20 gap-x-8">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-y-4 w-full justify-center px-4 py-20 lg:py-32 gap-x-8">
         <div className="relative size-20 lg:size-50 opacity-10 me-auto lg:ms-auto">
           <Image src="/logos/logomark-black.svg" fill alt="" />
         </div>
@@ -14,7 +14,7 @@ export function GainingTrustSection() {
             and sweats every detail, so your next launch feels credible, fast,
             and ready to convert.
           </h1>
-          {/* <CtaActions /> */}
+          <CtaActions className="max-md:items-start max-md:justify-start" />
         </div>
       </div>
     </section>

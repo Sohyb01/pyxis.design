@@ -42,11 +42,11 @@ function TelegramLogo() {
 
 const socialLinks = [
   { label: "X", href: "https://x.com/minimumviableme", icon: XLogo },
-  {
-    label: "Telegram",
-    href: "http://t.me/minimumviableme",
-    icon: TelegramLogo,
-  },
+  // {
+  //   label: "Telegram",
+  //   href: "http://t.me/minimumviableme",
+  //   icon: TelegramLogo,
+  // },
 ];
 
 export function CtaActions({
