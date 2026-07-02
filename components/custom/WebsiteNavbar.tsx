@@ -20,13 +20,13 @@ export default function WebsiteNavbar() {
           Recent work
           <ArrowUpRight className="size-4" />
         </Link>
-        {/* <Link
+        <Link
           href="/blog"
           className={`${buttonVariants({ variant: "outline" })}`}
         >
           Blog
           <ArrowUpRight className="size-4" />
-        </Link> */}
+        </Link>
       </div>
     </nav>
   );

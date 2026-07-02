@@ -43,8 +43,7 @@ export function ShowcaseGallerySection() {
   return (
     <section
       aria-label="Showcase gallery"
-      className="w-full py-6"
-      // className="w-full overflow-hidden py-6 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
+      className="w-full overflow-hidden py-6"
     >
       <style>
         {`

@@ -76,33 +76,27 @@ export default async function BlogPage() {
         </div>
 
         {posts.length > 0 ? (
-          <div className="mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
             {posts.map((post) => (
               <Link
                 key={post.slug}
                 href={getBlogPostUrl(post.slug)}
                 className={cn(
-                  "group overflow-hidden rounded-[1rem] border border-border bg-background transition flex-col items-start text-start no-scrollbar",
-                  "hover:-translate-y-0.5",
+                  "group overflow-hidden rounded-xl border border-border bg-background transition flex-col items-start text-start no-scrollbar",
+                  "hover:-translate-y-0.5 duration-200 ease-out",
                   "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] focus-visible:outline-none",
                 )}
               >
-                {post.frontmatter.coverImage ? (
-                  <div className="relative aspect-4/2 w-full overflow-hidden bg-muted no-scrollbar">
-                    <Image
-                      src={post.frontmatter.coverImage}
-                      alt={post.frontmatter.coverAlt ?? post.frontmatter.title}
-                      fill
-                      sizes="(min-width: 744px) 220px, 100vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                ) : (
-                  <div className="grid aspect-4/2 min-h-48 place-items-center bg-muted text-muted-foreground">
-                    <FileText className="size-6" />
-                  </div>
-                )}
-                <div className="p-4 pt-3">
+                <div className="relative aspect-4/2 w-full overflow-hidden bg-muted no-scrollbar">
+                  <Image
+                    src={post.posterImage}
+                    alt={`${post.frontmatter.title} poster image`}
+                    fill
+                    sizes="(min-width: 1280px) 33vw, (min-width: 744px) 50vw, 100vw"
+                    className="object-cover transition duration-200 ease-out group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="p-5 pt-4">
                   <span className="flex flex-wrap items-center gap-2 text-detail uppercase text-muted-foreground text-pretty">
                     <time dateTime={post.frontmatter.publishDate}>
                       {formatBlogDate(post.frontmatter.publishDate)}

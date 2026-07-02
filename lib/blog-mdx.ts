@@ -18,6 +18,7 @@ export type BlogFrontmatter = {
 export type BlogPost = {
   slug: string;
   frontmatter: BlogFrontmatter;
+  posterImage: string;
   content: ReactNode;
 };
 
@@ -28,7 +29,10 @@ const contentDirectory = path.join(
   "blog",
   "_mdx-content",
 );
+const blogImagesDirectory = path.join(process.cwd(), "public", "blog-images");
 const mdxExtension = ".mdx";
+const posterExtension = ".png";
+const placeholderPosterImage = "/blog-images/placeholder.png";
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -115,6 +119,34 @@ function getSlugFromFileName(fileName: string) {
   return path.basename(fileName, mdxExtension);
 }
 
+async function fileExists(filePath: string) {
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch (error) {
+    if (
+      isRecord(error) &&
+      typeof error.code === "string" &&
+      error.code === "ENOENT"
+    ) {
+      return false;
+    }
+
+    throw error;
+  }
+}
+
+async function getBlogPosterImage(slug: string) {
+  const posterFileName = `${slug}${posterExtension}`;
+  const posterFilePath = path.join(blogImagesDirectory, posterFileName);
+
+  if (await fileExists(posterFilePath)) {
+    return `/blog-images/${posterFileName}`;
+  }
+
+  return placeholderPosterImage;
+}
+
 export function isValidBlogSlug(slug: string) {
   return slugPattern.test(slug);
 }
@@ -179,6 +211,7 @@ async function readBlogPostBySlug(slug: string): Promise<BlogPost | null> {
     return {
       slug,
       frontmatter: normalizeFrontmatter(frontmatter, slug),
+      posterImage: await getBlogPosterImage(slug),
       content,
     };
   } catch (error) {
