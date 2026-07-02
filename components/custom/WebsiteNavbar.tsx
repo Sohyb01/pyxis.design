@@ -12,16 +12,22 @@ export default function WebsiteNavbar() {
       >
         <LogoMark width={14} className="scale-130" />
       </Link>
-      <Link
-        href="/work"
-        className={`${buttonVariants({ variant: "outline" })}`}
-      >
-        Recent work
-        <ArrowUpRight className="size-4" />
-      </Link>
-      {/* <Button variant={"ghost"} disabled>
-        Resources (coming soon)
-      </Button> */}
+      <div className="flex items-center gap-2">
+        <Link
+          href="/work"
+          className={`${buttonVariants({ variant: "outline" })}`}
+        >
+          Recent work
+          <ArrowUpRight className="size-4" />
+        </Link>
+        {/* <Link
+          href="/blog"
+          className={`${buttonVariants({ variant: "outline" })}`}
+        >
+          Blog
+          <ArrowUpRight className="size-4" />
+        </Link> */}
+      </div>
     </nav>
   );
 }

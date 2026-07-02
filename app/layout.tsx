@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import { siteConfig, socialImage } from "./seo";
 import "./globals.css";
 import "./css/components.css";
@@ -82,6 +83,7 @@ export default function RootLayout({
     <html className={`${nohemi.variable} h-screen overflow-y-hidden`} lang="en">
       <body className="h-full overflow-y-scroll font-sans antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
