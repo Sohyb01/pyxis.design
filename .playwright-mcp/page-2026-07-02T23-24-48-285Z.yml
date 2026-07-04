@@ -1,0 +1,243 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Evexa Home" [ref=e4] [cursor=pointer]:
+        - /url: /en
+        - img [ref=e7]
+      - generic [ref=e14]:
+        - link "ar" [ref=e15] [cursor=pointer]:
+          - /url: /ar/blog
+          - img [ref=e16]
+          - text: ar
+        - link "Free AI Consultation" [ref=e19] [cursor=pointer]:
+          - /url: /en#cta
+          - text: Free AI Consultation
+          - img [ref=e20]
+        - button "Toggle menu" [ref=e23]
+  - main [ref=e28]:
+    - generic [ref=e32]:
+      - paragraph [ref=e33]: Blog
+      - heading "Ideas for building clearer, smarter digital systems." [level=1] [ref=e34]
+      - paragraph [ref=e35]: Practical notes, case studies, and lessons from Evexa's work across AI, automation, product design, platforms, and digital experience.
+    - generic [ref=e37]:
+      - link "Ascend Real Estate Branding poster image April 13, 2026 Evexa Team Ascend Real Estate Branding A premium real estate identity system built for clear market presence across digital and marketing touchpoints. Branding Real Estate Identity" [ref=e38] [cursor=pointer]:
+        - /url: /en/blog/ascend-real-estate
+        - img "Ascend Real Estate Branding poster image" [ref=e40]
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - time [ref=e43]: April 13, 2026
+            - generic [ref=e44]: /
+            - generic [ref=e45]: Evexa Team
+          - heading "Ascend Real Estate Branding" [level=2] [ref=e46]
+          - paragraph [ref=e47]: A premium real estate identity system built for clear market presence across digital and marketing touchpoints.
+          - generic [ref=e48]:
+            - generic [ref=e49]: Branding
+            - generic [ref=e50]: Real Estate
+            - generic [ref=e51]: Identity
+      - link "Eslah Services Branding poster image April 13, 2026 Evexa Team Eslah Services Branding An industrial identity system helping an energy services company communicate trust, capability, and operational seriousness. Branding Industrial B2B" [ref=e52] [cursor=pointer]:
+        - /url: /en/blog/eslah-services-branding
+        - img "Eslah Services Branding poster image" [ref=e54]
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - time [ref=e57]: April 13, 2026
+            - generic [ref=e58]: /
+            - generic [ref=e59]: Evexa Team
+          - heading "Eslah Services Branding" [level=2] [ref=e60]
+          - paragraph [ref=e61]: An industrial identity system helping an energy services company communicate trust, capability, and operational seriousness.
+          - generic [ref=e62]:
+            - generic [ref=e63]: Branding
+            - generic [ref=e64]: Industrial
+            - generic [ref=e65]: B2B
+      - link "IHome Architecture Branding poster image April 13, 2026 Evexa Team IHome Architecture Branding An architecture identity system balancing premium restraint, practical presentation, and a polished visual language. Branding Architecture Identity" [ref=e66] [cursor=pointer]:
+        - /url: /en/blog/ihome-architecture
+        - img "IHome Architecture Branding poster image" [ref=e68]
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - time [ref=e71]: April 13, 2026
+            - generic [ref=e72]: /
+            - generic [ref=e73]: Evexa Team
+          - heading "IHome Architecture Branding" [level=2] [ref=e74]
+          - paragraph [ref=e75]: An architecture identity system balancing premium restraint, practical presentation, and a polished visual language.
+          - generic [ref=e76]:
+            - generic [ref=e77]: Branding
+            - generic [ref=e78]: Architecture
+            - generic [ref=e79]: Identity
+      - link "Zirkona Lab Branding poster image April 13, 2026 Evexa Team Zirkona Lab Branding A precise healthcare identity for a specialized dental lab, designed to build trust across digital and brand touchpoints. Branding Healthcare Dental" [ref=e80] [cursor=pointer]:
+        - /url: /en/blog/zirkona-lab-branding
+        - img "Zirkona Lab Branding poster image" [ref=e82]
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - time [ref=e85]: April 13, 2026
+            - generic [ref=e86]: /
+            - generic [ref=e87]: Evexa Team
+          - heading "Zirkona Lab Branding" [level=2] [ref=e88]
+          - paragraph [ref=e89]: A precise healthcare identity for a specialized dental lab, designed to build trust across digital and brand touchpoints.
+          - generic [ref=e90]:
+            - generic [ref=e91]: Branding
+            - generic [ref=e92]: Healthcare
+            - generic [ref=e93]: Dental
+      - link "Brainbots Branding poster image April 8, 2026 Evexa Team Brainbots Branding A bright identity and digital presence for a kids AI and coding academy, balancing parent trust with student energy. Branding EdTech AI Education" [ref=e94] [cursor=pointer]:
+        - /url: /en/blog/brainbots
+        - img "Brainbots Branding poster image" [ref=e96]
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - time [ref=e99]: April 8, 2026
+            - generic [ref=e100]: /
+            - generic [ref=e101]: Evexa Team
+          - heading "Brainbots Branding" [level=2] [ref=e102]
+          - paragraph [ref=e103]: A bright identity and digital presence for a kids AI and coding academy, balancing parent trust with student energy.
+          - generic [ref=e104]:
+            - generic [ref=e105]: Branding
+            - generic [ref=e106]: EdTech
+            - generic [ref=e107]: AI Education
+      - link "Mr Price - Mobile App poster image April 8, 2026 Evexa Team Mr Price - Mobile App A native iOS and Android B2B commerce app connected to the Mr Price platform for ordering, wallets, and order tracking. Mobile App B2B Commerce Retail" [ref=e108] [cursor=pointer]:
+        - /url: /en/blog/mr-price-app
+        - img "Mr Price - Mobile App poster image" [ref=e110]
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - time [ref=e113]: April 8, 2026
+            - generic [ref=e114]: /
+            - generic [ref=e115]: Evexa Team
+          - heading "Mr Price - Mobile App" [level=2] [ref=e116]
+          - paragraph [ref=e117]: A native iOS and Android B2B commerce app connected to the Mr Price platform for ordering, wallets, and order tracking.
+          - generic [ref=e118]:
+            - generic [ref=e119]: Mobile App
+            - generic [ref=e120]: B2B Commerce
+            - generic [ref=e121]: Retail
+      - link "Mr Price - E-Commerce Platform poster image April 8, 2026 Evexa Team Mr Price - E-Commerce Platform An enterprise B2B commerce platform digitizing ordering, pricing, catalogs, roles, and admin operations for beauty retail. E-Commerce B2B Platform" [ref=e122] [cursor=pointer]:
+        - /url: /en/blog/mr-price-ecommerce-platform
+        - img "Mr Price - E-Commerce Platform poster image" [ref=e124]
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - time [ref=e127]: April 8, 2026
+            - generic [ref=e128]: /
+            - generic [ref=e129]: Evexa Team
+          - heading "Mr Price - E-Commerce Platform" [level=2] [ref=e130]
+          - paragraph [ref=e131]: An enterprise B2B commerce platform digitizing ordering, pricing, catalogs, roles, and admin operations for beauty retail.
+          - generic [ref=e132]:
+            - generic [ref=e133]: E-Commerce
+            - generic [ref=e134]: B2B
+            - generic [ref=e135]: Platform
+      - link "PES Platform poster image April 8, 2026 Evexa Team PES Platform A unified education platform for schools and institutes managing learning, communication, scheduling, content, and progress. EdTech Platform MENA" [ref=e136] [cursor=pointer]:
+        - /url: /en/blog/pes-platform
+        - img "PES Platform poster image" [ref=e138]
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - time [ref=e141]: April 8, 2026
+            - generic [ref=e142]: /
+            - generic [ref=e143]: Evexa Team
+          - heading "PES Platform" [level=2] [ref=e144]
+          - paragraph [ref=e145]: A unified education platform for schools and institutes managing learning, communication, scheduling, content, and progress.
+          - generic [ref=e146]:
+            - generic [ref=e147]: EdTech
+            - generic [ref=e148]: Platform
+            - generic [ref=e149]: MENA
+      - link "Albetar AI Modules poster image March 30, 2026 Evexa Team Albetar AI Modules A production-grade bilingual AI commerce engine using RAG, semantic search, recommendations, and Arabic analytics for hardware retail. AI RAG Commerce" [ref=e150] [cursor=pointer]:
+        - /url: /en/blog/albetar-ai-modules
+        - img "Albetar AI Modules poster image" [ref=e152]
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - time [ref=e155]: March 30, 2026
+            - generic [ref=e156]: /
+            - generic [ref=e157]: Evexa Team
+          - heading "Albetar AI Modules" [level=2] [ref=e158]
+          - paragraph [ref=e159]: A production-grade bilingual AI commerce engine using RAG, semantic search, recommendations, and Arabic analytics for hardware retail.
+          - generic [ref=e160]:
+            - generic [ref=e161]: AI
+            - generic [ref=e162]: RAG
+            - generic [ref=e163]: Commerce
+      - link "Albetar Ecommerce Platform poster image March 30, 2026 Evexa Team Albetar Ecommerce Platform An Arabic-first hardware commerce platform combining customer shopping workflows with enterprise admin, inventory, shipping, and analytics. E-Commerce Arabic RTL Operations" [ref=e164] [cursor=pointer]:
+        - /url: /en/blog/albetar-ecommerce-platform
+        - img "Albetar Ecommerce Platform poster image" [ref=e166]
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - time [ref=e169]: March 30, 2026
+            - generic [ref=e170]: /
+            - generic [ref=e171]: Evexa Team
+          - heading "Albetar Ecommerce Platform" [level=2] [ref=e172]
+          - paragraph [ref=e173]: An Arabic-first hardware commerce platform combining customer shopping workflows with enterprise admin, inventory, shipping, and analytics.
+          - generic [ref=e174]:
+            - generic [ref=e175]: E-Commerce
+            - generic [ref=e176]: Arabic RTL
+            - generic [ref=e177]: Operations
+      - link "BDCC HR Management System poster image March 28, 2026 Evexa Team BDCC HR Management System An internal HR and operations platform centralizing staffing, fleet, finance, documents, compliance, and audit workflows. HRMS Operations Saudi Arabia" [ref=e178] [cursor=pointer]:
+        - /url: /en/blog/bdcc-hr-management-system
+        - img "BDCC HR Management System poster image" [ref=e180]
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - time [ref=e183]: March 28, 2026
+            - generic [ref=e184]: /
+            - generic [ref=e185]: Evexa Team
+          - heading "BDCC HR Management System" [level=2] [ref=e186]
+          - paragraph [ref=e187]: An internal HR and operations platform centralizing staffing, fleet, finance, documents, compliance, and audit workflows.
+          - generic [ref=e188]:
+            - generic [ref=e189]: HRMS
+            - generic [ref=e190]: Operations
+            - generic [ref=e191]: Saudi Arabia
+      - link "Bin Delamah PMS poster image March 28, 2026 Evexa Team Bin Delamah PMS A construction operations platform for materials, approvals, BOQ tracking, gate passes, reporting, and role-tiered governance. Construction Platform Operations" [ref=e192] [cursor=pointer]:
+        - /url: /en/blog/bin-delamah-pms
+        - img "Bin Delamah PMS poster image" [ref=e194]
+        - generic [ref=e195]:
+          - generic [ref=e196]:
+            - time [ref=e197]: March 28, 2026
+            - generic [ref=e198]: /
+            - generic [ref=e199]: Evexa Team
+          - heading "Bin Delamah PMS" [level=2] [ref=e200]
+          - paragraph [ref=e201]: A construction operations platform for materials, approvals, BOQ tracking, gate passes, reporting, and role-tiered governance.
+          - generic [ref=e202]:
+            - generic [ref=e203]: Construction
+            - generic [ref=e204]: Platform
+            - generic [ref=e205]: Operations
+  - contentinfo [ref=e206]:
+    - generic [ref=e207]:
+      - generic [ref=e208]:
+        - heading "Let's build something clear and intelligent." [level=2] [ref=e209]
+        - paragraph [ref=e210]: Evexa is a MENA-focused AI digital solutions company with offices in Alexandria and Riyadh.
+        - link "Free AI Consultation" [ref=e212] [cursor=pointer]:
+          - /url: /en#cta
+          - text: Free AI Consultation
+          - img [ref=e213]
+      - generic [ref=e216]:
+        - generic [ref=e218]:
+          - link "About" [ref=e219] [cursor=pointer]:
+            - /url: /en/about
+          - link "Our Work" [ref=e220] [cursor=pointer]:
+            - /url: /en#work
+          - link "Blog" [ref=e221] [cursor=pointer]:
+            - /url: /en/blog
+          - link "FAQ" [ref=e222] [cursor=pointer]:
+            - /url: /en#faq
+        - generic [ref=e224]:
+          - link "AI Assistants & Chatbots" [ref=e225] [cursor=pointer]:
+            - /url: /en/services/ai-assistants-chatbots
+          - link "RAG & Knowledge Search" [ref=e226] [cursor=pointer]:
+            - /url: /en/services/rag-knowledge-search
+          - link "Workflow Automation" [ref=e227] [cursor=pointer]:
+            - /url: /en/services/workflow-automation
+          - link "Custom Business Platforms" [ref=e228] [cursor=pointer]:
+            - /url: /en/services/custom-business-platforms
+          - link "Web & Mobile Applications" [ref=e229] [cursor=pointer]:
+            - /url: /en/services/web-mobile-applications
+          - link "Branding & Digital Experience" [ref=e230] [cursor=pointer]:
+            - /url: /en/services/branding-digital-experience
+    - generic [ref=e231]:
+      - link "Evexa home" [ref=e232] [cursor=pointer]:
+        - /url: /en
+        - img [ref=e234]
+      - generic [ref=e243]:
+        - link "LinkedIn" [ref=e244] [cursor=pointer]:
+          - /url: https://www.linkedin.com/
+          - img [ref=e245]
+        - link "Instagram" [ref=e247] [cursor=pointer]:
+          - /url: https://www.instagram.com/
+          - img [ref=e248]
+        - link "Facebook" [ref=e250] [cursor=pointer]:
+          - /url: https://www.facebook.com/
+          - img [ref=e251]
+        - link "WhatsApp" [ref=e253] [cursor=pointer]:
+          - /url: https://wa.me/966000000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20Evexa%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%8A.
+          - img [ref=e254]
+        - link "Email" [ref=e256] [cursor=pointer]:
+          - /url: mailto:hello@evexa.ai
+          - img [ref=e257]
+  - region "Notifications alt+T"

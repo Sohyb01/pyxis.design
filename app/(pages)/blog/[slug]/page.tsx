@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import { siteConfig, socialImage } from "@/app/seo";
+import { siteConfig } from "@/app/seo";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -35,10 +35,8 @@ export async function generateMetadata({
     notFound();
   }
 
-  const imageUrl = post.frontmatter.coverImage ?? socialImage.openGraphPath;
-  const imageAlt =
-    post.frontmatter.coverAlt ??
-    `${post.frontmatter.title} article from ${siteConfig.name}`;
+  const imageUrl = post.posterImage;
+  const imageAlt = `${post.frontmatter.title} poster image`;
   const publishDate = new Date(post.frontmatter.publishDate);
   const publishedTime = Number.isNaN(publishDate.getTime())
     ? undefined
@@ -62,8 +60,8 @@ export async function generateMetadata({
       images: [
         {
           url: imageUrl,
-          width: socialImage.width,
-          height: socialImage.height,
+          width: 2400,
+          height: 1200,
           alt: imageAlt,
         },
       ],

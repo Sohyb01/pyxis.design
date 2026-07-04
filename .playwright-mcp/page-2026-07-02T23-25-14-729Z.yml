@@ -1,0 +1,136 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Evexa Home" [ref=e4] [cursor=pointer]:
+        - /url: /en
+        - img [ref=e7]
+      - generic [ref=e14]:
+        - link "ar" [ref=e15] [cursor=pointer]:
+          - /url: /ar/blog/brainbots
+          - img [ref=e16]
+          - text: ar
+        - link "Free AI Consultation" [ref=e19] [cursor=pointer]:
+          - /url: /en#cta
+          - text: Free AI Consultation
+          - img [ref=e20]
+        - button "Toggle menu" [ref=e23]
+  - main [ref=e28]:
+    - article [ref=e29]:
+      - generic [ref=e30]:
+        - link "Back to blog" [ref=e31] [cursor=pointer]:
+          - /url: /en/blog
+          - img [ref=e32]
+          - text: Back to blog
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - time [ref=e36]: April 8, 2026
+            - generic [ref=e37]: /
+            - generic [ref=e38]: Evexa Team
+          - heading "Brainbots Branding" [level=1] [ref=e39]
+          - paragraph [ref=e40]: A bright identity and digital presence for a kids AI and coding academy, balancing parent trust with student energy.
+          - generic [ref=e41]:
+            - generic [ref=e42]: Branding
+            - generic [ref=e43]: EdTech
+            - generic [ref=e44]: AI Education
+          - img "Brainbots Branding" [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - img "Core BrainBots brand application preview" [ref=e50] [cursor=pointer]
+            - img "Kids-first AI and coding academy visual direction" [ref=e52] [cursor=pointer]
+            - img "Marketing design with playful learning narrative" [ref=e54] [cursor=pointer]
+            - img "Campaign-focused identity expansion" [ref=e56] [cursor=pointer]
+            - img "Digital-first communication layout" [ref=e58] [cursor=pointer]
+            - img "Program messaging and conversion creative" [ref=e60] [cursor=pointer]
+            - img "Audience-facing brand consistency sample" [ref=e62] [cursor=pointer]
+            - img "Educational product storytelling execution" [ref=e64] [cursor=pointer]
+            - img "Promotional direction for student engagement" [ref=e66] [cursor=pointer]
+            - img "Learning journey and value proposition design" [ref=e68] [cursor=pointer]
+            - img "Extended visual identity application" [ref=e70] [cursor=pointer]
+            - img "Brand system composition and layout depth" [ref=e72] [cursor=pointer]
+            - img "Creative suite for parent-focused communication" [ref=e74] [cursor=pointer]
+            - img "Design consistency across campaign touchpoints" [ref=e76] [cursor=pointer]
+            - img "Playful technology-forward brand composition" [ref=e78] [cursor=pointer]
+            - img "High-impact creative for academy positioning" [ref=e80] [cursor=pointer]
+            - img "Visual continuity for growth and trust messaging" [ref=e82] [cursor=pointer]
+            - img "Digital branding system presentation" [ref=e84] [cursor=pointer]
+            - img "Program promotion and identity storytelling" [ref=e86] [cursor=pointer]
+            - img "Final brand direction showcase" [ref=e88] [cursor=pointer]
+          - heading "Brand and digital presence for a kids AI and coding academy" [level=3] [ref=e89]
+          - paragraph [ref=e90]: BrainBots positions itself as a programming and AI school for children, focused on helping students build practical skills early through a playful but structured learning journey.
+          - paragraph [ref=e91]: The brand direction was crafted to communicate confidence to parents and excitement to students at the same time, balancing educational credibility with energetic, youth-friendly visuals.
+          - heading "Messaging Direction" [level=2] [ref=e92]
+          - list [ref=e93]:
+            - listitem [ref=e94]: "\"Play. Code. Innovate.\" as a clear and memorable learning mantra"
+            - listitem [ref=e95]: Outcome-focused positioning around practical coding and AI skills
+            - listitem [ref=e96]: Conversion-first framing with free session entry points
+            - listitem [ref=e97]: Parent trust language centered on visibility, support, and progress tracking
+          - heading "Experience Highlights Reflected in the Brand" [level=2] [ref=e98]
+          - list [ref=e99]:
+            - listitem [ref=e100]: Globally recognized certification positioning
+            - listitem [ref=e101]: Smart parent dashboard and support touchpoints
+            - listitem [ref=e102]: 24/7 instructor chat emphasis
+            - listitem [ref=e103]: AI-powered student portfolio narrative
+            - listitem [ref=e104]: Student project showcase featuring hands-on creations
+            - listitem [ref=e105]: Arabic/English audience readiness
+          - heading "Creative Outcome" [level=2] [ref=e106]
+          - paragraph [ref=e107]: The BrainBots branding system gave the academy a unified visual language across promotional and digital touchpoints, helping present a clear identity in the EdTech space. The final direction supports stronger first impressions, clearer value communication, and a smoother path from discovery to trial-session conversion.
+  - contentinfo [ref=e108]:
+    - generic:
+      - img
+    - generic:
+      - img
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - heading "Let's build something clear and intelligent." [level=2] [ref=e111]
+        - paragraph [ref=e112]: Evexa is a MENA-focused AI digital solutions company with offices in Alexandria and Riyadh.
+        - link "Free AI Consultation" [ref=e114] [cursor=pointer]:
+          - /url: /en#cta
+          - text: Free AI Consultation
+          - img [ref=e115]
+      - generic [ref=e118]:
+        - generic [ref=e120]:
+          - link "About" [ref=e121] [cursor=pointer]:
+            - /url: /en/about
+          - link "Our Work" [ref=e122] [cursor=pointer]:
+            - /url: /en#work
+          - link "Blog" [ref=e123] [cursor=pointer]:
+            - /url: /en/blog
+          - link "FAQ" [ref=e124] [cursor=pointer]:
+            - /url: /en#faq
+        - generic [ref=e126]:
+          - link "AI Assistants & Chatbots" [ref=e127] [cursor=pointer]:
+            - /url: /en/services/ai-assistants-chatbots
+          - link "RAG & Knowledge Search" [ref=e128] [cursor=pointer]:
+            - /url: /en/services/rag-knowledge-search
+          - link "Workflow Automation" [ref=e129] [cursor=pointer]:
+            - /url: /en/services/workflow-automation
+          - link "Custom Business Platforms" [ref=e130] [cursor=pointer]:
+            - /url: /en/services/custom-business-platforms
+          - link "Web & Mobile Applications" [ref=e131] [cursor=pointer]:
+            - /url: /en/services/web-mobile-applications
+          - link "Branding & Digital Experience" [ref=e132] [cursor=pointer]:
+            - /url: /en/services/branding-digital-experience
+    - generic [ref=e133]:
+      - link "Evexa home" [ref=e134] [cursor=pointer]:
+        - /url: /en
+        - img [ref=e136]
+      - generic [ref=e145]:
+        - link "LinkedIn" [ref=e146] [cursor=pointer]:
+          - /url: https://www.linkedin.com/
+          - img [ref=e147]
+        - link "Instagram" [ref=e149] [cursor=pointer]:
+          - /url: https://www.instagram.com/
+          - img [ref=e150]
+        - link "Facebook" [ref=e152] [cursor=pointer]:
+          - /url: https://www.facebook.com/
+          - img [ref=e153]
+        - link "WhatsApp" [ref=e155] [cursor=pointer]:
+          - /url: https://wa.me/966000000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20Evexa%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%B1%D9%82%D9%85%D9%8A.
+          - img [ref=e156]
+        - link "Email" [ref=e158] [cursor=pointer]:
+          - /url: mailto:hello@evexa.ai
+          - img [ref=e159]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e166] [cursor=pointer]:
+    - img [ref=e167]
+  - alert [ref=e170]
