@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Blog | ${siteConfig.name}`,
     description: blogDescription,
-    creator: "@minimumviableme",
+    creator: "@hoobiedesign",
     images: [socialImage.twitterPath],
   },
 };

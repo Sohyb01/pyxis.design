@@ -5,7 +5,7 @@ import { CtaActions } from "@/components/custom/CtaActions";
 export function FooterCta({
   showArrow = false,
   showLinkedIn = false,
-  twitterHref = "https://x.com/minimumviableme",
+  twitterHref = "https://x.com/hoobiedesign",
 }: {
   showArrow?: boolean;
   showLinkedIn?: boolean;

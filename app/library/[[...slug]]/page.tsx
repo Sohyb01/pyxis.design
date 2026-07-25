@@ -58,7 +58,7 @@ export async function generateMetadata({
           card: "summary_large_image",
           title: `${entry.title} | ${siteConfig.name}`,
           description: entry.description,
-          creator: "@minimumviableme",
+          creator: "@hoobiedesign",
           images: [socialImage.twitterPath],
         },
       };
@@ -90,7 +90,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${defaultTitle} | ${siteConfig.name}`,
       description: defaultDescription,
-      creator: "@minimumviableme",
+      creator: "@hoobiedesign",
       images: [socialImage.twitterPath],
     },
   };
