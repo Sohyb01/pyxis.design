@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brainbots Brand Guidelines — Design Improvement</title>
+    <style>
+      :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f5f6f8; color: #111318; line-height: 1.6; }
+      main { width: min(900px, calc(100% - 32px)); margin: 48px auto; background: white; padding: clamp(24px, 5vw, 64px); border: 1px solid #dde1e7; }
+      h1 { margin: 0 0 24px; font-size: clamp(36px, 7vw, 68px); line-height: 1; }
+      h2 { margin-top: 56px; border-top: 1px solid #dde1e7; padding-top: 24px; }
+      h3 { margin-top: 40px; }
+      .tldr { padding: 20px; background: #eaf4ff; border-left: 4px solid #2675ff; }
+      figure { margin: 24px 0 36px; }
+      img { display: block; width: 100%; height: auto; border: 1px solid #dde1e7; border-radius: 8px; box-shadow: 0 14px 36px rgba(20, 28, 45, .08); }
+      figcaption { margin-top: 10px; color: #626b79; font-size: 14px; }
+      a { color: #245cff; }
+      pre { overflow-x: auto; padding: 18px; border: 1px solid #dde1e7; background: #f8f9fb; font-size: 13px; line-height: 1.4; }
+      ul { padding-left: 22px; }
+      .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      @media (max-width: 700px) { .pair { grid-template-columns: 1fr; } main { margin-block: 16px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Brainbots Brand Guidelines</h1>
+      <div class="tldr"><strong>TL;DR:</strong> Replace balanced dashboard-like compositions with VANTA’s deliberately uneven editorial hierarchy: oversized titles and specimens, large quiet stages, small external captions, and widely spaced asset chapters.</div>
+      <p>Final verification uses current 1440px captures for every revised section. Checks at 390px, 744px, and 1024px found no horizontal overflow, with the Moodboard resolving to the configured 2/3/4-column progression.</p>
+
+      <h2>Previous state</h2>
+      <figure><img src="references/current.png" alt="Previous Brainbots Typography section" /><figcaption>The previous Typography layout distributed visual weight evenly across the intro, family data, and weight sheets.</figcaption></figure>
+
+      <h2>1. Dominant type-family specimen</h2>
+      <p>Give the family name most of the left half, use tall vertical weight sheets on the right, and move supporting detail below the first viewport.</p>
+      <figure><img src="references/vanta-typography.png" alt="VANTA Typography reference" /><figcaption>VANTA Typography — <a href="https://vessa.design/brand/vanta">live web reference</a>.</figcaption></figure>
+      <figure><img src="references/final-typography.png" alt="Revised Brainbots Typography section" /><figcaption>Brainbots revision — the same hierarchy adapted to Sora and Tajawal.</figcaption></figure>
+
+      <h2>2. Large stages and external captions</h2>
+      <div class="pair">
+        <figure><img src="references/vanta-motion.png" alt="VANTA Motion reference" /><figcaption>Motion stages carry the composition.</figcaption></figure>
+        <figure><img src="references/vanta-voice.png" alt="VANTA Voice and tone reference" /><figcaption>Statements sit in large panels; explanations sit below.</figcaption></figure>
+      </div>
+      <div class="pair">
+        <figure><img src="references/final-motion.png" alt="Revised Brainbots Motion section" /><figcaption>Brainbots Motion revision.</figcaption></figure>
+        <figure><img src="references/final-voice-and-tone.png" alt="Revised Brainbots Voice and tone section" /><figcaption>Brainbots Voice and tone revision.</figcaption></figure>
+      </div>
+
+      <h2>3. Consistent editorial imagery</h2>
+      <div class="pair">
+        <figure><img src="references/vanta-moodboard.png" alt="VANTA Moodboard reference" /><figcaption>Wide visual field with restrained controls.</figcaption></figure>
+        <figure><img src="references/vanta-applications.png" alt="VANTA Applications reference" /><figcaption>Equal application mats and small labels.</figcaption></figure>
+      </div>
+      <div class="pair">
+        <figure><img src="references/final-moodboard.png" alt="Revised Brainbots Moodboard section" /><figcaption>Brainbots Columns-only moodboard revision.</figcaption></figure>
+        <figure><img src="references/final-applications.png" alt="Revised Brainbots Applications section" /><figcaption>Brainbots Applications revision.</figcaption></figure>
+      </div>
+
+      <h2>4. Asset categories as chapters</h2>
+      <p>Use a strong intro, a quiet complete-pack action, and long vertical category bands with flat download rows.</p>
+      <figure><img src="references/vanta-assets.png" alt="VANTA Assets reference" /><figcaption>VANTA Assets — <a href="https://vessa.design/brand/vanta">live web reference</a>.</figcaption></figure>
+      <figure><img src="references/final-assets.png" alt="Revised Brainbots Assets section" /><figcaption>Brainbots Assets revision.</figcaption></figure>
+
+      <h2>What remains strong</h2>
+      <ul>
+        <li>The nine-section information architecture.</li>
+        <li>Typed, data-driven brand content and assets.</li>
+        <li>Aligned navigation and document metadata.</li>
+        <li>Purposeful empty states for missing logo and motion content.</li>
+      </ul>
+    </main>
+  </body>
+</html>

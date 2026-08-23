@@ -1,0 +1,504 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary "Brand guideline navigation" [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - paragraph [ref=e8]: Brainbots
+          - paragraph [ref=e9]: Brand guidelines
+        - navigation [ref=e11]:
+          - paragraph [ref=e12]: Contents
+          - list "Brand guideline sections" [ref=e13]:
+            - listitem [ref=e14]:
+              - button "01 Introduction" [ref=e15] [cursor=pointer]:
+                - generic [ref=e16]: "01"
+                - generic [ref=e17]: Introduction
+            - listitem [ref=e18]:
+              - button "02 Logo" [ref=e19] [cursor=pointer]:
+                - generic [ref=e20]: "02"
+                - generic [ref=e21]: Logo
+            - listitem [ref=e22]:
+              - button "03 Color" [ref=e23] [cursor=pointer]:
+                - generic [ref=e24]: "03"
+                - generic [ref=e25]: Color
+            - listitem [ref=e26]:
+              - button "04 Typography" [ref=e27] [cursor=pointer]:
+                - generic [ref=e28]: "04"
+                - generic [ref=e29]: Typography
+            - listitem [ref=e30]:
+              - button "05 Motion" [ref=e31] [cursor=pointer]:
+                - generic [ref=e32]: "05"
+                - generic [ref=e33]: Motion
+            - listitem [ref=e34]:
+              - button "06 Voice and tone" [ref=e35] [cursor=pointer]:
+                - generic [ref=e36]: "06"
+                - generic [ref=e37]: Voice and tone
+            - listitem [ref=e38]:
+              - button "07 Moodboard" [ref=e39] [cursor=pointer]:
+                - generic [ref=e40]: "07"
+                - generic [ref=e41]: Moodboard
+            - listitem [ref=e42]:
+              - button "08 Applications" [ref=e43] [cursor=pointer]:
+                - generic [ref=e44]: "08"
+                - generic [ref=e45]: Applications
+            - listitem [ref=e46]:
+              - button "09 Assets" [ref=e47] [cursor=pointer]:
+                - generic [ref=e48]: "09"
+                - generic [ref=e49]: Assets
+    - main [ref=e50]:
+      - generic:
+        - generic:
+          - button "Hide sections" [expanded]
+      - region [ref=e51]:
+        - generic [ref=e52]:
+          - img "A Brainbots learner seated in a workshop" [ref=e53]
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: Brainbots · Introduction
+            - paragraph [ref=e58]: 01 / 09
+          - img "Brainbots primary logo" [ref=e60]
+          - generic [ref=e61]:
+            - heading "Curious minds create what comes next." [level=1] [ref=e62]
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - term [ref=e65]: Audience
+                - definition [ref=e66]: Ages 5–18
+              - generic [ref=e67]:
+                - term [ref=e68]: Region
+                - definition [ref=e69]: The Gulf
+              - generic [ref=e70]:
+                - term [ref=e71]: Format
+                - definition [ref=e72]: Live classes
+              - generic [ref=e73]:
+                - term [ref=e74]: Outcome
+                - definition [ref=e75]: Real projects
+        - generic [ref=e76]:
+          - heading "Play, code, innovate." [level=2] [ref=e77]
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: Brainbots helps children and teenagers move from using technology to creating with it.
+            - paragraph [ref=e80]: Live, project-based learning turns big technical ideas into approachable experiences. Every touchpoint should feel energetic and optimistic for learners while remaining specific, transparent, and reassuring for parents.
+      - region [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Brainbots · Logo
+            - paragraph [ref=e85]: 02 / 09
+          - article [ref=e86]:
+            - generic [ref=e87]:
+              - heading "Primary logo" [level=2] [ref=e88]
+              - paragraph [ref=e89]: Use the complete wordmark for introductions, campaign sign-offs, and layouts with enough horizontal space.
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - paragraph [ref=e92]: Light
+                - img "Brainbots primary logo" [ref=e94]
+              - generic [ref=e95]:
+                - paragraph [ref=e96]: Dark
+                - img "Brainbots primary logo" [ref=e98]
+              - generic [ref=e99]:
+                - paragraph [ref=e100]: Clear space
+                - img "Brainbots primary logo" [ref=e102]
+                - generic [ref=e103]:
+                  - paragraph [ref=e104]: Primary logo clear space
+                  - paragraph [ref=e105]: Keep clear space equal to half the mark's height on every side. Nothing enters this zone.
+          - article [ref=e106]:
+            - generic [ref=e107]:
+              - heading "Logomark" [level=2] [ref=e108]
+              - paragraph [ref=e109]: Use the compact mark only where the brand is already established or available space is constrained.
+            - generic [ref=e110]:
+              - generic [ref=e111]:
+                - paragraph [ref=e112]: Light
+                - img "Brainbots logomark" [ref=e114]
+              - generic [ref=e115]:
+                - paragraph [ref=e116]: Dark
+                - img "Brainbots logomark" [ref=e118]
+              - generic [ref=e119]:
+                - paragraph [ref=e120]: Clear space
+                - img "Brainbots logomark" [ref=e122]
+                - generic [ref=e123]:
+                  - paragraph [ref=e124]: Logomark clear space
+                  - paragraph [ref=e125]: Keep clear space equal to half the mark's height on every side. Nothing enters this zone.
+      - region [ref=e126]:
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - paragraph [ref=e129]: Brainbots · Color
+            - paragraph [ref=e130]: 03 / 09
+          - generic [ref=e131]:
+            - generic [ref=e132]:
+              - generic [ref=e133]:
+                - heading "Color" [level=2] [ref=e134]
+                - paragraph [ref=e135]: Electric Ultramarine anchors the system, supporting colors add discovery and playfulness.
+              - group "Color view" [ref=e136]:
+                - button "Mosaic" [pressed] [ref=e137] [cursor=pointer]
+                - button "Proportions" [ref=e139] [cursor=pointer]
+            - generic "Brand color mosaic" [ref=e142]:
+              - 'button "Copy White #FFFFFF" [ref=e143] [cursor=pointer]':
+                - generic [ref=e146]:
+                  - generic [ref=e147]: White
+                  - generic [ref=e148]: Copied
+                - generic [ref=e149]:
+                  - generic [ref=e150]: "#FFFFFF"
+                  - generic [ref=e151]: "HSL: 0, 0%, 100%"
+                  - generic [ref=e152]: "RGB: 255, 255, 255"
+                  - generic [ref=e153]: "CMYK: 0%, 0%, 0%, 0%"
+              - 'button "Copy Vampire Black #0A0A0A" [ref=e154] [cursor=pointer]':
+                - generic [ref=e157]:
+                  - generic [ref=e158]: Vampire Black
+                  - generic [ref=e159]: Copied
+                - generic [ref=e160]:
+                  - generic [ref=e161]: "#0A0A0A"
+                  - generic [ref=e162]: "HSL: 0, 0%, 4%"
+                  - generic [ref=e163]: "RGB: 10, 10, 10"
+                  - generic [ref=e164]: "CMYK: 0%, 0%, 0%, 96%"
+              - 'button "Copy Electric Ultramarine #2201FF" [ref=e165] [cursor=pointer]':
+                - generic [ref=e168]:
+                  - generic [ref=e169]: Electric Ultramarine
+                  - generic [ref=e170]: Copied
+                - generic [ref=e171]:
+                  - generic [ref=e172]: "#2201FF"
+                  - generic [ref=e173]: "HSL: 248, 100%, 50%"
+                  - generic [ref=e174]: "RGB: 34, 1, 255"
+                  - generic [ref=e175]: "CMYK: 87%, 100%, 0%, 0%"
+              - 'button "Copy Spring Bud #AEFF02" [ref=e176] [cursor=pointer]':
+                - generic [ref=e179]:
+                  - generic [ref=e180]: Spring Bud
+                  - generic [ref=e181]: Copied
+                - generic [ref=e182]:
+                  - generic [ref=e183]: "#AEFF02"
+                  - generic [ref=e184]: "HSL: 79, 100%, 50%"
+                  - generic [ref=e185]: "RGB: 174, 255, 2"
+                  - generic [ref=e186]: "CMYK: 32%, 0%, 99%, 0%"
+              - 'button "Copy Shocking Pink #FE06BE" [ref=e187] [cursor=pointer]':
+                - generic [ref=e190]:
+                  - generic [ref=e191]: Pink
+                  - generic [ref=e192]: Copied
+                - generic [ref=e193]: "#FE06BE"
+              - 'button "Copy Vivid Yellow #FFE600" [ref=e195] [cursor=pointer]':
+                - generic [ref=e198]:
+                  - generic [ref=e199]: Yellow
+                  - generic [ref=e200]: Copied
+                - generic [ref=e201]: "#FFE600"
+              - 'button "Copy Lavender Indigo #A44AFE" [ref=e203] [cursor=pointer]':
+                - generic [ref=e206]:
+                  - generic [ref=e207]: Purple
+                  - generic [ref=e208]: Copied
+                - generic [ref=e209]: "#A44AFE"
+              - 'button "Copy Vivid Red #FE3649" [ref=e211] [cursor=pointer]':
+                - generic [ref=e214]:
+                  - generic [ref=e215]: Red
+                  - generic [ref=e216]: Copied
+                - generic [ref=e217]: "#FE3649"
+      - region [ref=e220]:
+        - generic [ref=e221]:
+          - generic [ref=e222]:
+            - paragraph [ref=e223]: Brainbots · Typography
+            - paragraph [ref=e224]: 04 / 09
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - heading "Typography" [level=2] [ref=e227]
+              - paragraph [ref=e228]: Sora carries the Latin system with geometric confidence. Tajawal gives Arabic the same friendly clarity and range.
+              - tablist "Typography language" [ref=e229]:
+                - tab "Latin" [selected] [ref=e230] [cursor=pointer]
+                - tab "Arabic" [ref=e231] [cursor=pointer]
+            - tabpanel "Latin" [ref=e232]:
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - heading "Sora" [level=3] [ref=e236]
+                  - generic [ref=e237]:
+                    - generic [ref=e238]:
+                      - term [ref=e239]: Role
+                      - definition [ref=e240]: Latin typeface
+                    - generic [ref=e241]:
+                      - term [ref=e242]: Source
+                      - definition [ref=e243]: Google Fonts
+                    - generic [ref=e244]:
+                      - term [ref=e245]: Styles
+                      - definition [ref=e246]: Variable 100–800
+                  - paragraph [ref=e247]: Open forms keep Latin display and text technical, never cold.
+                  - paragraph [ref=e248]: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 &?!@#%
+                - list "Sora weight specimens" [ref=e249]:
+                  - listitem [ref=e250]:
+                    - generic [ref=e251]: Medium
+                    - generic [ref=e253]: a
+                  - listitem [ref=e254]:
+                    - generic [ref=e255]: Semibold
+                    - generic [ref=e257]: a
+                  - listitem [ref=e258]:
+                    - generic [ref=e259]:
+                      - generic [ref=e260]: Bold
+                      - generic [ref=e261]: "700"
+                    - generic [ref=e262]: a
+              - generic [ref=e263]:
+                - generic [ref=e264]:
+                  - generic [ref=e265]:
+                    - generic [ref=e266]: Display · 48/48
+                    - generic [ref=e267]: Future in every idea.
+                  - generic [ref=e268]:
+                    - generic [ref=e269]: Heading 1 · 30/36
+                    - generic [ref=e270]: Little minds, big bots.
+                  - generic [ref=e271]:
+                    - generic [ref=e272]: Heading 2 · 24/32
+                    - generic [ref=e273]: Create something real.
+                  - generic [ref=e274]:
+                    - generic [ref=e275]: Heading 3 · 20/28
+                    - generic [ref=e276]: Start with curiosity.
+                - generic [ref=e277]:
+                  - generic [ref=e278]:
+                    - generic [ref=e279]: Lead · 18/28
+                    - generic [ref=e280]: Live learning with real instructors.
+                  - generic [ref=e281]:
+                    - generic [ref=e282]: Body large · 16/28
+                    - generic [ref=e283]: Plan, create, check, and explain.
+                  - generic [ref=e284]:
+                    - generic [ref=e285]: Body · 16/24
+                    - generic [ref=e286]: Every class leads to a project.
+                  - generic [ref=e287]:
+                    - generic [ref=e288]: UI · 14/24
+                    - generic [ref=e289]: Start the journey
+                  - generic [ref=e290]:
+                    - generic [ref=e291]: Detail · 12/20
+                    - generic [ref=e292]: LIVE INTERACTIVE CLASS
+      - region [ref=e293]:
+        - generic [ref=e294]:
+          - generic [ref=e295]:
+            - paragraph [ref=e296]: Brainbots · Motion
+            - paragraph [ref=e297]: 05 / 09
+          - generic [ref=e298]:
+            - heading "Motion" [level=2] [ref=e299]
+            - paragraph [ref=e300]: Motion should feel quick, playful, and purposeful. Eases keep every arrival and transition recognizably Brainbots.
+          - generic [ref=e301]:
+            - region [ref=e302]:
+              - heading "In motion" [level=3] [ref=e303]
+              - generic [ref=e304]:
+                - article [ref=e305]:
+                  - img "Enter motion demonstration" [ref=e306]
+                  - generic [ref=e308]:
+                    - heading "Enter" [level=4] [ref=e309]
+                    - paragraph [ref=e310]: Scaling in, opening. Content arriving into view.
+                  - button "Copy this ease" [ref=e312] [cursor=pointer]
+                - article [ref=e314]:
+                  - img "Move motion demonstration" [ref=e315]
+                  - generic [ref=e322]:
+                    - heading "Move" [level=4] [ref=e323]
+                    - paragraph [ref=e324]: Reordering, shuffling. The system responding to a gesture.
+                  - button "Copy this ease" [ref=e326] [cursor=pointer]
+            - region [ref=e328]:
+              - heading "In real use" [level=3] [ref=e329]
+              - generic [ref=e330]:
+                - article [ref=e331]:
+                  - img "Exchange motion example using the Move ease" [ref=e332]:
+                    - generic [ref=e333]:
+                      - img "Brainbots student portrait" [ref=e335]
+                      - img "Brainbots student portrait" [ref=e337]
+                  - heading "Exchange" [level=4] [ref=e338]
+                - article [ref=e339]:
+                  - img "Carousel motion example using the Move ease" [ref=e340]:
+                    - generic [ref=e342]:
+                      - img "Brainbots planning artwork" [ref=e345]
+                      - img "Brainbots website creation artwork" [ref=e348]
+                      - img "Brainbots image creation artwork" [ref=e351]
+                      - img "Brainbots planning artwork" [ref=e354]
+                      - img "Brainbots website creation artwork" [ref=e357]
+                      - img "Brainbots image creation artwork" [ref=e360]
+                  - heading "Carousel" [level=4] [ref=e361]
+                - article [ref=e362]:
+                  - img "Toggle motion example using the Enter ease" [ref=e363]
+                  - heading "Toggle" [level=4] [ref=e367]
+                - article [ref=e368]:
+                  - img "Reveal motion example using the Enter ease" [ref=e369]
+                  - heading "Reveal" [level=4] [ref=e391]
+            - region [ref=e392]:
+              - heading "The curve" [level=3] [ref=e393]
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - article [ref=e396]:
+                    - img "Enter cubic Bézier curve" [ref=e398]
+                    - heading "Enter" [level=4] [ref=e417]
+                    - button "Copy this ease" [ref=e419] [cursor=pointer]
+                  - article [ref=e421]:
+                    - img "Move cubic Bézier curve" [ref=e423]
+                    - heading "Move" [level=4] [ref=e442]
+                    - button "Copy this ease" [ref=e444] [cursor=pointer]
+                - generic [ref=e446]:
+                  - paragraph [ref=e447]: Brainbots motion is quick enough to feel responsive and soft enough to stay welcoming. Enter handles arrival; Move handles change.
+                  - paragraph [ref=e448]: Use these curves consistently across components. Adjust duration and stagger before introducing another ease.
+      - region [ref=e449]:
+        - generic [ref=e450]:
+          - generic [ref=e451]:
+            - paragraph [ref=e452]: Brainbots · Voice and tone
+            - paragraph [ref=e453]: 06 / 09
+          - generic [ref=e454]:
+            - heading "Voice and tone" [level=2] [ref=e455]
+            - paragraph [ref=e456]: Speak clearly to parents . Celebrate possibility and show real experience and outcomes.
+          - generic [ref=e457]:
+            - article [ref=e458]:
+              - heading "Make outcomes visible" [level=3] [ref=e459]
+              - blockquote [ref=e461]: AI creation you can show.
+              - paragraph [ref=e462]: Name the websites, designs, apps, plans, and dashboards learners create.
+            - article [ref=e463]:
+              - heading "Be clear and trustworthy" [level=3] [ref=e464]
+              - blockquote [ref=e466]: Live instructors. Real feedback.
+              - paragraph [ref=e467]: Use concrete proof and plain language instead of broad claims.
+            - article [ref=e468]:
+              - heading "Playful, not childish" [level=3] [ref=e469]
+              - blockquote [ref=e471]: Curiosity turns into something real.
+              - paragraph [ref=e472]: Keep the energy bright and imaginative without talking down to young learners.
+            - article [ref=e473]:
+              - heading "Reassure with specifics" [level=3] [ref=e474]
+              - blockquote [ref=e476]: Your child plans, creates, checks, and explains.
+              - paragraph [ref=e477]: Help parents understand the learning process and the confidence it builds.
+          - generic [ref=e478]:
+            - article [ref=e479]:
+              - heading "Campaign line" [level=3] [ref=e480]
+              - generic [ref=e481]:
+                - generic [ref=e482]: Do
+                - paragraph [ref=e483]: Where Curiosity Meets Technology.
+              - generic [ref=e484]:
+                - generic [ref=e485]: Don't
+                - paragraph [ref=e486]: Unleash limitless innovation today!
+            - article [ref=e487]:
+              - heading "Product specification" [level=3] [ref=e488]
+              - generic [ref=e489]:
+                - generic [ref=e490]: Do
+                - paragraph [ref=e491]: Live interactive classes, not pre-recorded.
+              - generic [ref=e492]:
+                - generic [ref=e493]: Don't
+                - paragraph [ref=e494]: The world’s most revolutionary classes!
+            - article [ref=e495]:
+              - heading "Error message" [level=3] [ref=e496]
+              - generic [ref=e497]:
+                - generic [ref=e498]: Do
+                - paragraph [ref=e499]: Something went wrong. Please try again.
+              - generic [ref=e500]:
+                - generic [ref=e501]: Don't
+                - paragraph [ref=e502]: Oopsie! The bot broke.
+            - article [ref=e503]:
+              - heading "Call to action" [level=3] [ref=e504]
+              - generic [ref=e505]:
+                - generic [ref=e506]: Do
+                - paragraph [ref=e507]: Start the journey.
+              - generic [ref=e508]:
+                - generic [ref=e509]: Don't
+                - paragraph [ref=e510]: Click here now!!!
+      - region [ref=e511]:
+        - generic [ref=e512]:
+          - generic [ref=e513]:
+            - paragraph [ref=e514]: Brainbots · Moodboard
+            - paragraph [ref=e515]: 07 / 09
+          - generic [ref=e516]:
+            - heading "Moodboard" [level=2] [ref=e517]
+            - paragraph [ref=e518]: Warm, candid learning moments alongside bold product imagery and graphic expressions.
+          - list "Brand moodboard" [ref=e519]
+      - region [ref=e520]:
+        - generic [ref=e521]:
+          - generic [ref=e522]:
+            - paragraph [ref=e523]: Brainbots · Applications
+            - paragraph [ref=e524]: 08 / 09
+          - generic [ref=e525]:
+            - heading "Applications" [level=2] [ref=e526]
+            - paragraph [ref=e527]: The Brainbots identity supports public discovery, focused learning, and clear operational tools across every role.
+          - generic [ref=e528]:
+            - figure "Track catalog" [ref=e529]:
+              - img "Brainbots Track catalog application" [ref=e531]
+            - figure "Student dashboard" [ref=e533]:
+              - img "Brainbots Student dashboard application" [ref=e535]
+            - figure "Parent dashboard" [ref=e537]:
+              - img "Brainbots Parent dashboard application" [ref=e539]
+            - figure "Instructor dashboard" [ref=e541]:
+              - img "Brainbots Instructor dashboard application" [ref=e543]
+            - figure "Admin classes" [ref=e545]:
+              - img "Brainbots Admin classes application" [ref=e547]
+      - region [ref=e549]:
+        - generic [ref=e550]:
+          - generic [ref=e551]:
+            - paragraph [ref=e552]: Brainbots · Assets
+            - paragraph [ref=e553]: 09 / 09
+          - generic [ref=e554]:
+            - generic [ref=e555]:
+              - heading "Assets" [level=2] [ref=e556]
+              - paragraph [ref=e557]: Download the local typefaces, implementation-ready color files, and approved imagery used in this guide.
+            - link "Download" [ref=e559] [cursor=pointer]:
+              - /url: /brand/brainbots/brainbots-brand-assets.zip
+          - generic [ref=e560]:
+            - article [ref=e561]:
+              - generic [ref=e562]:
+                - heading "Logo files" [level=3] [ref=e563]
+                - generic [ref=e564]: "2"
+              - generic [ref=e565]:
+                - article [ref=e566]:
+                  - heading "Brainbots primary logo" [level=3] [ref=e569]
+                  - generic [ref=e570]: SVG
+                  - generic [ref=e571]: Reading size…
+                  - generic [ref=e572]: Reading dimensions…
+                  - link "Download Brainbots primary logo, SVG, Reading size…, Reading dimensions…" [ref=e573] [cursor=pointer]:
+                    - /url: /brand/brainbots/logos/brainbots-primary-logo.svg
+                    - text: Download
+                - article [ref=e574]:
+                  - heading "Brainbots logomark" [level=3] [ref=e577]
+                  - generic [ref=e578]: SVG
+                  - generic [ref=e579]: Reading size…
+                  - generic [ref=e580]: Reading dimensions…
+                  - link "Download Brainbots logomark, SVG, Reading size…, Reading dimensions…" [ref=e581] [cursor=pointer]:
+                    - /url: /brand/brainbots/logos/brainbots-logomark.svg
+                    - text: Download
+            - article [ref=e582]:
+              - generic [ref=e583]:
+                - heading "Typefaces" [level=3] [ref=e584]
+                - generic [ref=e585]: "5"
+              - generic [ref=e586]:
+                - generic [ref=e587]:
+                  - paragraph [ref=e588]: Sora variable
+                  - link "Download" [ref=e589] [cursor=pointer]:
+                    - /url: /brand/brainbots/fonts/Sora-Variable.ttf
+                - generic [ref=e590]:
+                  - paragraph [ref=e591]: Tajawal Regular
+                  - link "Download" [ref=e592] [cursor=pointer]:
+                    - /url: /brand/brainbots/fonts/Tajawal-Regular.ttf
+                - generic [ref=e593]:
+                  - paragraph [ref=e594]: Tajawal Medium
+                  - link "Download" [ref=e595] [cursor=pointer]:
+                    - /url: /brand/brainbots/fonts/Tajawal-Medium.ttf
+                - generic [ref=e596]:
+                  - paragraph [ref=e597]: Tajawal Bold
+                  - link "Download" [ref=e598] [cursor=pointer]:
+                    - /url: /brand/brainbots/fonts/Tajawal-Bold.ttf
+                - generic [ref=e599]:
+                  - paragraph [ref=e600]: Tajawal ExtraBold
+                  - link "Download" [ref=e601] [cursor=pointer]:
+                    - /url: /brand/brainbots/fonts/Tajawal-ExtraBold.ttf
+            - article [ref=e602]:
+              - generic [ref=e603]:
+                - heading "Brand colors" [level=3] [ref=e604]
+                - generic [ref=e605]: "2"
+              - generic [ref=e606]:
+                - generic [ref=e607]:
+                  - paragraph [ref=e608]: CSS color variables
+                  - link "Download" [ref=e609] [cursor=pointer]:
+                    - /url: /brand/brainbots/colors.css
+                - generic [ref=e610]:
+                  - paragraph [ref=e611]: Design tokens
+                  - link "Download" [ref=e612] [cursor=pointer]:
+                    - /url: /brand/brainbots/tokens.json
+            - article [ref=e613]:
+              - generic [ref=e614]:
+                - heading "Imagery" [level=3] [ref=e615]
+                - generic [ref=e616]: "3"
+              - generic [ref=e617]:
+                - article [ref=e618]:
+                  - heading "Student portrait" [level=3] [ref=e621]
+                  - generic [ref=e622]: PNG
+                  - generic [ref=e623]: Reading dimensions…
+                  - link "Download Student portrait, PNG, Reading dimensions…" [ref=e624] [cursor=pointer]:
+                    - /url: /brand/brainbots/imagery/student-portrait.png
+                    - text: Download
+                - article [ref=e625]:
+                  - heading "Website creation" [level=3] [ref=e628]
+                  - generic [ref=e629]: PNG
+                  - generic [ref=e630]: Reading dimensions…
+                  - link "Download Website creation, PNG, Reading dimensions…" [ref=e631] [cursor=pointer]:
+                    - /url: /brand/brainbots/imagery/website-creation.png
+                    - text: Download
+                - article [ref=e632]:
+                  - heading "Dashboards creation" [level=3] [ref=e635]
+                  - generic [ref=e636]: PNG
+                  - generic [ref=e637]: Reading dimensions…
+                  - link "Download Dashboards creation, PNG, Reading dimensions…" [ref=e638] [cursor=pointer]:
+                    - /url: /brand/brainbots/imagery/dashboards-creation.png
+                    - text: Download
+  - button "Open Next.js Dev Tools" [ref=e644] [cursor=pointer]

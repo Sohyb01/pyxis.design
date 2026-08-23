@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "./seo";
 import { getBlogPostUrl, getPublishedBlogPosts } from "@/lib/blog-mdx";
+import { brands } from "@/lib/brand";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
@@ -25,6 +26,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${siteConfig.url}/brand`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    ...brands.map((brand) => ({
+      url: `${siteConfig.url}/brand/${brand.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
     ...posts.map((post) => {
       const publishedDate = new Date(post.frontmatter.publishDate);
 

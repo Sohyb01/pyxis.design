@@ -16,16 +16,11 @@ import {
   Sun,
   X,
 } from "lucide-react";
-import {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { MouseEvent, ReactNode, RefObject } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Kbd } from "@/components/ui/kbd";
 import { cn } from "@/lib/utils";
 import {
   getLibraryCategory,
@@ -40,6 +35,7 @@ type CatalogLayout = "grid" | "stack";
 type LibraryTheme = "light" | "dark";
 
 type LibraryBrowserProps = {
+  entrySources: Record<string, string>;
   initialCategorySlug: string | null;
   initialEntrySlug: string | null;
 };
@@ -60,11 +56,11 @@ function getEntryCategory(entry: LibraryEntry) {
 function parseEntryIdFromPath(pathname: string) {
   const parts = pathname.split("/").filter(Boolean);
 
-  if (parts.length === 1 && parts[0] === "libary") {
+  if (parts.length === 1 && parts[0] === "library") {
     return null;
   }
 
-  if (parts.length !== 3 || parts[0] !== "libary") {
+  if (parts.length !== 3 || parts[0] !== "library") {
     return null;
   }
 
@@ -92,7 +88,9 @@ function isEditableTarget(target: EventTarget | null) {
 }
 
 function getPreviewSources(entries: LibraryEntry[]) {
-  return entries.flatMap((entry) => (entry.previewSrc ? [entry.previewSrc] : []));
+  return entries.flatMap((entry) =>
+    entry.previewSrc ? [entry.previewSrc] : [],
+  );
 }
 
 function readStoredLayout(): CatalogLayout {
@@ -122,6 +120,7 @@ function readStoredTheme(): LibraryTheme {
 }
 
 export function LibraryBrowser({
+  entrySources,
   initialCategorySlug,
   initialEntrySlug,
 }: LibraryBrowserProps) {
@@ -139,11 +138,12 @@ export function LibraryBrowser({
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSearchIndex, setSelectedSearchIndex] = useState(0);
   const [copiedSource, setCopiedSource] = useState(false);
-  const historyDepthRef = useRef(0);
   const preferencesLoadedRef = useRef(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  const activeEntry = activeEntryId ? entryById.get(activeEntryId) ?? null : null;
+  const activeEntry = activeEntryId
+    ? (entryById.get(activeEntryId) ?? null)
+    : null;
   const activeCategory = activeEntry ? getEntryCategory(activeEntry) : null;
 
   const searchableEntries = useMemo(
@@ -199,25 +199,26 @@ export function LibraryBrowser({
         return;
       }
 
-      historyDepthRef.current += 1;
-      window.history.pushState({ entryId: entry.id, libary: true }, "", entry.href);
+      window.history.pushState(
+        { entryId: entry.id, libary: true },
+        "",
+        entry.href,
+      );
     },
     [],
   );
 
-  const navigateHome = useCallback((options?: { replace?: boolean }) => {
+  const navigateHome = useCallback(() => {
     setActiveEntryId(null);
     setIsSearchOpen(false);
     setIsCodeOpen(false);
     setCopiedSource(false);
 
-    if (options?.replace) {
-      window.history.replaceState({ entryId: null, libary: true }, "", "/libary");
-      return;
-    }
-
-    historyDepthRef.current += 1;
-    window.history.pushState({ entryId: null, libary: true }, "", "/libary");
+    window.history.replaceState(
+      { entryId: null, libary: true },
+      "",
+      "/library",
+    );
   }, []);
 
   const navigateByOffset = useCallback(
@@ -281,6 +282,11 @@ export function LibraryBrowser({
   }, [activeEntry, navigateToEntry]);
 
   const closeOrBack = useCallback(() => {
+    if (activeEntry) {
+      navigateHome();
+      return;
+    }
+
     if (isSearchOpen) {
       setIsSearchOpen(false);
       return;
@@ -288,19 +294,7 @@ export function LibraryBrowser({
 
     if (isCodeOpen) {
       setIsCodeOpen(false);
-      return;
     }
-
-    if (!activeEntry) {
-      return;
-    }
-
-    if (historyDepthRef.current > 0) {
-      window.history.back();
-      return;
-    }
-
-    navigateHome({ replace: true });
   }, [activeEntry, isCodeOpen, isSearchOpen, navigateHome]);
 
   const openSearch = useCallback(() => {
@@ -327,13 +321,15 @@ export function LibraryBrowser({
     }
 
     try {
-      await window.navigator.clipboard.writeText(activeEntry.source);
+      await window.navigator.clipboard.writeText(
+        entrySources[activeEntry.id] ?? "",
+      );
       setCopiedSource(true);
       window.setTimeout(() => setCopiedSource(false), 1400);
     } catch {
       setCopiedSource(false);
     }
-  }, [activeEntry]);
+  }, [activeEntry, entrySources]);
 
   useEffect(() => {
     const frameId = window.requestAnimationFrame(() => {
@@ -376,7 +372,6 @@ export function LibraryBrowser({
     );
 
     const handlePopState = () => {
-      historyDepthRef.current = Math.max(0, historyDepthRef.current - 1);
       setIsSearchOpen(false);
       setIsCodeOpen(false);
       setCopiedSource(false);
@@ -559,6 +554,7 @@ export function LibraryBrowser({
           copied={copiedSource}
           entry={activeEntry}
           isOpen={isCodeOpen}
+          source={entrySources[activeEntry.id] ?? ""}
           onClose={() => setIsCodeOpen(false)}
           onCopy={copySource}
         />
@@ -578,13 +574,8 @@ export function LibraryBrowser({
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-24 pt-28 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-muted-foreground">
-            Folder
-          </p>
-          <h1 className="mt-4 text-5xl font-semibold tracking-normal sm:text-7xl">
-            Libary.
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+          <h1 className="mt-4 text-h2">Libary.</h1>
+          <p className="mt-4 max-w-2xl text-p_ui text-muted-foreground">
             Empty component catalogs with devl-style browsing, full-screen
             previews, search, and keyboard-first navigation.
           </p>
@@ -632,29 +623,25 @@ function HomeHeader({
   onTheme: () => void;
 }) {
   return (
-    <header className="fixed inset-x-0 top-0 z-30 border-b border-border/80 bg-background/90 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-30 border-b border-border bg-background">
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
-        <div className="flex min-w-0 items-center gap-3 max-[760px]:hidden">
-          <span className="size-2 rounded-full bg-foreground" />
-          <span className="truncate font-mono text-xs uppercase tracking-[0.32em]">
-            Pyxis libary
-          </span>
-          <span className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground lg:inline">
+        <div className="hidden min-w-0 items-center gap-3 md:flex">
+          <span className="truncate text-subtle_semibold">Pyxis libary</span>
+          <span className="hidden text-detail text-muted-foreground lg:inline">
             {libraryEntries.length.toString().padStart(2, "0")} files /{" "}
             {libraryCategories.length.toString().padStart(2, "0")} folders
           </span>
         </div>
-        <div className="flex min-w-0 flex-1 items-center justify-end gap-2 max-[760px]:justify-center">
+        <div className="flex min-w-0 flex-1 items-center justify-center gap-2 md:justify-end">
           <div
             aria-label="Layout"
-            className="flex items-center rounded-[8px] border border-border bg-background p-1 max-[760px]:hidden"
+            className="hidden items-center rounded-md border border-border bg-background p-1 md:flex"
             role="group"
           >
             <Button
               aria-label="Grid view"
               aria-pressed={catalogLayout === "grid"}
               className={cn(
-                "size-7 rounded-[6px]",
                 catalogLayout === "grid" && "bg-foreground text-background",
               )}
               size="icon-xs"
@@ -668,7 +655,6 @@ function HomeHeader({
               aria-label="Stack view"
               aria-pressed={catalogLayout === "stack"}
               className={cn(
-                "size-7 rounded-[6px]",
                 catalogLayout === "stack" && "bg-foreground text-background",
               )}
               size="icon-xs"
@@ -680,20 +666,20 @@ function HomeHeader({
             </Button>
           </div>
           <Button
-            className="h-8 rounded-[8px] px-3 font-mono text-xs max-[420px]:px-2"
+            className="max-sm:px-2"
+            size="sm"
             type="button"
             variant="outline"
             onClick={onSearch}
           >
             <Search className="size-3.5" />
-            <span className="max-[420px]:hidden">Search</span>
-            <span className="max-[520px]:hidden">
+            <span className="max-sm:hidden">Search</span>
+            <span className="hidden md:inline">
               <Kbd>Ctrl K</Kbd>
             </span>
           </Button>
           <Button
             aria-label="Random example"
-            className="size-8 rounded-[8px]"
             size="icon-sm"
             type="button"
             variant="ghost"
@@ -702,8 +688,9 @@ function HomeHeader({
             <Shuffle className="size-4" />
           </Button>
           <Button
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            className="size-8 rounded-[8px]"
+            aria-label={
+              theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+            }
             size="icon-sm"
             type="button"
             variant="ghost"
@@ -732,19 +719,12 @@ function CategorySection({
 }) {
   return (
     <section className="border-t border-border pt-8">
-      <div className="mb-6 flex items-start gap-4">
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-[8px] border border-border bg-muted">
-          <span className={cn("size-2.5 rounded-full", category.accentClass)} />
-        </div>
-        <div className="min-w-0">
-          <h2 className="text-3xl font-semibold tracking-normal">
-            {category.name}
-          </h2>
-          <p className="mt-2 font-mono text-xs leading-6 text-muted-foreground">
-            {category.description} /{" "}
-            {category.entries.length.toString().padStart(2, "0")} files
-          </p>
-        </div>
+      <div className="mb-6 min-w-0">
+        <h2 className="text-h3">{category.name}</h2>
+        <p className="mt-2 text-subtle text-muted-foreground">
+          {category.description} /{" "}
+          {category.entries.length.toString().padStart(2, "0")} files
+        </p>
       </div>
       <div
         className={cn(
@@ -756,7 +736,6 @@ function CategorySection({
         {category.entries.map((entry) => (
           <EntryCard
             key={entry.id}
-            category={category}
             entry={entry}
             isStack={catalogLayout === "stack"}
             onNavigate={onNavigate}
@@ -768,12 +747,10 @@ function CategorySection({
 }
 
 function EntryCard({
-  category,
   entry,
   isStack,
   onNavigate,
 }: {
-  category: LibraryCategory;
   entry: LibraryEntry;
   isStack: boolean;
   onNavigate: (entry: LibraryEntry) => void;
@@ -781,8 +758,8 @@ function EntryCard({
   return (
     <a
       className={cn(
-        "group block overflow-hidden rounded-[8px] border border-border bg-card text-card-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-        isStack && "grid md:grid-cols-[minmax(0,1.4fr)_minmax(260px,0.6fr)]",
+        "block overflow-clip rounded-md border border-border bg-background text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+        isStack && "grid md:grid-cols-2",
       )}
       href={entry.href}
       onClick={(event) => {
@@ -794,38 +771,20 @@ function EntryCard({
         onNavigate(entry);
       }}
     >
-      <div className="relative aspect-[16/9] min-h-56 overflow-hidden bg-muted">
-        <div className="absolute inset-4 rounded-[8px] border border-border bg-background shadow-sm" />
-        <div className="absolute inset-x-8 top-8 flex items-center gap-2">
-          <span className={cn("size-2 rounded-full", category.accentClass)} />
-          <span className="h-2 w-24 rounded-full bg-muted-foreground/20" />
-        </div>
-        <div className="absolute inset-x-8 bottom-8 grid gap-2">
-          <span className="h-2 rounded-full bg-muted-foreground/20" />
-          <span className="h-2 w-2/3 rounded-full bg-muted-foreground/20" />
-        </div>
-        <div className="absolute inset-0 grid place-items-center">
-          <span
-            className={cn(
-              "rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.24em]",
-              category.softAccentClass,
-            )}
-          >
-            placeholder
-          </span>
-        </div>
+      <div className="grid w-full min-h-56 place-items-center overflow-hidden bg-muted">
+        <span className="text-detail text-center text-muted-foreground w-full">
+          Placeholder
+        </span>
       </div>
       <div className="p-4">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
-            <h3 className="truncate text-lg font-semibold tracking-normal">
-              {entry.title}
-            </h3>
-            <p className="mt-1 truncate font-mono text-xs text-muted-foreground">
+            <h3 className="truncate text-large">{entry.title}</h3>
+            <p className="mt-1 truncate text-detail text-muted-foreground">
               {entry.fileName}
             </p>
           </div>
-          <ArrowRight className="mt-1 size-4 text-muted-foreground transition group-hover:translate-x-0.5 group-hover:text-foreground" />
+          <ArrowRight className="mt-1 size-4 text-muted-foreground" />
         </div>
       </div>
     </a>
@@ -852,14 +811,34 @@ function DetailControls({
   onTheme: () => void;
 }) {
   return (
-    <div className="fixed bottom-4 right-4 z-40 flex max-w-[calc(100vw-2rem)] flex-wrap items-center justify-end gap-1 rounded-[8px] border border-border bg-background/90 p-1.5 shadow-lg backdrop-blur-xl">
-      <ControlButton label="back" keys={["esc"]} onClick={onBack} />
+    <div className="fixed bottom-4 right-4 z-40 flex max-w-[calc(100vw-2rem)] flex-wrap items-center justify-end gap-1 rounded-md border border-border bg-background p-1.5">
+      <ControlButton label="home" keys={["esc"]} onClick={onBack} />
       <span className="mx-1 hidden h-3 w-px bg-border sm:block" />
-      <ControlButton icon={<ArrowLeft />} label="browse" keys={["left"]} onClick={onPrevious} />
-      <ControlButton icon={<ArrowRight />} label="browse" keys={["right"]} onClick={onNext} />
+      <ControlButton
+        icon={<ArrowLeft />}
+        label="prev"
+        keys={["left"]}
+        onClick={onPrevious}
+      />
+      <ControlButton
+        icon={<ArrowRight />}
+        label="next"
+        keys={["right"]}
+        onClick={onNext}
+      />
       <span className="mx-1 hidden h-3 w-px bg-border sm:block" />
-      <ControlButton icon={<ArrowUp />} label="group" keys={["up"]} onClick={onPreviousCategory} />
-      <ControlButton icon={<ArrowDown />} label="group" keys={["down"]} onClick={onNextCategory} />
+      <ControlButton
+        icon={<ArrowUp />}
+        label="prev group"
+        keys={["up"]}
+        onClick={onPreviousCategory}
+      />
+      <ControlButton
+        icon={<ArrowDown />}
+        label="next group"
+        keys={["down"]}
+        onClick={onNextCategory}
+      />
       <span className="mx-1 hidden h-3 w-px bg-border sm:block" />
       <ControlButton label="random" keys={["r"]} onClick={onRandom} />
       <ControlButton label="theme" keys={["t"]} onClick={onTheme} />
@@ -881,16 +860,14 @@ function ControlButton({
 }) {
   return (
     <Button
-      className="h-7 rounded-[6px] px-2 font-mono text-[10px] text-muted-foreground hover:text-foreground"
+      className="text-muted-foreground hover:text-foreground flex gap-1 items-center"
+      size="xs"
       type="button"
       variant="ghost"
       onClick={onClick}
     >
-      {icon ? <span className="[&_svg]:size-3">{icon}</span> : null}
-      {keys.map((key) => (
-        <Kbd key={key}>{key}</Kbd>
-      ))}
-      <span className="hidden sm:inline">{label}</span>
+      {icon ?? keys.map((key) => <Kbd key={key}>{key}</Kbd>)}
+      <span className="hidden sm:inline pt-0.5">{label}</span>
     </Button>
   );
 }
@@ -921,7 +898,7 @@ function SearchDialog({
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-background/70 p-4 backdrop-blur-md">
+    <div className="fixed inset-0 z-50 bg-background p-4">
       <button
         aria-label="Close search"
         className="absolute inset-0 cursor-default"
@@ -930,7 +907,7 @@ function SearchDialog({
       />
       <div
         aria-label="Search every component"
-        className="relative mx-auto mt-20 flex max-h-[min(680px,calc(100dvh-8rem))] w-full max-w-2xl flex-col overflow-hidden rounded-[8px] border border-border bg-background shadow-2xl"
+        className="relative mx-auto mt-20 flex max-h-[min(680px,calc(100dvh-8rem))] w-full max-w-2xl flex-col overflow-hidden rounded-md border border-border bg-background"
         role="dialog"
       >
         <div className="flex items-center gap-3 border-b border-border p-3">
@@ -939,7 +916,7 @@ function SearchDialog({
             ref={searchInputRef}
             aria-label="Search every component"
             autoFocus
-            className="h-10 border-0 px-0 font-mono shadow-none focus-visible:ring-0"
+            className="h-10 border-0 px-0 shadow-none focus-visible:ring-0"
             placeholder="Search every placeholder..."
             value={query}
             onChange={(event) => onQueryChange(event.target.value)}
@@ -969,12 +946,10 @@ function SearchDialog({
                 }
                 return;
               }
-
             }}
           />
           <Button
             aria-label="Close search"
-            className="size-8 rounded-[8px]"
             size="icon-sm"
             type="button"
             variant="ghost"
@@ -985,7 +960,7 @@ function SearchDialog({
         </div>
         <div className="min-h-0 overflow-y-auto p-2">
           {entries.length === 0 ? (
-            <div className="p-8 text-center text-sm text-muted-foreground">
+            <div className="p-8 text-center text-subtle text-muted-foreground">
               No placeholders found.
             </div>
           ) : (
@@ -993,20 +968,20 @@ function SearchDialog({
               <button
                 key={entry.id}
                 className={cn(
-                  "flex w-full items-center justify-between gap-4 rounded-[8px] px-3 py-3 text-left transition",
+                  "flex w-full items-center justify-between gap-4 rounded-md px-3 py-3 text-left",
                   index === selectedIndex
                     ? "bg-muted text-foreground"
-                    : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
                 type="button"
                 onMouseEnter={() => onSelectedIndexChange(index)}
                 onClick={() => onNavigate(entry)}
               >
                 <span className="min-w-0">
-                  <span className="block truncate text-sm font-medium">
+                  <span className="block truncate text-subtle_semibold">
                     {entry.title}
                   </span>
-                  <span className="mt-1 block truncate font-mono text-xs">
+                  <span className="mt-1 block truncate text-detail">
                     {category?.name ?? "Unknown"} / {entry.fileName}
                   </span>
                 </span>
@@ -1015,7 +990,7 @@ function SearchDialog({
             ))
           )}
         </div>
-        <div className="flex items-center justify-between gap-4 border-t border-border px-4 py-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        <div className="flex items-center justify-between gap-4 border-t border-border px-4 py-3 text-detail text-muted-foreground">
           <span>Up Down navigate</span>
           <span>{libraryEntries.length} files</span>
         </div>
@@ -1030,19 +1005,21 @@ function CodeDialog({
   isOpen,
   onClose,
   onCopy,
+  source,
 }: {
   copied: boolean;
   entry: LibraryEntry;
   isOpen: boolean;
   onClose: () => void;
   onCopy: () => void;
+  source: string;
 }) {
   if (!isOpen) {
     return null;
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-background/70 p-4 backdrop-blur-md">
+    <div className="fixed inset-0 z-50 bg-background p-4">
       <button
         aria-label="Close code"
         className="absolute inset-0 cursor-default"
@@ -1051,31 +1028,27 @@ function CodeDialog({
       />
       <div
         aria-label={`${entry.title} source`}
-        className="relative mx-auto flex h-[min(760px,calc(100dvh-4rem))] w-full max-w-3xl flex-col overflow-hidden rounded-[8px] border border-border bg-background shadow-2xl"
+        className="relative mx-auto flex h-[min(760px,calc(100dvh-4rem))] w-full max-w-3xl flex-col overflow-hidden rounded-md border border-border bg-background"
         role="dialog"
       >
         <div className="flex items-center justify-between gap-4 border-b border-border p-4">
           <div className="min-w-0">
-            <h2 className="truncate text-lg font-semibold tracking-normal">
-              {entry.title}
-            </h2>
-            <p className="truncate font-mono text-xs text-muted-foreground">
+            <h2 className="truncate text-large">{entry.title}</h2>
+            <p className="truncate text-detail text-muted-foreground">
               {entry.fileName}
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <Button
-              className="h-8 rounded-[8px] px-3 font-mono text-xs"
-              type="button"
-              variant="outline"
-              onClick={onCopy}
-            >
-              {copied ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}
+            <Button size="sm" type="button" variant="outline" onClick={onCopy}>
+              {copied ? (
+                <Check className="size-3.5" />
+              ) : (
+                <Copy className="size-3.5" />
+              )}
               {copied ? "Copied" : "Copy code"}
             </Button>
             <Button
               aria-label="Close code"
-              className="size-8 rounded-[8px]"
               size="icon-sm"
               type="button"
               variant="ghost"
@@ -1085,10 +1058,10 @@ function CodeDialog({
             </Button>
           </div>
         </div>
-        <pre className="min-h-0 flex-1 overflow-auto bg-muted/40 p-5 text-xs leading-6 text-foreground">
-          <code>{entry.source}</code>
+        <pre className="min-h-0 flex-1 overflow-auto bg-muted p-5 font-mono text-detail text-foreground">
+          <code>{source}</code>
         </pre>
-        <div className="flex items-center justify-between gap-4 border-t border-border px-4 py-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        <div className="flex items-center justify-between gap-4 border-t border-border px-4 py-3 text-detail text-muted-foreground">
           <span>Install real examples later</span>
           <span className="inline-flex items-center gap-1">
             <Code2 className="size-3" />
@@ -1097,13 +1070,5 @@ function CodeDialog({
         </div>
       </div>
     </div>
-  );
-}
-
-function Kbd({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-flex min-w-5 items-center justify-center rounded-[5px] border border-border bg-muted px-1.5 py-0.5 font-mono text-[10px] leading-none text-muted-foreground">
-      {children}
-    </span>
   );
 }

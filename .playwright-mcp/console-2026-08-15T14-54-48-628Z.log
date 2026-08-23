@@ -1,0 +1,2 @@
+[    1170ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:3019/_vercel/insights/script.js:0
+[    1177ms] [LOG] [Vercel Web Analytics] Failed to load script from /_vercel/insights/script.js. Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information. @ http://127.0.0.1:3019/_next/static/chunks/6adc879b7bd0eb1f.js:0

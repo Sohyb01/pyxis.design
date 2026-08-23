@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brainbots Motion Section - Design Improvement</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f7f8fa; color: #15171a; font: 16px/1.6 Inter, system-ui, sans-serif; }
+      main { width: min(900px, calc(100% - 40px)); margin: 48px auto; padding: 48px; background: #fff; }
+      h1, h2, h3 { line-height: 1.15; }
+      h1 { margin-top: 0; }
+      h2 { margin-top: 48px; }
+      h3 { margin-top: 36px; }
+      img { display: block; width: 100%; margin: 20px 0 8px; border-radius: 2px; box-shadow: 0 8px 24px rgb(0 0 0 / 8%); }
+      figure { margin: 0 0 32px; }
+      figcaption, .muted { color: #676b72; font-size: 14px; }
+      .tldr { padding: 20px 24px; background: #eaf3ff; border-left: 3px solid #2563eb; }
+      pre { overflow-x: auto; padding: 16px; background: #f1f2f4; }
+      a { color: #1d4ed8; }
+      li + li { margin-top: 8px; }
+      @media (max-width: 640px) { main { margin: 0; width: 100%; padding: 24px 20px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Brainbots Motion Section</h1>
+      <section class="tldr">
+        <strong>TL;DR</strong><br />
+        All loops continue offscreen. Move now has a tighter 25ms stagger, Carousel has a visible slide gutter, and Reveal uses one neutral gray with balanced vertical breathing room.
+      </section>
+
+      <h2>Current state</h2>
+      <figure>
+        <img src="references/current-motion-revision.png" alt="Revised Brainbots Enter and Move demonstrations" />
+        <figcaption>The revised primary demonstrations at 1440px.</figcaption>
+      </figure>
+      <figure>
+        <img src="references/current-motion-examples.png" alt="Revised Brainbots real-use motion examples" />
+        <figcaption>Exchange, Carousel with both neighboring edges visible around its settled active slide, Toggle, and image-free Reveal examples.</figcaption>
+      </figure>
+      <figure>
+        <img src="references/current-curve-controls.png" alt="Expanded Brainbots curve copy controls" />
+        <figcaption>CSS, GSAP, and React form a compact 4px-gap group; Copy sits in its own right-aligned row below the code.</figcaption>
+      </figure>
+
+      <h2>Reference comparison</h2>
+      <figure>
+        <img src="references/vanta-primary-motion.png" alt="VANTA Enter and Move demonstrations" />
+        <figcaption>VANTA establishes compact animated geometry inside generous stage space.</figcaption>
+      </figure>
+
+      <h2>Improvements applied</h2>
+      <h3>1. Continuous timelines</h3>
+      <p>Viewport observers were removed from all Motion animations. Scrolling no longer restarts or fast-forwards their timelines.</p>
+      <pre>on screen  ---- timeline ----&gt;  off screen  ---- same timeline ----&gt;</pre>
+
+      <h3>2. Refined primary demonstrations</h3>
+      <p>Enter moves between 60% and 100% scale. Move uses smaller tiles, a tighter oval, an 840ms configured shift, staggered followers, and a one-second pause.</p>
+      <pre>       square     square
+  square               accent
+       square     square</pre>
+
+      <h3>3. Discrete real-use gestures</h3>
+      <p>Exchange uses symmetrical timing. Carousel matches Exchange's measured image width, reveals both neighboring edges even while settled, and clips only at the shaded stage boundary. Reveal uses only the shared neutral gray and has a verified 63px structural inset above and below its rows at desktop size.</p>
+      <pre>Exchange: A [hold] -&gt; B [hold] -&gt; A
+Carousel: 1 [hold] -&gt; 2 [hold] -&gt; 3 [hold] -&gt; 1
+Reveal:   placeholder rows enter with configured stagger</pre>
+
+      <h2>What's working</h2>
+      <ul>
+        <li>All six stages are borderless.</li>
+        <li>Move followers begin only 25ms apart.</li>
+        <li>Curve format tabs have approximately 4px gaps.</li>
+        <li>Exchange and Carousel image widths differ by less than 0.02px.</li>
+        <li>A settled carousel slide exposes roughly 25px of the previous image and 40px of the next.</li>
+        <li>Copy sits approximately 17px below the code output.</li>
+        <li>Move tiles retain more than 6px of clearance through the sampled shift.</li>
+        <li>Exchange and Carousel use Move; Toggle uses Enter.</li>
+        <li>Reveal uses Enter.</li>
+        <li>The carousel reset is visually seamless.</li>
+        <li>Reduced-motion states remain static and legible.</li>
+      </ul>
+
+      <p class="muted">Reference: <a href="https://vessa.design/brand/vanta">VANTA brand guidelines</a>.</p>
+    </main>
+  </body>
+</html>

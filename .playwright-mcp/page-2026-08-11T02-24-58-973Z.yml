@@ -1,0 +1,683 @@
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - status: VANTA brand guidelines
+      - generic:
+        - generic:
+          - generic:
+            - generic: VANTA
+            - button [expanded]: Sections
+          - generic:
+            - main:
+              - generic:
+                - region:
+                  - generic:
+                    - heading [level=1]: Perform in the quiet.
+                    - generic:
+                      - generic:
+                        - generic: Founded
+                        - generic: 2021, Zurich
+                      - generic:
+                        - generic: Category
+                        - generic: Performance sportswear
+                      - generic:
+                        - generic: Athletes
+                        - generic: 40 across 9 disciplines
+                      - generic:
+                        - generic: Made in
+                        - generic: Portugal and Italy
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: VANTA
+                            - generic: ·
+                            - generic: Introduction
+                        - generic: 01 / 09
+                    - heading [level=2]: Built for the distance nobody watches.
+                    - generic:
+                      - paragraph: VANTA makes performance sportswear for people who train alone at hours other people sleep through. The label started in a Zurich basement in 2021 with one pair of running shorts and a refusal to add a single logo bigger than a fingernail.
+                      - paragraph: Everything we make is tested on real roads, real tracks and real weather before it earns the mark. The design language is quiet on purpose. The work is loud enough on its own.
+                      - paragraph: "This guideline is the whole system: how the mark sits, how the type behaves, how motion feels, and how the world around the brand is photographed. Follow it and VANTA looks like VANTA everywhere."
+              - generic:
+                - region:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Logo
+                      - generic: 02 / 09
+                  - generic:
+                    - generic:
+                      - heading [level=2]: Primary logo
+                      - paragraph: The V-mark is the brand at its smallest. It never gets crowded, stretched or recolored outside this system.
+                    - generic:
+                      - generic: Light
+                      - generic: Dark
+                    - generic:
+                      - generic:
+                        - figure:
+                          - img:
+                            - generic:
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                            - generic:
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                          - generic:
+                            - generic: 1x = half the logo height
+                            - generic: Keep clear space equal to half the mark's height on every side. Nothing enters this zone.
+                  - generic:
+                    - generic:
+                      - heading [level=2]: Logomark
+                    - generic:
+                      - generic: Light
+                      - generic: Dark
+                    - generic:
+                      - generic:
+                        - figure:
+                          - img:
+                            - generic:
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                            - generic:
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                              - generic: 1x
+                          - generic:
+                            - generic: 1x = half the logo height
+                            - generic: Keep clear space equal to half the mark's height on every side. Nothing enters this zone.
+              - generic:
+                - region:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Color
+                      - generic: 03 / 09
+                  - generic:
+                    - generic:
+                      - heading [level=2]: Color
+                      - paragraph: One loud color, held back until it counts. Everything else is ink, paper and the cool greys between them.
+                    - group:
+                      - button [pressed]: Mosaic
+                      - button: Proportions
+                  - generic:
+                    - button:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Ink
+                            - generic: Copied
+                      - generic:
+                        - generic: "#101216"
+                        - generic: "HSL: 220, 16%, 7%"
+                        - generic: "RGB: 16, 18, 22"
+                        - generic: "CMYK: 27, 18, 0, 91"
+                    - button:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Paper
+                            - generic: Copied
+                      - generic:
+                        - generic: "#EEF0F3"
+                        - generic: "HSL: 216, 17%, 94%"
+                        - generic: "RGB: 238, 240, 243"
+                        - generic: "CMYK: 2, 1, 0, 5"
+                    - button:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Depth
+                            - generic: Copied
+                      - generic:
+                        - generic: "#101216"
+                        - generic: "#1F2DE6"
+                    - button:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Ultramarine
+                            - generic: Copied
+                      - generic:
+                        - generic: "#1F2DE6"
+                        - generic: "HSL: 236, 80%, 51%"
+                        - generic: "RGB: 31, 45, 230"
+                        - generic: "CMYK: 87, 80, 0, 10"
+                    - button:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Graphite
+                            - generic: Copied
+                      - generic:
+                        - generic: "#3F434B"
+                        - generic: "HSL: 220, 9%, 27%"
+                        - generic: "RGB: 63, 67, 75"
+                        - generic: "CMYK: 16, 11, 0, 71"
+                    - button:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Fog
+                            - generic: Copied
+                      - generic:
+                        - generic: "#D3D7DE"
+                        - generic: "HSL: 218, 14%, 85%"
+                        - generic: "RGB: 211, 215, 222"
+                        - generic: "CMYK: 5, 3, 0, 13"
+              - generic:
+                - region:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Typography
+                      - generic: 04 / 09
+                  - generic:
+                    - heading [level=2]: Typography
+                    - paragraph: Two faces, one job each. Switzer carries every headline; General Sans carries everything you actually read.
+                  - generic:
+                    - generic:
+                      - heading [level=3]: Switzer
+                      - generic:
+                        - generic: Display typeface
+                        - generic: Fontshare
+                        - generic: 3 styles
+                      - paragraph: Switzer, tight tracking, for headlines and hero statements.
+                      - generic: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@€£$&*})({§?"
+                    - generic:
+                      - generic:
+                        - generic: Medium
+                        - generic: a
+                      - generic:
+                        - generic: Semibold
+                        - generic: a
+                      - generic:
+                        - generic:
+                          - generic: Bold
+                          - generic: "700"
+                        - generic: a
+                  - generic:
+                    - generic:
+                      - heading [level=4]: General Sans
+                      - generic:
+                        - generic: Text typeface
+                        - generic: Fontshare
+                        - generic: 3 styles
+                    - generic:
+                      - paragraph: General Sans, for body copy, captions and all data chrome.
+                      - paragraph: Perform in the quiet.
+                      - generic:
+                        - generic: Regular
+                        - generic: Medium
+                        - generic: Semibold
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Display · 80px
+                        - generic: Perform in the quiet.
+                      - generic:
+                        - generic: H1 · 60px
+                        - generic: Perform in the quiet.
+                      - generic:
+                        - generic: H2 · 48px
+                        - generic: Perform in the quiet.
+                      - generic:
+                        - generic: H3 · 36px
+                        - generic: Perform in the quiet.
+                      - generic:
+                        - generic: H4 · 28px
+                        - generic: Perform in the quiet.
+                      - generic:
+                        - generic: H5 · 22px
+                        - generic: Perform in the quiet.
+                      - generic:
+                        - generic: H6 · 18px
+                        - generic: Perform in the quiet.
+                    - generic:
+                      - generic:
+                        - generic: Body large · 20px
+                        - paragraph: Perform in the quiet.
+                      - generic:
+                        - generic: Body · 16px
+                        - paragraph: Perform in the quiet.
+                      - generic:
+                        - generic: Small · 14px
+                        - paragraph: Perform in the quiet.
+                  - generic:
+                    - paragraph: Set display sizes with negative tracking; the bigger the size, the tighter the letters. Body copy stays at default tracking and never goes below 15px.
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Motion
+                      - generic: 05 / 09
+                  - generic:
+                    - heading [level=2]: Motion
+                    - paragraph: "VANTA moves like an athlete: hard off the line, decisive, then dead still. Nothing drifts."
+                  - generic:
+                    - generic:
+                      - paragraph: In motion
+                      - generic:
+                        - article:
+                          - generic:
+                            - heading [level=4]: Enter
+                            - paragraph: Scaling in, opening. Content arriving into view.
+                          - generic:
+                            - button: Copy this ease
+                        - article:
+                          - generic:
+                            - heading [level=4]: Move
+                            - paragraph: Reordering, shuffling. The system responding to a gesture.
+                          - generic:
+                            - button: Copy this ease
+                    - generic:
+                      - paragraph: In real use
+                      - generic:
+                        - article:
+                          - paragraph: Exchange
+                        - article:
+                          - paragraph: Carousel
+                        - article:
+                          - paragraph: Toggle
+                        - article:
+                          - paragraph: Reveal
+                    - generic:
+                      - paragraph: The curve
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - figure
+                              - paragraph: Enter
+                              - generic:
+                                - button: Copy this ease
+                            - generic:
+                              - figure
+                              - paragraph: Move
+                              - generic:
+                                - button: Copy this ease
+                        - generic:
+                          - paragraph: Motion accelerates hard and brakes late. Every entrance reads as a decision, not a drift. Durations sit at the lower end of each band. Anything slower than a second is a set piece, not a default.
+                          - paragraph: Staggers are tight. Groups read as one gesture with texture, not a queue. Between moves, nothing drifts. The contrast between still and moving is the signature.
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Voice and tone
+                      - generic: 06 / 09
+                  - generic:
+                    - heading [level=2]: Voice and tone
+                    - paragraph: "Write like a coach who respects you: short, direct, never hyped."
+                  - generic:
+                    - generic:
+                      - generic:
+                        - article:
+                          - generic:
+                            - paragraph:
+                              - generic: 220 grams. The lightest
+                              - generic: short we've built.
+                          - generic:
+                            - paragraph: Say the true thing
+                            - paragraph: No superlatives we can't back up. If it's the lightest short we've made, prove it. If it isn't, don't reach.
+                        - article:
+                          - generic:
+                            - paragraph:
+                              - generic: Dries between intervals.
+                              - generic: That's the whole pitch.
+                          - generic:
+                            - paragraph: Earned, not shouted
+                            - paragraph: The work does the talking. We describe what it does, then get out of the way.
+                        - article:
+                          - generic:
+                            - paragraph:
+                              - generic: You'll notice it at kilometer
+                              - generic: thirty, not kilometer one.
+                          - generic:
+                            - paragraph: For the athlete, not the crowd
+                            - paragraph: We write to the person training, not to the person watching. Second person, present tense.
+                        - article:
+                          - generic:
+                            - paragraph:
+                              - generic: It's a running short. It's
+                              - generic: very good.
+                          - generic:
+                            - paragraph: Plain over clever
+                            - paragraph: Say it the way you'd say it out loud. No wordplay, no slogans that need decoding. Clear beats clever, every time.
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Campaign line
+                          - generic:
+                            - generic: Do
+                            - paragraph: Perform in the quiet.
+                          - generic:
+                            - generic: Don't
+                            - paragraph: Unleash your ultimate potential!
+                        - generic:
+                          - paragraph: Product spec
+                          - generic:
+                            - generic: Do
+                            - paragraph: 220g. Tested to 40km.
+                          - generic:
+                            - generic: Don't
+                            - paragraph: Incredibly lightweight and durable!
+                        - generic:
+                          - paragraph: Error message
+                          - generic:
+                            - generic: Do
+                            - paragraph: That didn't save. Try again.
+                          - generic:
+                            - generic: Don't
+                            - paragraph: Oops! Something went wrong.
+                        - generic:
+                          - paragraph: Call to action
+                          - generic:
+                            - generic: Do
+                            - paragraph: Add to bag.
+                          - generic:
+                            - generic: Don't
+                            - paragraph: Grab yours before they're gone!
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Moodboard
+                      - generic: 07 / 09
+                  - generic:
+                    - generic:
+                      - heading [level=2]: Moodboard
+                      - paragraph: The world VANTA lives in — before a single garment is designed.
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic: Full screen
+                        - generic: F
+                      - group:
+                        - button [pressed]: Cloud
+                        - button: Columns
+                    - generic:
+                      - generic:
+                        - generic:
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+                          - figure
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Applications
+                      - generic: 08 / 09
+                  - generic:
+                    - heading [level=2]: Applications
+                    - paragraph: The system in the world — live, built from the tokens in this document.
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 9:41
+                        - generic:
+                          - generic: Mail
+                          - generic: Photos
+                          - generic: Notes
+                          - generic: VANTA
+                          - generic: Maps
+                          - generic: Calendar
+                          - generic: App Store
+                          - generic: FaceTime
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: vanta
+                              - generic: 2h
+                          - paragraph: Perform in the quiet.
+                          - generic: Shop the collection
+                    - generic:
+                      - generic:
+                        - paragraph: VANTA
+                        - paragraph: vanta.run
+                    - generic:
+                      - generic:
+                        - paragraph: VANTA
+                        - paragraph: vanta.run
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Perform in the quiet.
+                          - paragraph: Performance sportswear for the hours nobody watches.
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Perform in the quiet.
+                          - paragraph: Performance sportswear for the hours nobody watches.
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: VANTA
+                          - generic: ·
+                          - generic: Assets
+                      - generic: 09 / 09
+                  - generic:
+                    - generic:
+                      - heading [level=2]: Assets
+                      - paragraph: Everything you need to build with VANTA.
+                      - paragraph: Free to use in VANTA partner work. Don't redistribute the source files.
+                    - link:
+                      - /url: /api/brand/vanta/pack.zip
+                      - text: Download everything
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading [level=3]: Logo files
+                        - paragraph: Every mark variant in this guideline, straight from the brand tokens.
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Primary logo
+                            - generic:
+                              - generic: SVG
+                              - generic: ·7 KB
+                              - generic: ·118 × 33
+                          - link:
+                            - /url: /fixtures/vanta/vanta-logo.svg
+                            - text: Download
+                        - generic:
+                          - generic:
+                            - generic: Logomark
+                            - generic:
+                              - generic: SVG
+                              - generic: ·2 KB
+                              - generic: ·213 × 240
+                          - link:
+                            - /url: /fixtures/vanta/vanta-mark.svg
+                            - text: Download
+                        - generic:
+                          - generic:
+                            - generic: Mono, light
+                            - generic: SVG
+                          - link:
+                            - /url: /fixtures/vanta/vanta-mark-light.svg
+                            - text: Download
+                    - generic:
+                      - generic:
+                        - heading [level=3]: Typefaces
+                        - paragraph: The faces this brand sets in — files or foundry links.
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Switzer
+                            - generic: Fontshare
+                          - link:
+                            - /url: https://www.fontshare.com/fonts/switzer
+                            - text: Get at Fontshare
+                        - generic:
+                          - generic:
+                            - generic: General Sans
+                            - generic: Fontshare
+                          - link:
+                            - /url: https://www.fontshare.com/fonts/general-sans
+                            - text: Get at Fontshare
+                    - generic:
+                      - generic:
+                        - heading [level=3]: Brand colors
+                        - paragraph: The palette as working files, generated from the tokens.
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Adobe swatches
+                            - generic: ASE
+                          - link:
+                            - /url: blob:https://vessa.design/5494ffcd-4989-4236-ae3d-efb04bac0b09
+                            - text: Download
+                        - generic:
+                          - generic:
+                            - generic: Design tokens
+                            - generic: JSON
+                          - link:
+                            - /url: blob:https://vessa.design/13359ba2-5ff4-4067-92d6-a5328dd76b24
+                            - text: Download
+                        - generic:
+                          - generic:
+                            - generic: CSS variables
+                            - generic: CSS
+                          - link:
+                            - /url: blob:https://vessa.design/225e80ea-57f3-4bd0-a04c-39aa2b0e4757
+                            - text: Download
+                    - generic:
+                      - generic:
+                        - heading [level=3]: Imagery
+                        - paragraph: Approved exemplars for reference and layout.
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Hero, run
+                            - generic:
+                              - generic: JPG
+                              - generic: ·3840 × 2176
+                          - link:
+                            - /url: https://annnimate.b-cdn.net/preview-assets/vanta/hero_run_01.jpg
+                            - text: Download
+                        - generic:
+                          - generic:
+                            - generic: Action, leap
+                            - generic:
+                              - generic: JPG
+                              - generic: ·3840 × 2568
+                          - link:
+                            - /url: https://annnimate.b-cdn.net/preview-assets/vanta/action_leap_01.jpg
+                            - text: Download
+                        - generic:
+                          - generic:
+                            - generic: Portrait
+                            - generic:
+                              - generic: JPG
+                              - generic: ·3840 × 3840
+                          - link:
+                            - /url: https://annnimate.b-cdn.net/preview-assets/vanta/face_portrait_01.jpg
+                            - text: Download
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: VANTA brand guidelines
+                    - generic: © 2026
+        - dialog [ref=f1e850]:
+          - heading "Guideline sections" [level=2] [ref=f1e851]
+          - paragraph [ref=f1e852]: Jump to a section of the VANTA guideline.
+          - navigation "Guideline sections" [ref=f1e853]:
+            - generic [ref=f1e854]:
+              - generic [ref=f1e855]: VANTA
+              - generic [ref=f1e856]: Brand guidelines
+            - generic [ref=f1e857]: Contents
+            - list [ref=f1e858]:
+              - listitem [ref=f1e859]:
+                - button "01 Introduction" [ref=f1e860] [cursor=pointer]:
+                  - generic [ref=f1e861]: "01"
+                  - generic [ref=f1e862]: Introduction
+              - listitem [ref=f1e864]:
+                - button "02 Logo" [ref=f1e865] [cursor=pointer]:
+                  - generic [ref=f1e866]: "02"
+                  - generic [ref=f1e867]: Logo
+              - listitem [ref=f1e868]:
+                - button "03 Color" [ref=f1e869] [cursor=pointer]:
+                  - generic [ref=f1e870]: "03"
+                  - generic [ref=f1e871]: Color
+              - listitem [ref=f1e872]:
+                - button "04 Typography" [ref=f1e873] [cursor=pointer]:
+                  - generic [ref=f1e874]: "04"
+                  - generic [ref=f1e875]: Typography
+              - listitem [ref=f1e876]:
+                - button "05 Motion" [ref=f1e877] [cursor=pointer]:
+                  - generic [ref=f1e878]: "05"
+                  - generic [ref=f1e879]: Motion
+              - listitem [ref=f1e880]:
+                - button "06 Voice and tone" [ref=f1e881] [cursor=pointer]:
+                  - generic [ref=f1e882]: "06"
+                  - generic [ref=f1e883]: Voice and tone
+              - listitem [ref=f1e884]:
+                - button "07 Moodboard" [ref=f1e885] [cursor=pointer]:
+                  - generic [ref=f1e886]: "07"
+                  - generic [ref=f1e887]: Moodboard
+              - listitem [ref=f1e888]:
+                - button "08 Applications" [ref=f1e889] [cursor=pointer]:
+                  - generic [ref=f1e890]: "08"
+                  - generic [ref=f1e891]: Applications
+              - listitem [ref=f1e892]:
+                - button "09 Assets" [ref=f1e893] [cursor=pointer]:
+                  - generic [ref=f1e894]: "09"
+                  - generic [ref=f1e895]: Assets
+            - generic [ref=f1e896]: 09 sections
+          - button "Close" [active] [ref=f1e897]

@@ -1,0 +1,619 @@
+- generic [ref=e3]:
+  - status [ref=e971]: VANTA brand guidelines
+  - generic [ref=e6]:
+    - complementary [ref=e7]:
+      - navigation "Guideline sections" [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: VANTA
+          - generic [ref=e12]: Brand guidelines
+        - generic [ref=e13]: Contents
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - button "01 Introduction" [ref=e16] [cursor=pointer]:
+              - generic [ref=e17]: "01"
+              - generic [ref=e18]: Introduction
+          - listitem [ref=e20]:
+            - button "02 Logo" [ref=e21] [cursor=pointer]:
+              - generic [ref=e22]: "02"
+              - generic [ref=e23]: Logo
+          - listitem [ref=e24]:
+            - button "03 Color" [ref=e25] [cursor=pointer]:
+              - generic [ref=e26]: "03"
+              - generic [ref=e27]: Color
+          - listitem [ref=e28]:
+            - button "04 Typography" [ref=e29] [cursor=pointer]:
+              - generic [ref=e30]: "04"
+              - generic [ref=e31]: Typography
+          - listitem [ref=e32]:
+            - button "05 Motion" [ref=e33] [cursor=pointer]:
+              - generic [ref=e34]: "05"
+              - generic [ref=e35]: Motion
+          - listitem [ref=e36]:
+            - button "06 Voice and tone" [ref=e37] [cursor=pointer]:
+              - generic [ref=e38]: "06"
+              - generic [ref=e39]: Voice and tone
+          - listitem [ref=e40]:
+            - button "07 Moodboard" [ref=e41] [cursor=pointer]:
+              - generic [ref=e42]: "07"
+              - generic [ref=e43]: Moodboard
+          - listitem [ref=e44]:
+            - button "08 Applications" [ref=e45] [cursor=pointer]:
+              - generic [ref=e46]: "08"
+              - generic [ref=e47]: Applications
+          - listitem [ref=e48]:
+            - button "09 Assets" [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]: "09"
+              - generic [ref=e51]: Assets
+        - generic [ref=e52]: 09 sections
+    - main [ref=e53]:
+      - region [ref=e58]:
+        - generic [ref=e59]:
+          - img "Runner mid-stride on an open road at dawn" [ref=e60]
+          - img "VANTA logo" [ref=e62]
+          - heading "Perform in the quiet." [level=1] [ref=e63]
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - generic [ref=e66]: Founded
+              - generic [ref=e67]: 2021, Zurich
+            - generic [ref=e68]:
+              - generic [ref=e69]: Category
+              - generic [ref=e70]: Performance sportswear
+            - generic [ref=e71]:
+              - generic [ref=e72]: Athletes
+              - generic [ref=e73]: 40 across 9 disciplines
+            - generic [ref=e74]:
+              - generic [ref=e75]: Made in
+              - generic [ref=e76]: Portugal and Italy
+        - generic [ref=e77]:
+          - generic [ref=e79]:
+            - generic [ref=e81]:
+              - generic [ref=e82]: VANTA
+              - generic [ref=e83]: ·
+              - generic [ref=e84]: Introduction
+            - generic [ref=e85]: 01 / 09
+          - heading "Built for the distance nobody watches." [level=2] [ref=e88]
+          - generic [ref=e89]:
+            - paragraph [ref=e90]: VANTA makes performance sportswear for people who train alone at hours other people sleep through. The label started in a Zurich basement in 2021 with one pair of running shorts and a refusal to add a single logo bigger than a fingernail.
+            - paragraph [ref=e91]: Everything we make is tested on real roads, real tracks and real weather before it earns the mark. The design language is quiet on purpose. The work is loud enough on its own.
+            - paragraph [ref=e92]: "This guideline is the whole system: how the mark sits, how the type behaves, how motion feels, and how the world around the brand is photographed. Follow it and VANTA looks like VANTA everywhere."
+      - region [ref=e94]:
+        - generic [ref=e96]:
+          - generic [ref=e98]:
+            - generic [ref=e99]: VANTA
+            - generic [ref=e100]: ·
+            - generic [ref=e101]: Logo
+          - generic [ref=e102]: 02 / 09
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - heading "Primary logo" [level=2] [ref=e107]
+            - paragraph [ref=e108]: The V-mark is the brand at its smallest. It never gets crowded, stretched or recolored outside this system.
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - img "VANTA logo, light mode" [ref=e111]
+              - generic [ref=e113]: Light
+            - generic [ref=e114]:
+              - img "VANTA logo, dark mode" [ref=e115]
+              - generic [ref=e117]: Dark
+          - figure "1x = half the logo height Keep clear space equal to half the mark's height on every side. Nothing enters this zone." [ref=e120]:
+            - img "Logo clear space diagram" [ref=e121]:
+              - generic [ref=e125]:
+                - generic [ref=e126]: 1x
+                - generic [ref=e127]: 1x
+                - generic [ref=e128]: 1x
+                - generic [ref=e129]: 1x
+              - generic [ref=e131]:
+                - generic [ref=e132]: 1x
+                - generic [ref=e135]: 1x
+                - generic [ref=e138]: 1x
+                - generic [ref=e141]: 1x
+            - generic [ref=e144]:
+              - generic [ref=e145]: 1x = half the logo height
+              - generic [ref=e146]: Keep clear space equal to half the mark's height on every side. Nothing enters this zone.
+        - generic [ref=e147]:
+          - heading "Logomark" [level=2] [ref=e149]
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - img "VANTA V-mark, light mode" [ref=e152]
+              - generic [ref=e154]: Light
+            - generic [ref=e155]:
+              - img "VANTA V-mark, dark mode" [ref=e156]
+              - generic [ref=e158]: Dark
+          - figure "1x = half the logo height Keep clear space equal to half the mark's height on every side. Nothing enters this zone." [ref=e161]:
+            - img "Logo clear space diagram" [ref=e162]:
+              - generic [ref=e166]:
+                - generic [ref=e167]: 1x
+                - generic [ref=e168]: 1x
+                - generic [ref=e169]: 1x
+                - generic [ref=e170]: 1x
+              - generic [ref=e172]:
+                - generic [ref=e173]: 1x
+                - generic [ref=e176]: 1x
+                - generic [ref=e179]: 1x
+                - generic [ref=e182]: 1x
+            - generic [ref=e185]:
+              - generic [ref=e186]: 1x = half the logo height
+              - generic [ref=e187]: Keep clear space equal to half the mark's height on every side. Nothing enters this zone.
+      - region [ref=e189]:
+        - generic [ref=e191]:
+          - generic [ref=e193]:
+            - generic [ref=e194]: VANTA
+            - generic [ref=e195]: ·
+            - generic [ref=e196]: Color
+          - generic [ref=e197]: 03 / 09
+        - generic [ref=e200]:
+          - generic [ref=e201]:
+            - heading "Color" [level=2] [ref=e202]
+            - paragraph [ref=e203]: One loud color, held back until it counts. Everything else is ink, paper and the cool greys between them.
+          - group "Color view" [ref=e204]:
+            - button "Mosaic" [pressed] [ref=e205] [cursor=pointer]
+            - button "Proportions" [ref=e206] [cursor=pointer]
+        - generic [ref=e207]:
+          - 'button "Copy Ink #101216" [active] [ref=e208] [cursor=pointer]':
+            - generic [ref=e211]:
+              - generic [ref=e212]: Ink
+              - generic [ref=e213]: Copied
+            - generic [ref=e214]:
+              - generic [ref=e215]: "#101216"
+              - generic [ref=e216]: "HSL: 220, 16%, 7%"
+              - generic [ref=e217]: "RGB: 16, 18, 22"
+              - generic [ref=e218]: "CMYK: 27, 18, 0, 91"
+          - 'button "Copy Paper #EEF0F3" [ref=e219] [cursor=pointer]':
+            - generic [ref=e222]:
+              - generic [ref=e223]: Paper
+              - generic [ref=e224]: Copied
+            - generic [ref=e225]:
+              - generic [ref=e226]: "#EEF0F3"
+              - generic [ref=e227]: "HSL: 216, 17%, 94%"
+              - generic [ref=e228]: "RGB: 238, 240, 243"
+              - generic [ref=e229]: "CMYK: 2, 1, 0, 5"
+          - 'button "Copy Depth background: linear-gradient(145deg, #101216 0%, #1F2DE6 100%);" [ref=e230] [cursor=pointer]':
+            - generic [ref=e233]:
+              - generic [ref=e234]: Depth
+              - generic [ref=e235]: Copied
+            - generic [ref=e236]:
+              - generic [ref=e237]: "#101216"
+              - generic [ref=e238]: "#1F2DE6"
+          - 'button "Copy Ultramarine #1F2DE6" [ref=e239] [cursor=pointer]':
+            - generic [ref=e242]:
+              - generic [ref=e243]: Ultramarine
+              - generic [ref=e244]: Copied
+            - generic [ref=e245]:
+              - generic [ref=e246]: "#1F2DE6"
+              - generic [ref=e247]: "HSL: 236, 80%, 51%"
+              - generic [ref=e248]: "RGB: 31, 45, 230"
+              - generic [ref=e249]: "CMYK: 87, 80, 0, 10"
+          - 'button "Copy Graphite #3F434B" [ref=e250] [cursor=pointer]':
+            - generic [ref=e253]:
+              - generic [ref=e254]: Graphite
+              - generic [ref=e255]: Copied
+            - generic [ref=e256]:
+              - generic [ref=e257]: "#3F434B"
+              - generic [ref=e258]: "HSL: 220, 9%, 27%"
+              - generic [ref=e259]: "RGB: 63, 67, 75"
+              - generic [ref=e260]: "CMYK: 16, 11, 0, 71"
+          - 'button "Copy Fog #D3D7DE" [ref=e261] [cursor=pointer]':
+            - generic [ref=e264]:
+              - generic [ref=e265]: Fog
+              - generic [ref=e266]: Copied
+            - generic [ref=e267]:
+              - generic [ref=e268]: "#D3D7DE"
+              - generic [ref=e269]: "HSL: 218, 14%, 85%"
+              - generic [ref=e270]: "RGB: 211, 215, 222"
+              - generic [ref=e271]: "CMYK: 5, 3, 0, 13"
+      - region [ref=e273]:
+        - generic [ref=e275]:
+          - generic [ref=e277]:
+            - generic [ref=e278]: VANTA
+            - generic [ref=e279]: ·
+            - generic [ref=e280]: Typography
+          - generic [ref=e281]: 04 / 09
+        - generic [ref=e284]:
+          - heading "Typography" [level=2] [ref=e285]
+          - paragraph [ref=e286]: Two faces, one job each. Switzer carries every headline; General Sans carries everything you actually read.
+        - generic [ref=e287]:
+          - generic [ref=e288]:
+            - heading "Switzer" [level=3] [ref=e289]
+            - generic [ref=e290]:
+              - generic [ref=e291]: Display typeface
+              - generic [ref=e292]: Fontshare
+              - generic [ref=e293]: 3 styles
+            - paragraph [ref=e294]: Switzer, tight tracking, for headlines and hero statements.
+            - generic [ref=e295]: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@€£$&*})({§?"
+          - generic [ref=e296]:
+            - generic [ref=e297]:
+              - generic [ref=e298]: Medium
+              - generic [ref=e300]: a
+            - generic [ref=e301]:
+              - generic [ref=e302]: Semibold
+              - generic [ref=e304]: a
+            - generic [ref=e305]:
+              - generic [ref=e306]:
+                - generic [ref=e307]: Bold
+                - generic [ref=e308]: "700"
+              - generic [ref=e309]: a
+        - generic [ref=e310]:
+          - generic [ref=e311]:
+            - heading "General Sans" [level=4] [ref=e312]
+            - generic [ref=e313]:
+              - generic [ref=e314]: Text typeface
+              - generic [ref=e315]: Fontshare
+              - generic [ref=e316]: 3 styles
+          - generic [ref=e317]:
+            - paragraph [ref=e318]: General Sans, for body copy, captions and all data chrome.
+            - paragraph [ref=e319]: Perform in the quiet.
+            - generic [ref=e320]:
+              - generic [ref=e321]: Regular
+              - generic [ref=e322]: Medium
+              - generic [ref=e323]: Semibold
+        - generic [ref=e324]:
+          - generic [ref=e325]:
+            - generic [ref=e326]:
+              - generic [ref=e327]: Display · 80px
+              - generic [ref=e328]: Perform in the quiet.
+            - generic [ref=e329]:
+              - generic [ref=e330]: H1 · 60px
+              - generic [ref=e331]: Perform in the quiet.
+            - generic [ref=e332]:
+              - generic [ref=e333]: H2 · 48px
+              - generic [ref=e334]: Perform in the quiet.
+            - generic [ref=e335]:
+              - generic [ref=e336]: H3 · 36px
+              - generic [ref=e337]: Perform in the quiet.
+            - generic [ref=e338]:
+              - generic [ref=e339]: H4 · 28px
+              - generic [ref=e340]: Perform in the quiet.
+            - generic [ref=e341]:
+              - generic [ref=e342]: H5 · 22px
+              - generic [ref=e343]: Perform in the quiet.
+            - generic [ref=e344]:
+              - generic [ref=e345]: H6 · 18px
+              - generic [ref=e346]: Perform in the quiet.
+          - generic [ref=e347]:
+            - generic [ref=e348]:
+              - generic [ref=e349]: Body large · 20px
+              - paragraph [ref=e350]: Perform in the quiet.
+            - generic [ref=e351]:
+              - generic [ref=e352]: Body · 16px
+              - paragraph [ref=e353]: Perform in the quiet.
+            - generic [ref=e354]:
+              - generic [ref=e355]: Small · 14px
+              - paragraph [ref=e356]: Perform in the quiet.
+        - paragraph [ref=e358]: Set display sizes with negative tracking; the bigger the size, the tighter the letters. Body copy stays at default tracking and never goes below 15px.
+      - generic [ref=e360]:
+        - generic [ref=e362]:
+          - generic [ref=e364]:
+            - generic [ref=e365]: VANTA
+            - generic [ref=e366]: ·
+            - generic [ref=e367]: Motion
+          - generic [ref=e368]: 05 / 09
+        - generic [ref=e371]:
+          - heading "Motion" [level=2] [ref=e372]
+          - paragraph [ref=e373]: "VANTA moves like an athlete: hard off the line, decisive, then dead still. Nothing drifts."
+        - generic [ref=e374]:
+          - generic [ref=e375]:
+            - paragraph [ref=e376]: In motion
+            - generic [ref=e377]:
+              - article [ref=e378]:
+                - generic [ref=e382]:
+                  - heading "Enter" [level=4] [ref=e383]
+                  - paragraph [ref=e384]: Scaling in, opening. Content arriving into view.
+                - button "Copy this ease" [ref=e386] [cursor=pointer]
+              - article [ref=e387]:
+                - generic [ref=e402]:
+                  - heading "Move" [level=4] [ref=e403]
+                  - paragraph [ref=e404]: Reordering, shuffling. The system responding to a gesture.
+                - button "Copy this ease" [ref=e406] [cursor=pointer]
+          - generic [ref=e407]:
+            - paragraph [ref=e408]: In real use
+            - generic [ref=e409]:
+              - article [ref=e410]:
+                - paragraph [ref=e415]: Exchange
+              - article [ref=e416]:
+                - paragraph [ref=e426]: Carousel
+              - article [ref=e427]:
+                - paragraph [ref=e432]: Toggle
+              - article [ref=e433]:
+                - paragraph [ref=e456]: Reveal
+          - generic [ref=e457]:
+            - paragraph [ref=e458]: The curve
+            - generic [ref=e459]:
+              - generic [ref=e461]:
+                - generic [ref=e462]:
+                  - figure [ref=e463]
+                  - paragraph [ref=e471]: Enter
+                  - button "Copy this ease" [ref=e473] [cursor=pointer]
+                - generic [ref=e474]:
+                  - figure [ref=e475]
+                  - paragraph [ref=e483]: Move
+                  - button "Copy this ease" [ref=e485] [cursor=pointer]
+              - generic [ref=e486]:
+                - paragraph [ref=e487]: Motion accelerates hard and brakes late. Every entrance reads as a decision, not a drift. Durations sit at the lower end of each band. Anything slower than a second is a set piece, not a default.
+                - paragraph [ref=e488]: Staggers are tight. Groups read as one gesture with texture, not a queue. Between moves, nothing drifts. The contrast between still and moving is the signature.
+      - generic [ref=e490]:
+        - generic [ref=e492]:
+          - generic [ref=e494]:
+            - generic [ref=e495]: VANTA
+            - generic [ref=e496]: ·
+            - generic [ref=e497]: Voice and tone
+          - generic [ref=e498]: 06 / 09
+        - generic [ref=e501]:
+          - heading "Voice and tone" [level=2] [ref=e502]
+          - paragraph [ref=e503]: "Write like a coach who respects you: short, direct, never hyped."
+        - generic [ref=e504]:
+          - generic [ref=e506]:
+            - article [ref=e507]:
+              - paragraph [ref=e509]:
+                - generic [ref=e996]: 220 grams. The
+                - generic [ref=e998]: lightest short
+                - generic [ref=e1000]: we've built.
+              - generic [ref=e510]:
+                - paragraph [ref=e511]: Say the true thing
+                - paragraph [ref=e512]: No superlatives we can't back up. If it's the lightest short we've made, prove it. If it isn't, don't reach.
+            - article [ref=e513]:
+              - paragraph [ref=e515]:
+                - generic [ref=e1002]: Dries between
+                - generic [ref=e1004]: intervals. That's
+                - generic [ref=e1006]: the whole pitch.
+              - generic [ref=e516]:
+                - paragraph [ref=e517]: Earned, not shouted
+                - paragraph [ref=e518]: The work does the talking. We describe what it does, then get out of the way.
+            - article [ref=e519]:
+              - paragraph [ref=e521]:
+                - generic [ref=e1008]: You'll notice it at
+                - generic [ref=e1010]: kilometer thirty,
+                - generic [ref=e1012]: not kilometer
+                - generic [ref=e1014]: one.
+              - generic [ref=e522]:
+                - paragraph [ref=e523]: For the athlete, not the crowd
+                - paragraph [ref=e524]: We write to the person training, not to the person watching. Second person, present tense.
+            - article [ref=e525]:
+              - paragraph [ref=e527]:
+                - generic [ref=e1016]: It's a running
+                - generic [ref=e1018]: short. It's very
+                - generic [ref=e1020]: good.
+              - generic [ref=e528]:
+                - paragraph [ref=e529]: Plain over clever
+                - paragraph [ref=e530]: Say it the way you'd say it out loud. No wordplay, no slogans that need decoding. Clear beats clever, every time.
+          - generic [ref=e532]:
+            - generic [ref=e533]:
+              - paragraph [ref=e534]: Campaign line
+              - generic [ref=e535]:
+                - generic [ref=e536]: Do
+                - paragraph [ref=e537]: Perform in the quiet.
+              - generic [ref=e538]:
+                - generic [ref=e539]: Don't
+                - paragraph [ref=e540]: Unleash your ultimate potential!
+            - generic [ref=e541]:
+              - paragraph [ref=e542]: Product spec
+              - generic [ref=e543]:
+                - generic [ref=e544]: Do
+                - paragraph [ref=e545]: 220g. Tested to 40km.
+              - generic [ref=e546]:
+                - generic [ref=e547]: Don't
+                - paragraph [ref=e548]: Incredibly lightweight and durable!
+            - generic [ref=e549]:
+              - paragraph [ref=e550]: Error message
+              - generic [ref=e551]:
+                - generic [ref=e552]: Do
+                - paragraph [ref=e553]: That didn't save. Try again.
+              - generic [ref=e554]:
+                - generic [ref=e555]: Don't
+                - paragraph [ref=e556]: Oops! Something went wrong.
+            - generic [ref=e557]:
+              - paragraph [ref=e558]: Call to action
+              - generic [ref=e559]:
+                - generic [ref=e560]: Do
+                - paragraph [ref=e561]: Add to bag.
+              - generic [ref=e562]:
+                - generic [ref=e563]: Don't
+                - paragraph [ref=e564]: Grab yours before they're gone!
+      - generic [ref=e566]:
+        - generic [ref=e568]:
+          - generic [ref=e570]:
+            - generic [ref=e571]: VANTA
+            - generic [ref=e572]: ·
+            - generic [ref=e573]: Moodboard
+          - generic [ref=e574]: 07 / 09
+        - generic [ref=e578]:
+          - heading "Moodboard" [level=2] [ref=e579]
+          - paragraph [ref=e580]: The world VANTA lives in — before a single garment is designed.
+        - generic [ref=e581]:
+          - generic [ref=e582]:
+            - button "Full screen" [ref=e583] [cursor=pointer]:
+              - generic: F
+            - group "Moodboard view" [ref=e587]:
+              - button "Cloud" [pressed] [ref=e588] [cursor=pointer]
+              - button "Columns" [ref=e589] [cursor=pointer]
+          - generic [ref=e1024]:
+            - figure [ref=e1025]
+            - figure [ref=e1026]
+            - figure [ref=e1027]
+            - figure [ref=e1028]
+            - figure [ref=e1029]
+            - figure [ref=e1030]
+            - figure [ref=e1031]
+            - figure [ref=e1032]
+            - figure [ref=e1033]
+            - figure [ref=e1034]
+            - figure [ref=e1035]
+            - figure [ref=e1036]
+            - figure [ref=e1037]
+            - figure [ref=e1038]
+            - figure [ref=e1039]
+            - figure [ref=e1040]
+            - figure [ref=e1041]
+            - figure [ref=e1042]
+            - figure [ref=e1043]
+            - figure [ref=e1044]
+      - generic [ref=e591]:
+        - generic [ref=e593]:
+          - generic [ref=e595]:
+            - generic [ref=e596]: VANTA
+            - generic [ref=e597]: ·
+            - generic [ref=e598]: Applications
+          - generic [ref=e599]: 08 / 09
+        - generic [ref=e602]:
+          - heading "Applications" [level=2] [ref=e603]
+          - paragraph [ref=e604]: The system in the world — live, built from the tokens in this document.
+        - generic [ref=e605]:
+          - generic [ref=e1046]:
+            - generic [ref=e1047]: 9:41
+            - generic [ref=e1053]:
+              - generic [ref=e1054]: Mail
+              - generic [ref=e1056]: Photos
+              - generic [ref=e1058]: Notes
+              - generic [ref=e1060]:
+                - img "VANTA mark" [ref=e1062]
+                - generic [ref=e1063]: VANTA
+              - generic [ref=e1064]: Maps
+              - generic [ref=e1066]: Calendar
+              - generic [ref=e1068]: App Store
+              - generic [ref=e1070]: FaceTime
+          - generic [ref=e1079]:
+            - generic [ref=e1086]:
+              - img "VANTA mark" [ref=e1088]
+              - generic [ref=e1089]: vanta
+              - generic [ref=e1090]: 2h
+            - paragraph [ref=e1091]: Perform in the quiet.
+            - generic [ref=e1092]: Shop the collection
+          - img "VANTA logo" [ref=e1099]
+          - img "VANTA logo" [ref=e1103]
+          - generic [ref=e1105]:
+            - paragraph [ref=e1106]: VANTA
+            - paragraph [ref=e1108]: vanta.run
+          - img "VANTA logo" [ref=e1112]
+          - generic [ref=e1114]:
+            - paragraph [ref=e1115]: VANTA
+            - paragraph [ref=e1117]: vanta.run
+          - generic [ref=e1119]:
+            - img "VANTA logo" [ref=e1124]
+            - generic [ref=e1125]:
+              - paragraph [ref=e1126]: Perform in the quiet.
+              - img "VANTA mark" [ref=e1128]
+              - paragraph [ref=e1129]: Performance sportswear for the hours nobody watches.
+          - generic [ref=e1131]:
+            - img "VANTA logo" [ref=e1136]
+            - generic [ref=e1137]:
+              - paragraph [ref=e1138]: Perform in the quiet.
+              - img "VANTA mark" [ref=e1140]
+              - paragraph [ref=e1141]: Performance sportswear for the hours nobody watches.
+          - img "VANTA logo" [ref=e1144]
+          - img "VANTA logo" [ref=e1147]
+          - img "VANTA logo" [ref=e1150]
+      - generic [ref=e820]:
+        - generic [ref=e822]:
+          - generic [ref=e824]:
+            - generic [ref=e825]: VANTA
+            - generic [ref=e826]: ·
+            - generic [ref=e827]: Assets
+          - generic [ref=e828]: 09 / 09
+        - generic [ref=e831]:
+          - generic [ref=e832]:
+            - heading "Assets" [level=2] [ref=e833]
+            - paragraph [ref=e834]: Everything you need to build with VANTA.
+            - paragraph [ref=e835]: Free to use in VANTA partner work. Don't redistribute the source files.
+          - link "Download everything" [ref=e836] [cursor=pointer]:
+            - /url: /api/brand/vanta/pack.zip
+        - generic [ref=e837]:
+          - generic [ref=e838]:
+            - generic [ref=e839]:
+              - heading "Logo files" [level=3] [ref=e840]
+              - paragraph [ref=e841]: Every mark variant in this guideline, straight from the brand tokens.
+            - generic [ref=e842]:
+              - generic [ref=e843]:
+                - generic [ref=e844]:
+                  - generic [ref=e847]: Primary logo
+                  - generic [ref=e848]:
+                    - generic [ref=e849]: SVG
+                    - generic [ref=e850]: ·7 KB
+                    - generic [ref=e851]: ·118 × 33
+                - link "Download" [ref=e852] [cursor=pointer]:
+                  - /url: /fixtures/vanta/vanta-logo.svg
+              - generic [ref=e853]:
+                - generic [ref=e854]:
+                  - generic [ref=e857]: Logomark
+                  - generic [ref=e858]:
+                    - generic [ref=e859]: SVG
+                    - generic [ref=e860]: ·2 KB
+                    - generic [ref=e861]: ·213 × 240
+                - link "Download" [ref=e862] [cursor=pointer]:
+                  - /url: /fixtures/vanta/vanta-mark.svg
+              - generic [ref=e863]:
+                - generic [ref=e864]:
+                  - generic [ref=e867]: Mono, light
+                  - generic [ref=e868]: SVG
+                - link "Download" [ref=e870] [cursor=pointer]:
+                  - /url: /fixtures/vanta/vanta-mark-light.svg
+          - generic [ref=e871]:
+            - generic [ref=e872]:
+              - heading "Typefaces" [level=3] [ref=e873]
+              - paragraph [ref=e874]: The faces this brand sets in — files or foundry links.
+            - generic [ref=e875]:
+              - generic [ref=e876]:
+                - generic [ref=e877]:
+                  - generic [ref=e878]: Switzer
+                  - generic [ref=e879]: Fontshare
+                - link "Get at Fontshare" [ref=e881] [cursor=pointer]:
+                  - /url: https://www.fontshare.com/fonts/switzer
+              - generic [ref=e882]:
+                - generic [ref=e883]:
+                  - generic [ref=e884]: General Sans
+                  - generic [ref=e885]: Fontshare
+                - link "Get at Fontshare" [ref=e887] [cursor=pointer]:
+                  - /url: https://www.fontshare.com/fonts/general-sans
+          - generic [ref=e888]:
+            - generic [ref=e889]:
+              - heading "Brand colors" [level=3] [ref=e890]
+              - paragraph [ref=e891]: The palette as working files, generated from the tokens.
+            - generic [ref=e892]:
+              - generic [ref=e893]:
+                - generic [ref=e894]:
+                  - generic [ref=e902]: Adobe swatches
+                  - generic [ref=e903]: ASE
+                - link "Download" [ref=e905] [cursor=pointer]:
+                  - /url: blob:https://vessa.design/8ecf3da7-1b69-4c10-969c-5d8d1f291e32
+              - generic [ref=e906]:
+                - generic [ref=e907]:
+                  - generic [ref=e915]: Design tokens
+                  - generic [ref=e916]: JSON
+                - link "Download" [ref=e918] [cursor=pointer]:
+                  - /url: blob:https://vessa.design/b82abab8-5fb5-4215-ba85-9cec53863dab
+              - generic [ref=e919]:
+                - generic [ref=e920]:
+                  - generic [ref=e928]: CSS variables
+                  - generic [ref=e929]: CSS
+                - link "Download" [ref=e931] [cursor=pointer]:
+                  - /url: blob:https://vessa.design/5d2d06de-70df-44bb-af3d-d51b58ee79b0
+          - generic [ref=e932]:
+            - generic [ref=e933]:
+              - heading "Imagery" [level=3] [ref=e934]
+              - paragraph [ref=e935]: Approved exemplars for reference and layout.
+            - generic [ref=e936]:
+              - generic [ref=e937]:
+                - generic [ref=e938]:
+                  - generic [ref=e941]: Hero, run
+                  - generic [ref=e942]:
+                    - generic [ref=e943]: JPG
+                    - generic [ref=e944]: ·3840 × 2176
+                - link "Download" [ref=e945] [cursor=pointer]:
+                  - /url: https://annnimate.b-cdn.net/preview-assets/vanta/hero_run_01.jpg
+              - generic [ref=e946]:
+                - generic [ref=e947]:
+                  - generic [ref=e950]: Action, leap
+                  - generic [ref=e951]:
+                    - generic [ref=e952]: JPG
+                    - generic [ref=e953]: ·3840 × 2568
+                - link "Download" [ref=e954] [cursor=pointer]:
+                  - /url: https://annnimate.b-cdn.net/preview-assets/vanta/action_leap_01.jpg
+              - generic [ref=e955]:
+                - generic [ref=e956]:
+                  - generic [ref=e959]: Portrait
+                  - generic [ref=e960]:
+                    - generic [ref=e961]: JPG
+                    - generic [ref=e962]: ·3840 × 3840
+                - link "Download" [ref=e963] [cursor=pointer]:
+                  - /url: https://annnimate.b-cdn.net/preview-assets/vanta/face_portrait_01.jpg
+      - generic [ref=e967]:
+        - generic [ref=e968]: VANTA brand guidelines
+        - generic [ref=e969]: End of document
+        - generic [ref=e970]: © 2026

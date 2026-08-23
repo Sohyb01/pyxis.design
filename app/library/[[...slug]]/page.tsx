@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig, socialImage } from "@/app/seo";
 import { getLibraryEntry, libraryEntries } from "@/lib/library/registry";
+import { getLibraryEntrySources } from "@/lib/library/source";
 import { LibraryBrowser } from "./LibraryBrowser";
 
 type LibaryPageProps = {
@@ -69,12 +70,12 @@ export async function generateMetadata({
     title: defaultTitle,
     description: defaultDescription,
     alternates: {
-      canonical: "/libary",
+      canonical: "/library",
     },
     openGraph: {
       title: `${defaultTitle} | ${siteConfig.name}`,
       description: defaultDescription,
-      url: "/libary",
+      url: "/library",
       siteName: siteConfig.name,
       type: "website",
       images: [
@@ -98,33 +99,37 @@ export async function generateMetadata({
 
 export default async function LibaryPage({ params }: LibaryPageProps) {
   const { slug = [] } = await params;
+  let initialCategorySlug: string | null = null;
+  let initialEntrySlug: string | null = null;
 
-  if (slug.length === 0) {
-    return (
-      <LibraryBrowser initialCategorySlug={null} initialEntrySlug={null} />
-    );
-  }
-
-  if (slug.length !== 2) {
+  if (slug.length !== 0 && slug.length !== 2) {
     notFound();
   }
 
-  const [categorySlug, entrySlug] = slug;
+  if (slug.length === 2) {
+    const [categorySlug, entrySlug] = slug;
 
-  if (!categorySlug || !entrySlug) {
-    notFound();
+    if (!categorySlug || !entrySlug) {
+      notFound();
+    }
+
+    const entry = getLibraryEntry(categorySlug, entrySlug);
+
+    if (!entry) {
+      notFound();
+    }
+
+    initialCategorySlug = entry.categorySlug;
+    initialEntrySlug = entry.slug;
   }
 
-  const entry = getLibraryEntry(categorySlug, entrySlug);
-
-  if (!entry) {
-    notFound();
-  }
+  const entrySources = await getLibraryEntrySources();
 
   return (
     <LibraryBrowser
-      initialCategorySlug={entry.categorySlug}
-      initialEntrySlug={entry.slug}
+      entrySources={entrySources}
+      initialCategorySlug={initialCategorySlug}
+      initialEntrySlug={initialEntrySlug}
     />
   );
 }
