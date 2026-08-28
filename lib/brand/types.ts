@@ -284,6 +284,8 @@ export interface BrandLogoFile {
 export interface BrandAssetsConfig {
   heading: string;
   description: string;
+  fontStylesheetSrc: string | null;
+  motionStylesheetSrc: string | null;
   completePackSrc: string | null;
   logoFiles: readonly BrandLogoFile[];
   typefaces: readonly BrandDownloadAsset[];

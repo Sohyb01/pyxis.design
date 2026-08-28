@@ -1,5 +1,7 @@
 import { brainbotsBrand } from "@/lib/brand/brands/brainbots";
+import { evexaBrand } from "@/lib/brand/brands/evexa";
 import type { BrandConfig, BrandSectionDefinition } from "@/lib/brand/types";
+import { assertUniqueBrandSlugs } from "@/lib/brand/validation";
 
 export const brandSectionLinks = [
   { id: "introduction", label: "Introduction" },
@@ -13,7 +15,12 @@ export const brandSectionLinks = [
   { id: "assets", label: "Assets" },
 ] as const satisfies readonly BrandSectionDefinition[];
 
-export const brands = [brainbotsBrand] as const satisfies readonly BrandConfig[];
+export const brands = [
+  brainbotsBrand,
+  evexaBrand,
+] as const satisfies readonly BrandConfig[];
+
+assertUniqueBrandSlugs(brands);
 
 const brandsBySlug = new Map<string, BrandConfig>(
   brands.map((brand) => [brand.slug, brand]),

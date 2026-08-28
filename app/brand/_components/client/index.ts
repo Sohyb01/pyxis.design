@@ -4,9 +4,11 @@ export {
   type BrandNavigationProps,
 } from "./BrandNavigation";
 export {
-  ColorExplorer,
-  type ColorExplorerProps,
-} from "./ColorExplorer";
+  BrandSegmentedControl,
+  type BrandSegmentedControlOption,
+  type BrandSegmentedControlProps,
+} from "./BrandSegmentedControl";
+export { ColorExplorer, type ColorExplorerProps } from "./ColorExplorer";
 export { MotionExplorer, type MotionExplorerProps } from "./MotionExplorer";
 export {
   ColumnsMoodboard,
@@ -16,6 +18,10 @@ export {
   DownloadAssetRow,
   type DownloadAssetRowProps,
 } from "./DownloadAssetRow";
+export {
+  ClearSpaceArtwork,
+  type ClearSpaceArtworkProps,
+} from "./ClearSpaceArtwork";
 export {
   TypographyExplorer,
   type TypographyExplorerProps,

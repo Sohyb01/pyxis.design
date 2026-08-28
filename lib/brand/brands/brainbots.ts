@@ -1,8 +1,8 @@
-import type { BrandConfig } from "@/lib/brand/types";
+import { defineBrand } from "@/lib/brand/validation";
 
 const basePath = "/brand/brainbots" as const;
 
-export const brainbotsBrand = {
+export const brainbotsBrand = defineBrand({
   slug: "brainbots",
   name: "Brainbots",
   guidelinesLabel: "Brand guidelines",
@@ -49,7 +49,7 @@ export const brainbotsBrand = {
       src: `${basePath}/logos/brainbots-primary-logo.svg`,
       darkSrc: `${basePath}/logos/brainbots-primary-logo-white.svg`,
       alt: "Brainbots primary logo",
-      clearSpaceLabel: "Primary logo clear space",
+      clearSpaceLabel: "1x = half the logo height",
     },
     mark: {
       title: "Logomark",
@@ -58,7 +58,7 @@ export const brainbotsBrand = {
       src: `${basePath}/logos/brainbots-logomark.svg`,
       darkSrc: `${basePath}/logos/brainbots-logomark-white.svg`,
       alt: "Brainbots logomark",
-      clearSpaceLabel: "Logomark clear space",
+      clearSpaceLabel: "1x = half the logo height",
     },
   },
   colors: {
@@ -603,14 +603,16 @@ export const brainbotsBrand = {
     heading: "Assets",
     description:
       "Download the local typefaces, implementation-ready color files, and approved imagery used in this guide.",
+    fontStylesheetSrc: `${basePath}/fonts.css`,
+    motionStylesheetSrc: `${basePath}/motion.css`,
     completePackSrc: `${basePath}/brainbots-brand-assets.zip`,
     logoFiles: [
       {
-        name: "Brainbots primary logo",
+        name: "Primary logo",
         src: `${basePath}/logos/brainbots-primary-logo.svg`,
       },
       {
-        name: "Brainbots logomark",
+        name: "Logomark",
         src: `${basePath}/logos/brainbots-logomark.svg`,
       },
     ],
@@ -646,4 +648,4 @@ export const brainbotsBrand = {
       },
     ],
   },
-} satisfies BrandConfig<"brainbots">;
+});

@@ -1,11 +1,10 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { useEffect, useId, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import {
   AnimatePresence,
-  LayoutGroup,
   motion,
   useInView,
   useReducedMotion,
@@ -13,11 +12,19 @@ import {
 } from "motion/react";
 
 import type { BrandColor } from "@/lib/brand/types";
+import { getBrandColorFormats } from "@/lib/brand/values";
 import { cn } from "@/lib/utils";
 
+import { BrandSegmentedControl } from "./BrandSegmentedControl";
 import { writeTextToClipboard } from "./clipboard";
 
 type ColorView = "mosaic" | "proportions";
+type ColorFormat = "hex" | "hsl" | "rgb" | "cmyk";
+
+interface ColorCopyState {
+  name: string;
+  format: ColorFormat;
+}
 
 export interface ColorExplorerProps {
   heading: string;
@@ -36,8 +43,11 @@ const POWER_FOUR_OUT: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const POWER_FOUR_IN: [number, number, number, number] = [0.64, 0, 0.78, 0];
 const POWER_TWO_OUT: [number, number, number, number] = [0.33, 1, 0.68, 1];
 const POWER_TWO_IN: [number, number, number, number] = [0.32, 0, 0.67, 0];
-const PUNCH_MOVE: [number, number, number, number] = [0.7, 0, 0.16, 1];
 const VIEW_TRANSITION_MS = 1700;
+const COLOR_VIEW_OPTIONS = [
+  { value: "mosaic", label: "Mosaic" },
+  { value: "proportions", label: "Proportions" },
+] as const;
 
 const paletteVariants: Variants = {
   hidden: {},
@@ -55,9 +65,7 @@ const paletteVariants: Variants = {
 };
 
 function hiddenClip(view: ColorView) {
-  return view === "mosaic"
-    ? "inset(100% 0% 0% 0%)"
-    : "inset(0% 100% 0% 0%)";
+  return view === "mosaic" ? "inset(100% 0% 0% 0%)" : "inset(0% 100% 0% 0%)";
 }
 
 const tileVariants: Variants = {
@@ -103,93 +111,46 @@ const labelVariants: Variants = {
   },
 };
 
-function hexToRgb(hex: string) {
-  const raw = hex.replace("#", "").trim();
-  const normalized =
-    raw.length === 3
-      ? raw
-          .split("")
-          .map((character) => `${character}${character}`)
-          .join("")
-      : raw;
-
-  if (!/^[0-9a-f]{6}$/i.test(normalized)) {
-    return { red: 0, green: 0, blue: 0 };
-  }
+function convertColor(hex: string): ConvertedColor {
+  const formats = getBrandColorFormats(hex);
 
   return {
-    red: Number.parseInt(normalized.slice(0, 2), 16),
-    green: Number.parseInt(normalized.slice(2, 4), 16),
-    blue: Number.parseInt(normalized.slice(4, 6), 16),
+    rgb: formats.rgb.slice(4, -1),
+    hsl: formats.hsl.slice(4, -1),
+    cmyk: formats.cmyk.slice(5, -1),
   };
 }
 
-function convertColor(hex: string): ConvertedColor {
-  const { red, green, blue } = hexToRgb(hex);
-  const redUnit = red / 255;
-  const greenUnit = green / 255;
-  const blueUnit = blue / 255;
-  const max = Math.max(redUnit, greenUnit, blueUnit);
-  const min = Math.min(redUnit, greenUnit, blueUnit);
-  const delta = max - min;
+function colorCopyValue(
+  color: BrandColor,
+  converted: ConvertedColor,
+  format: ColorFormat,
+) {
+  if (format === "hex") return color.hex.toUpperCase();
+  if (format === "hsl") return `hsl(${converted.hsl})`;
+  if (format === "rgb") return `rgb(${converted.rgb})`;
+  return `cmyk(${converted.cmyk})`;
+}
 
-  let hue = 0;
-  if (delta !== 0) {
-    if (max === redUnit) {
-      hue = 60 * (((greenUnit - blueUnit) / delta) % 6);
-    } else if (max === greenUnit) {
-      hue = 60 * ((blueUnit - redUnit) / delta + 2);
-    } else {
-      hue = 60 * ((redUnit - greenUnit) / delta + 4);
-    }
-  }
-  if (hue < 0) hue += 360;
-
-  const lightness = (max + min) / 2;
-  const saturation =
-    delta === 0 ? 0 : delta / (1 - Math.abs(2 * lightness - 1));
-
-  const black = 1 - max;
-  const cyan = black === 1 ? 0 : (1 - redUnit - black) / (1 - black);
-  const magenta = black === 1 ? 0 : (1 - greenUnit - black) / (1 - black);
-  const yellow = black === 1 ? 0 : (1 - blueUnit - black) / (1 - black);
-
-  return {
-    rgb: `${red}, ${green}, ${blue}`,
-    hsl: `${Math.round(hue)}, ${Math.round(saturation * 100)}%, ${Math.round(lightness * 100)}%`,
-    cmyk: `${Math.round(cyan * 100)}%, ${Math.round(magenta * 100)}%, ${Math.round(yellow * 100)}%, ${Math.round(black * 100)}%`,
-  };
+function colorCopyMessage(format: ColorFormat) {
+  if (format === "hex") return "Copied hex code!";
+  return `Copied ${format.toUpperCase()} format!`;
 }
 
 function ColorName({
   name,
-  copied,
-  reduceMotion,
+  copiedMessage,
 }: {
   name: string;
-  copied: boolean;
-  reduceMotion: boolean;
+  copiedMessage: string | null;
 }) {
+  const copied = copiedMessage !== null;
+
   return (
     <motion.span
-      className="relative flex w-fit items-center text-p_ui_medium"
+      className="pointer-events-none relative z-10 flex w-fit items-center text-subtle whitespace-nowrap"
       variants={labelVariants}
     >
-      <AnimatePresence initial={false}>
-        {copied ? (
-          <motion.span
-            className="absolute end-full top-1/2 me-1 grid -translate-y-1/2 place-items-center [&_svg]:size-4"
-            initial={reduceMotion ? false : { rotate: -35, scale: 0 }}
-            animate={{ rotate: 0, scale: 1 }}
-            exit={reduceMotion ? undefined : { rotate: 35, scale: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.3, ease: POWER_FOUR_OUT }}
-            aria-hidden="true"
-          >
-            <Check />
-          </motion.span>
-        ) : null}
-      </AnimatePresence>
-
       <span className="block h-6 overflow-hidden">
         <span
           className={cn(
@@ -198,59 +159,123 @@ function ColorName({
           )}
         >
           <span className="flex h-6 items-center">{name}</span>
-          <span className="flex h-6 items-center">Copied</span>
+          <span className="flex h-6 items-center gap-2">
+            <Check className="size-4 shrink-0" aria-hidden="true" />
+            {copiedMessage}
+          </span>
         </span>
       </span>
     </motion.span>
   );
 }
 
+function ColorFormatValue({
+  colorName,
+  format,
+  children,
+  onCopy,
+  className,
+}: {
+  colorName: string;
+  format: ColorFormat;
+  children: ReactNode;
+  onCopy: (format: ColorFormat) => void;
+  className?: string;
+}) {
+  return (
+    <button
+      type="button"
+      className={cn(
+        "group/color-value pointer-events-auto relative w-fit cursor-pointer justify-self-end border-0 bg-transparent p-0 text-right text-inherit focus-visible:outline-none",
+        className,
+      )}
+      aria-label={`Copy ${colorName} ${format === "hex" ? "hex code" : `${format.toUpperCase()} format`}`}
+      onClick={() => onCopy(format)}
+    >
+      <span>{children}</span>
+      <span
+        className="absolute right-0 bottom-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-300 group-hover/color-value:scale-x-100 group-focus-visible/color-value:scale-x-100 motion-reduce:transition-none"
+        aria-hidden="true"
+      />
+    </button>
+  );
+}
+
 function DetailedColorValues({
   color,
   converted,
+  onCopy,
   compact = false,
 }: {
   color: BrandColor;
   converted: ConvertedColor;
+  onCopy: (format: ColorFormat) => void;
   compact?: boolean;
 }) {
   return (
-    <motion.span
-      className="grid self-end text-right text-detail opacity-80"
+    <motion.div
+      className="pointer-events-none relative z-10 grid self-end text-right text-detail opacity-80"
       variants={labelVariants}
     >
-      <span>{color.hex.toUpperCase()}</span>
-      <span className={cn(compact && "min-[768px]:max-[1439px]:hidden")}>
+      <ColorFormatValue colorName={color.name} format="hex" onCopy={onCopy}>
+        {color.hex.toUpperCase()}
+      </ColorFormatValue>
+      <ColorFormatValue
+        format="hsl"
+        colorName={color.name}
+        onCopy={onCopy}
+        className={cn(compact && "min-[768px]:max-[1439px]:hidden")}
+      >
         HSL: {converted.hsl}
-      </span>
-      <span className={cn(compact && "min-[768px]:max-[1439px]:hidden")}>
+      </ColorFormatValue>
+      <ColorFormatValue
+        format="rgb"
+        colorName={color.name}
+        onCopy={onCopy}
+        className={cn(compact && "min-[768px]:max-[1439px]:hidden")}
+      >
         RGB: {converted.rgb}
-      </span>
-      <span className={cn(compact && "min-[768px]:max-[1439px]:hidden")}>
+      </ColorFormatValue>
+      <ColorFormatValue
+        format="cmyk"
+        colorName={color.name}
+        onCopy={onCopy}
+        className={cn(compact && "min-[768px]:max-[1439px]:hidden")}
+      >
         CMYK: {converted.cmyk}
-      </span>
-    </motion.span>
+      </ColorFormatValue>
+    </motion.div>
   );
 }
 
 function ProportionValues({
   color,
   converted,
+  onCopy,
 }: {
   color: BrandColor;
   converted: ConvertedColor;
+  onCopy: (format: ColorFormat) => void;
 }) {
   return (
-    <motion.span
-      className="grid self-end text-right text-detail opacity-80"
+    <motion.div
+      className="pointer-events-none relative z-10 grid self-end text-right text-detail opacity-80"
       variants={labelVariants}
     >
       <span>{color.proportion}%</span>
-      <span>{color.hex.toUpperCase()}</span>
-      <span>HSL: {converted.hsl}</span>
-      <span>RGB: {converted.rgb}</span>
-      <span>CMYK: {converted.cmyk}</span>
-    </motion.span>
+      <ColorFormatValue colorName={color.name} format="hex" onCopy={onCopy}>
+        {color.hex.toUpperCase()}
+      </ColorFormatValue>
+      <ColorFormatValue colorName={color.name} format="hsl" onCopy={onCopy}>
+        HSL: {converted.hsl}
+      </ColorFormatValue>
+      <ColorFormatValue colorName={color.name} format="rgb" onCopy={onCopy}>
+        RGB: {converted.rgb}
+      </ColorFormatValue>
+      <ColorFormatValue colorName={color.name} format="cmyk" onCopy={onCopy}>
+        CMYK: {converted.cmyk}
+      </ColorFormatValue>
+    </motion.div>
   );
 }
 
@@ -262,13 +287,13 @@ export function ColorExplorer({
 }: ColorExplorerProps) {
   const [view, setView] = useState<ColorView>("mosaic");
   const [transitioning, setTransitioning] = useState(false);
-  const [copiedName, setCopiedName] = useState<string | null>(null);
+  const [copiedColor, setCopiedColor] = useState<ColorCopyState | null>(null);
   const [copyError, setCopyError] = useState(false);
   const resetTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const viewTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const paletteRef = useRef<HTMLDivElement>(null);
-  const switcherId = useId().replace(/:/g, "");
-  const panelId = `${switcherId}-color-panel`;
+  const explorerId = useId().replace(/:/g, "");
+  const panelId = `${explorerId}-color-panel`;
   const prefersReducedMotion = useReducedMotion();
   const reduceMotion = prefersReducedMotion === true;
   const paletteInView = useInView(paletteRef, {
@@ -307,20 +332,21 @@ export function ColorExplorer({
     }, VIEW_TRANSITION_MS);
   };
 
-  const copyColor = async (color: BrandColor) => {
+  const copyColor = async (color: BrandColor, format: ColorFormat) => {
     if (resetTimerRef.current) clearTimeout(resetTimerRef.current);
+    const converted = convertColor(color.hex);
 
     try {
-      await writeTextToClipboard(color.hex.toUpperCase());
-      setCopiedName(color.name);
+      await writeTextToClipboard(colorCopyValue(color, converted, format));
+      setCopiedColor({ name: color.name, format });
       setCopyError(false);
     } catch {
-      setCopiedName(null);
+      setCopiedColor(null);
       setCopyError(true);
     }
 
     resetTimerRef.current = setTimeout(() => {
-      setCopiedName(null);
+      setCopiedColor(null);
       setCopyError(false);
     }, 1400);
   };
@@ -337,47 +363,14 @@ export function ColorExplorer({
           </p>
         </div>
 
-        <LayoutGroup id={switcherId}>
-          <div
-            className="relative inline-flex shrink-0 items-center gap-0.5 rounded-full border border-(--brand-line) bg-(--brand-surface) p-[3px]"
-            aria-label="Color view"
-            role="group"
-          >
-            {(["mosaic", "proportions"] as const).map((option) => {
-              const active = option === view;
-
-              return (
-                <button
-                  type="button"
-                  key={option}
-                  className={cn(
-                    "relative z-0 h-[29px] cursor-pointer rounded-full border-0 bg-transparent px-3 text-body transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--brand-accent) motion-reduce:transition-none",
-                    active
-                      ? "[color:var(--brand-accent-foreground)]"
-                      : "text-muted-foreground/70 hover:text-foreground",
-                  )}
-                  aria-pressed={active}
-                  aria-controls={panelId}
-                  aria-disabled={transitioning || undefined}
-                  onClick={() => selectView(option)}
-                >
-                  {active ? (
-                    <motion.span
-                      className="absolute inset-0 -z-10 rounded-full bg-(--brand-accent)"
-                      layoutId={`${switcherId}-color-view-selection`}
-                      initial={false}
-                      transition={{ duration: reduceMotion ? 0 : 0.42, ease: PUNCH_MOVE }}
-                      aria-hidden="true"
-                    />
-                  ) : null}
-                  <span className="relative z-10">
-                    {option === "mosaic" ? "Mosaic" : "Proportions"}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </LayoutGroup>
+        <BrandSegmentedControl
+          value={view}
+          options={COLOR_VIEW_OPTIONS}
+          onValueChange={selectView}
+          ariaLabel="Color view"
+          controlsId={panelId}
+          disabled={transitioning}
+        />
       </header>
 
       <div
@@ -420,24 +413,28 @@ export function ColorExplorer({
               }
             >
               {colors.map((color, colorIndex) => {
-                const copied = copiedName === color.name;
+                const copiedMessage =
+                  copiedColor?.name === color.name
+                    ? colorCopyMessage(copiedColor.format)
+                    : null;
                 const converted = convertColor(color.hex);
                 const foreground =
                   color.foreground === "light" ? "#ffffff" : "#0a0a0a";
 
                 if (view === "mosaic") {
                   return (
-                    <motion.button
-                      type="button"
+                    <motion.div
                       key={color.name}
                       className={cn(
-                        "relative flex min-w-0 cursor-pointer flex-col justify-between overflow-hidden border-0 py-5 text-left data-[bordered=true]:ring-1 data-[bordered=true]:ring-(--brand-line) data-[bordered=true]:ring-inset focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-(--brand-accent) max-[767px]:min-h-[clamp(9rem,22vh,13rem)] max-[767px]:px-6",
+                        "relative flex min-w-0 flex-col justify-between overflow-hidden border-0 py-5 text-left data-[bordered=true]:ring-1 data-[bordered=true]:ring-(--brand-line) data-[bordered=true]:ring-inset max-[767px]:min-h-[clamp(9rem,22vh,13rem)] max-[767px]:px-6",
                         color.mosaic.columnSpan === 1 ? "px-2" : "px-6",
                       )}
                       custom="mosaic"
                       variants={tileVariants}
                       data-bordered={
-                        color.hex.toUpperCase() === "#FFFFFF" ? "true" : undefined
+                        color.hex.toUpperCase() === "#FFFFFF"
+                          ? "true"
+                          : undefined
                       }
                       style={{
                         backgroundColor: color.hex,
@@ -445,20 +442,24 @@ export function ColorExplorer({
                         gridColumn: `${color.mosaic.columnStart} / span ${color.mosaic.columnSpan}`,
                         gridRow: `${color.mosaic.rowStart} / span ${color.mosaic.rowSpan}`,
                       }}
-                      aria-label={`Copy ${color.name} ${color.hex}`}
-                      onClick={() => void copyColor(color)}
                     >
+                      <button
+                        type="button"
+                        className="absolute inset-0 z-0 cursor-pointer border-0 bg-transparent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-(--brand-accent)"
+                        aria-label={`Copy ${color.name} hex code ${color.hex}`}
+                        onClick={() => void copyColor(color, "hex")}
+                      />
                       <ColorName
                         name={color.mosaicLabel ?? color.name}
-                        copied={copied}
-                        reduceMotion={reduceMotion}
+                        copiedMessage={copiedMessage}
                       />
                       <DetailedColorValues
                         color={color}
                         converted={converted}
+                        onCopy={(format) => void copyColor(color, format)}
                         compact={color.mosaic.columnSpan === 1}
                       />
-                    </motion.button>
+                    </motion.div>
                   );
                 }
 
@@ -470,36 +471,42 @@ export function ColorExplorer({
                 } as CSSProperties;
 
                 return (
-                  <motion.button
-                    type="button"
+                  <motion.div
                     key={color.name}
                     className={cn(
-                      "group relative min-w-0 basis-[var(--brand-color-proportion)] shrink grow-0 cursor-pointer overflow-hidden border-0 p-0 text-left transition-[min-width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-(--brand-accent) max-[767px]:min-h-44 max-[767px]:basis-auto motion-reduce:transition-none",
+                      "group relative min-w-0 basis-[var(--brand-color-proportion)] shrink grow-0 overflow-hidden border-0 p-0 text-left transition-[min-width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] max-[767px]:min-h-44 max-[767px]:basis-auto motion-reduce:transition-none",
                       isDominantProportion
                         ? "min-[768px]:min-w-40"
-                        : "min-[768px]:hover:min-w-52 min-[768px]:focus:min-w-52",
+                        : "min-[768px]:hover:min-w-52 min-[768px]:focus-within:min-w-52",
                     )}
                     custom="proportions"
                     variants={tileVariants}
                     style={proportionStyle}
-                    aria-label={`Copy ${color.name} ${color.hex}, ${color.proportion} percent`}
-                    onClick={() => void copyColor(color)}
                   >
-                    <span
+                    <button
+                      type="button"
+                      className="absolute inset-0 z-0 cursor-pointer border-0 bg-transparent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-(--brand-accent)"
+                      aria-label={`Copy ${color.name} hex code ${color.hex}, ${color.proportion} percent`}
+                      onClick={() => void copyColor(color, "hex")}
+                    />
+                    <div
                       className={cn(
-                        "absolute inset-0 flex flex-col justify-between px-4 py-5 transition-opacity duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+                        "pointer-events-none absolute inset-0 flex flex-col justify-between px-4 py-5 transition-opacity duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
                         !isDominantProportion &&
-                          "min-[768px]:opacity-0 min-[768px]:group-hover:opacity-100 min-[768px]:group-focus:opacity-100",
+                          "min-[768px]:opacity-0 min-[768px]:group-hover:opacity-100 min-[768px]:group-focus-within:opacity-100",
                       )}
                     >
                       <ColorName
                         name={color.name}
-                        copied={copied}
-                        reduceMotion={reduceMotion}
+                        copiedMessage={copiedMessage}
                       />
-                      <ProportionValues color={color} converted={converted} />
-                    </span>
-                  </motion.button>
+                      <ProportionValues
+                        color={color}
+                        converted={converted}
+                        onCopy={(format) => void copyColor(color, format)}
+                      />
+                    </div>
+                  </motion.div>
                 );
               })}
             </motion.div>
@@ -510,8 +517,8 @@ export function ColorExplorer({
       <span className="sr-only" aria-live="polite" aria-atomic="true">
         {copyError
           ? "Could not copy the color value"
-          : copiedName
-            ? `${copiedName} HEX copied`
+          : copiedColor
+            ? `${copiedColor.name}: ${colorCopyMessage(copiedColor.format)}`
             : ""}
       </span>
     </div>

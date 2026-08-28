@@ -1,0 +1,11 @@
+:root,
+[data-brand="evexa"] {
+  --evexa-color-void-black: #050505;
+  --evexa-color-signal-white: #ebebeb;
+  --evexa-color-blue: #0032d6;
+  --evexa-color-electric-cyan: #00bbe0;
+  --evexa-color-system-azure: #1fa5ff;
+  --evexa-color-graphite: #474747;
+  --evexa-color-interface-gray: #8f8f8f;
+  --evexa-color-alert-red: #ff000d;
+}

@@ -1,7 +1,6 @@
 "use client";
 
-import type { KeyboardEvent } from "react";
-import { useId, useRef, useState } from "react";
+import { useId, useState } from "react";
 
 import type {
   BrandTypeface,
@@ -11,6 +10,8 @@ import type {
   BrandTypeScaleItem,
 } from "@/lib/brand/types";
 import { cn } from "@/lib/utils";
+
+import { BrandSegmentedControl } from "./BrandSegmentedControl";
 
 export interface TypographyExplorerProps {
   typography: BrandTypographyConfig;
@@ -154,8 +155,7 @@ function HeadingSpecimen({
             fontSize: "clamp(2rem, 2.45vw, 2.75rem)",
             fontWeight: 400,
             lineHeight: 1.2,
-            letterSpacing:
-              system.direction === "rtl" ? "normal" : undefined,
+            letterSpacing: system.direction === "rtl" ? "normal" : undefined,
           }}
         >
           {system.heading.charset}
@@ -258,8 +258,7 @@ function SeparateBodySpecimen({
             fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
             fontWeight: 500,
             lineHeight: 1.2,
-            letterSpacing:
-              system.direction === "rtl" ? "normal" : undefined,
+            letterSpacing: system.direction === "rtl" ? "normal" : undefined,
           }}
         >
           {body.sample}
@@ -326,8 +325,7 @@ function ScaleSample({
           fontSize: item.sizePx,
           fontWeight: item.weight,
           lineHeight: `${item.lineHeightPx}px`,
-          letterSpacing:
-            system.direction === "rtl" ? "normal" : undefined,
+          letterSpacing: system.direction === "rtl" ? "normal" : undefined,
         }}
       >
         {item.sample}
@@ -439,11 +437,8 @@ function TypographySystemPanel({
   );
 }
 
-export function TypographyExplorer({
-  typography,
-}: TypographyExplorerProps) {
+export function TypographyExplorer({ typography }: TypographyExplorerProps) {
   const explorerId = useId().replace(/:/g, "");
-  const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const [activeSystemId, setActiveSystemId] = useState(
     typography.defaultSystemId,
   );
@@ -463,35 +458,6 @@ export function TypographyExplorer({
   );
   const selectedIndex = activeIndex === -1 ? defaultIndex : activeIndex;
 
-  const selectTab = (index: number) => {
-    const system = typography.systems[index];
-    setActiveSystemId(system.id);
-    tabRefs.current[index]?.focus();
-  };
-
-  const handleTabKeyDown = (
-    event: KeyboardEvent<HTMLButtonElement>,
-    index: number,
-  ) => {
-    let nextIndex: number | null = null;
-
-    if (event.key === "ArrowRight") {
-      nextIndex = (index + 1) % typography.systems.length;
-    } else if (event.key === "ArrowLeft") {
-      nextIndex =
-        (index - 1 + typography.systems.length) % typography.systems.length;
-    } else if (event.key === "Home") {
-      nextIndex = 0;
-    } else if (event.key === "End") {
-      nextIndex = typography.systems.length - 1;
-    }
-
-    if (nextIndex === null) return;
-
-    event.preventDefault();
-    selectTab(nextIndex);
-  };
-
   return (
     <div>
       <header className="mb-24 grid gap-6 pt-12 min-[900px]:grid-cols-12 min-[900px]:gap-x-6 min-[1024px]:pt-8">
@@ -505,41 +471,19 @@ export function TypographyExplorer({
           {typography.description}
         </p>
 
-        <div
-          className="inline-flex w-fit items-center gap-1 rounded-[2px] border border-(--brand-line) bg-(--brand-surface) p-1 min-[900px]:col-span-5 min-[900px]:self-end min-[900px]:justify-self-end"
-          role="tablist"
-          aria-label="Typography language"
-          aria-orientation="horizontal"
-        >
-          {typography.systems.map((system, index) => {
-            const selected = index === selectedIndex;
-
-            return (
-              <button
-                key={system.id}
-                ref={(element) => {
-                  tabRefs.current[index] = element;
-                }}
-                id={`${explorerId}-${system.id}-tab`}
-                type="button"
-                role="tab"
-                aria-selected={selected}
-                aria-controls={`${explorerId}-${system.id}-panel`}
-                tabIndex={selected ? 0 : -1}
-                className={cn(
-                  "cursor-pointer rounded-[2px] px-3 py-1.5 text-body transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--brand-accent) motion-reduce:transition-none",
-                  selected
-                    ? "bg-(--brand-accent) [color:var(--brand-accent-foreground)]"
-                    : "text-muted-foreground/70 hover:text-foreground",
-                )}
-                onClick={() => setActiveSystemId(system.id)}
-                onKeyDown={(event) => handleTabKeyDown(event, index)}
-              >
-                {system.label}
-              </button>
-            );
-          })}
-        </div>
+        <BrandSegmentedControl
+          className="w-fit min-[900px]:col-span-5 min-[900px]:self-end min-[900px]:justify-self-end"
+          value={typography.systems[selectedIndex].id}
+          options={typography.systems.map((system) => ({
+            value: system.id,
+            label: system.label,
+            id: `${explorerId}-${system.id}-tab`,
+            controlsId: `${explorerId}-${system.id}-panel`,
+          }))}
+          onValueChange={setActiveSystemId}
+          ariaLabel="Typography language"
+          semantics="tabs"
+        />
       </header>
 
       {typography.systems.map((system, index) => (

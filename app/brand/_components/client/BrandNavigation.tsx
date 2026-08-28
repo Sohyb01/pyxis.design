@@ -319,15 +319,14 @@ export function BrandNavigation({
       </aside>
 
       <div className="sticky top-0 z-40 flex min-h-14 items-center justify-between gap-4 border-b border-(--brand-line) bg-(--brand-background)/95 px-4 py-3 backdrop-blur-lg min-[1024px]:hidden">
-        <p className="min-w-0 truncate text-p_ui_medium">{brandName}</p>
+        <p className="whitespace-nowrap text-xl uppercase">{brandName}</p>
         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
           <SheetTrigger asChild>
             <button
               type="button"
-              className="inline-flex min-h-9 cursor-pointer items-center gap-2 rounded-md border border-(--brand-line) bg-transparent px-3 py-1 text-body_medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--brand-accent) [&_svg]:size-4"
+              className="inline-flex min-h-9 cursor-pointer items-center gap-2 bg-transparent text-body_medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--brand-accent) [&_svg]:size-4"
             >
               <Menu aria-hidden="true" />
-              Sections
             </button>
           </SheetTrigger>
           <SheetContent

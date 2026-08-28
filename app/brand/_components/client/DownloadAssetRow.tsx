@@ -196,58 +196,60 @@ export function DownloadAssetRow({
         : "Reading size…";
 
   return (
-    <article className="grid min-h-24 grid-cols-[3.25rem_minmax(0,1fr)_auto] items-center gap-2 border-b border-(--brand-line) px-1 py-2 last:border-b min-[640px]:grid-cols-[5rem_minmax(0,1fr)_auto] min-[640px]:gap-4 min-[640px]:px-2 min-[900px]:grid-cols-12">
-      <div className="relative aspect-4/3 w-13 overflow-hidden rounded-sm bg-(--brand-surface) min-[640px]:w-20 min-[900px]:col-span-1">
-        {sourceForPreview && !currentState.previewFailed ? (
-          <Image
-            src={sourceForPreview}
-            alt=""
-            fill
-            sizes="5rem"
-            className={containPreview ? "object-contain p-3" : "object-cover"}
-            unoptimized
-            onError={() =>
-              setAssetState((current) => ({
-                source: sourceForPreview,
-                dimensions:
-                  current.source === sourceForPreview
-                    ? current.dimensions
-                    : null,
-                metadataFailed:
-                  current.source === sourceForPreview
-                    ? current.metadataFailed
-                    : true,
-                previewFailed: true,
-              }))
-            }
-          />
-        ) : (
-          <div
-            className="grid size-full place-items-center text-muted-foreground/70"
-            aria-hidden="true"
-          >
-            {sourceForPreview ? (
-              <ImageIcon className="size-5" />
-            ) : (
-              <FileQuestion className="size-5" />
-            )}
-          </div>
-        )}
-      </div>
+    <article className="grid min-h-24 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 border-b border-(--brand-line) px-1 py-2 last:border-b min-[640px]:gap-4 min-[640px]:px-2 min-[900px]:grid-cols-12">
+      <div className="flex min-w-0 items-center gap-2 min-[640px]:gap-4 min-[900px]:col-span-5">
+        <div className="relative aspect-4/3 w-13 shrink-0 overflow-hidden rounded-sm bg-(--brand-surface) min-[640px]:w-20">
+          {sourceForPreview && !currentState.previewFailed ? (
+            <Image
+              src={sourceForPreview}
+              alt=""
+              fill
+              sizes="5rem"
+              className={containPreview ? "object-contain p-3" : "object-cover"}
+              unoptimized
+              onError={() =>
+                setAssetState((current) => ({
+                  source: sourceForPreview,
+                  dimensions:
+                    current.source === sourceForPreview
+                      ? current.dimensions
+                      : null,
+                  metadataFailed:
+                    current.source === sourceForPreview
+                      ? current.metadataFailed
+                      : true,
+                  previewFailed: true,
+                }))
+              }
+            />
+          ) : (
+            <div
+              className="grid size-full place-items-center text-muted-foreground/70"
+              aria-hidden="true"
+            >
+              {sourceForPreview ? (
+                <ImageIcon className="size-5" />
+              ) : (
+                <FileQuestion className="size-5" />
+              )}
+            </div>
+          )}
+        </div>
 
-      <div className="min-w-0 min-[900px]:col-span-4">
-        <h3 className="truncate text-p_ui_medium">{label}</h3>
-        <p className="mt-1 flex flex-wrap gap-1 text-detail text-muted-foreground/70 min-[900px]:hidden">
-          <span>{extension}</span>
-          {showFileSize ? (
-            <>
-              <span aria-hidden="true">&middot;</span>
-              <span>{fileSizeLabel}</span>
-            </>
-          ) : null}
-          <span aria-hidden="true">&middot;</span>
-          <span>{dimensionLabel}</span>
-        </p>
+        <div className="min-w-0">
+          <h3 className="truncate text-p_ui_medium">{label}</h3>
+          <p className="mt-1 flex flex-wrap gap-1 text-detail text-muted-foreground/70 min-[900px]:hidden">
+            <span>{extension}</span>
+            {showFileSize ? (
+              <>
+                <span aria-hidden="true">&middot;</span>
+                <span>{fileSizeLabel}</span>
+              </>
+            ) : null}
+            <span aria-hidden="true">&middot;</span>
+            <span>{dimensionLabel}</span>
+          </p>
+        </div>
       </div>
 
       <span className="hidden text-detail text-muted-foreground/70 min-[900px]:col-span-1 min-[900px]:block">

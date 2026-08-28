@@ -1,7 +1,4 @@
-import type {
-  BrandConfig,
-  BrandTypographyConfig,
-} from "@/lib/brand/types";
+import type { BrandConfig } from "@/lib/brand/types";
 
 import { TypographyExplorer } from "../client";
 import { SectionMeta } from "../shared";
@@ -10,56 +7,7 @@ type TypographySectionProps = {
   brand: BrandConfig;
 };
 
-function validateTypographyConfig(typography: BrandTypographyConfig) {
-  const typefaceIds = new Set<string>();
-
-  typography.typefaces.forEach((typeface) => {
-    if (typefaceIds.has(typeface.id)) {
-      throw new Error(
-        `Brand typography configuration contains the duplicate typeface ID "${typeface.id}".`,
-      );
-    }
-
-    typefaceIds.add(typeface.id);
-  });
-
-  const systemIds = new Set<string>();
-
-  typography.systems.forEach((system) => {
-    if (systemIds.has(system.id)) {
-      throw new Error(
-        `Brand typography configuration contains the duplicate system ID "${system.id}".`,
-      );
-    }
-
-    systemIds.add(system.id);
-
-    if (!typefaceIds.has(system.heading.typefaceId)) {
-      throw new Error(
-        `Typography system "${system.id}" references the missing heading typeface "${system.heading.typefaceId}".`,
-      );
-    }
-
-    if (
-      system.body.mode === "separate" &&
-      !typefaceIds.has(system.body.typefaceId)
-    ) {
-      throw new Error(
-        `Typography system "${system.id}" references the missing body typeface "${system.body.typefaceId}".`,
-      );
-    }
-  });
-
-  if (!systemIds.has(typography.defaultSystemId)) {
-    throw new Error(
-      `Brand typography default system "${typography.defaultSystemId}" does not exist.`,
-    );
-  }
-}
-
 export function TypographySection({ brand }: TypographySectionProps) {
-  validateTypographyConfig(brand.typography);
-
   return (
     <section
       id="typography"

@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 
 import { siteConfig, socialImage } from "@/app/seo";
 import { BrandDocument } from "@/app/brand/_components/BrandDocument";
-import { brandSectionLinks, brands, getBrandBySlug } from "@/lib/brand";
+import {
+  brandSectionLinks,
+  brands,
+  createPublicBrandDocument,
+  getBrandBySlug,
+} from "@/lib/brand";
 
 type BrandPageProps = {
   params: Promise<{ slug: string }>;
@@ -29,7 +34,12 @@ export async function generateMetadata({
   return {
     title: brand.metadata.title,
     description: brand.metadata.description,
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      types: {
+        "application/json": `${canonical}/brand.json`,
+      },
+    },
     openGraph: {
       title: `${brand.metadata.title} | ${siteConfig.name}`,
       description: brand.metadata.description,
@@ -53,5 +63,17 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
   if (!brand) notFound();
 
-  return <BrandDocument brand={brand} sections={brandSectionLinks} />;
+  const publicDocument = createPublicBrandDocument(
+    brand,
+    brandSectionLinks,
+    siteConfig.url,
+  );
+
+  return (
+    <BrandDocument
+      brand={brand}
+      sections={brandSectionLinks}
+      publicDocument={publicDocument}
+    />
+  );
 }

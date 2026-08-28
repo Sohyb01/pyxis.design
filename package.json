@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "brand:check": "tsx scripts/check-brands.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

@@ -88,7 +88,7 @@ export function AssetsSection({ brand }: AssetsSectionProps) {
                 href={assets.completePackSrc}
                 download
               >
-                Download
+                Download all
               </a>
             ) : null}
           </div>

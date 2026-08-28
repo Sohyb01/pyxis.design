@@ -2,14 +2,14 @@ import Image from "next/image";
 
 import type { BrandConfig } from "@/lib/brand/types";
 
-import { MediaPlaceholder, SectionMeta } from "../shared";
+import { MediaPlaceholder } from "../shared";
 
 type IntroductionSectionProps = {
   brand: BrandConfig;
 };
 
 export function IntroductionSection({ brand }: IntroductionSectionProps) {
-  const { introduction, logo } = brand;
+  const { introduction } = brand;
 
   return (
     <section
@@ -40,48 +40,30 @@ export function IntroductionSection({ brand }: IntroductionSectionProps) {
           aria-hidden="true"
         />
 
-        <div className="relative z-20 px-5 text-white min-[640px]:px-8 min-[900px]:px-16">
+        {/* <div className="relative z-20 px-5 text-white min-[640px]:px-8 min-[900px]:px-16">
           <SectionMeta
             brandName={brand.name}
             section="Introduction"
             index={1}
           />
-        </div>
+        </div> */}
 
-        <div className="relative z-10 w-68 max-w-[58vw] px-5 py-8 min-[640px]:px-8 min-[900px]:px-16">
-          {logo.primary.src ? (
-            <Image
-              className="h-auto w-full object-contain object-left"
-              src={logo.primary.src}
-              alt={logo.primary.alt}
-              width={560}
-              height={240}
-            />
-          ) : (
-            <MediaPlaceholder
-              className="min-h-20 border-white/30 bg-black/20 text-white/70"
-              label="Primary logo not supplied"
-              tone="dark"
-            />
-          )}
-        </div>
-
-        <div className="relative z-10 grid gap-10 px-5 pt-16 pb-8 min-[640px]:px-8 min-[900px]:grid-cols-12 min-[900px]:items-end min-[900px]:px-16 min-[1280px]:pb-12">
+        <div className="mt-auto relative z-10 grid gap-10 px-5 pt-16 pb-8 min-[640px]:px-8 min-[900px]:grid-cols-12 min-[900px]:items-end min-[900px]:px-16 min-[1280px]:pb-12">
           <h1
             id="introduction-heading"
-            className="max-w-[20ch] text-h1 text-balance min-[900px]:col-span-5"
+            className="min-w-0 max-w-full text-balance text-5xl md:text-6xl lg:text-7xl min-[900px]:col-span-12"
           >
             {introduction.statement}
           </h1>
 
-          <dl className="grid grid-cols-4 gap-5 min-[900px]:col-span-full">
+          <dl className="grid grid-cols-2 gap-5 min-[640px]:grid-cols-4 min-[900px]:col-span-full">
             {introduction.facts.map((fact) => (
               <div
-                className="grid content-start gap-1 border-t border-white/30 pt-3"
+                className="grid min-w-0 content-start gap-1 border-t border-white/30 pt-3"
                 key={fact.label}
               >
                 <dt className="text-detail text-white/65">{fact.label}</dt>
-                <dd className="text-body_medium">{fact.value}</dd>
+                <dd className="break-words text-body_medium">{fact.value}</dd>
               </div>
             ))}
           </dl>

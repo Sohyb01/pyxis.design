@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import type { BrandConfig, BrandLogoVariant } from "@/lib/brand/types";
 
+import { ClearSpaceArtwork } from "../client";
 import { MediaPlaceholder, SectionMeta } from "../shared";
 
 type LogoSectionProps = {
@@ -17,23 +18,15 @@ type LogoVariantProps = {
 function LogoArtwork({
   variant,
   tone,
-  clearSpace = false,
 }: {
   variant: BrandLogoVariant;
   tone: "light" | "dark";
-  clearSpace?: boolean;
 }) {
   const artworkSrc =
     tone === "dark" ? (variant.darkSrc ?? variant.src) : variant.src;
 
   return (
-    <div
-      className={`relative grid min-h-0 place-items-center ${
-        clearSpace
-          ? "before:absolute before:aspect-[2/1] before:w-[min(78%,21rem)] before:border before:border-dashed before:border-(--brand-accent) before:opacity-40 before:content-['']"
-          : ""
-      }`}
-    >
+    <div className="relative grid min-h-0 place-items-center">
       {artworkSrc ? (
         <Image
           className="relative z-10 h-auto max-h-48 w-[min(72%,20rem)] object-contain"
@@ -74,22 +67,24 @@ function LogoVariant({
       </header>
 
       <div className="grid gap-6 min-[752px]:grid-cols-3">
-        <div className="relative grid min-h-[30rem] grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-sm border border-(--brand-line) bg-(--brand-background) p-4 [color:var(--brand-foreground)] min-[752px]:min-h-[clamp(31rem,64svh,40rem)]">
-          <p className="relative z-20 text-detail opacity-[0.58]">Light</p>
+        <div className="relative grid min-h-[30rem] grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-sm border border-(--brand-line) bg-white p-4 [color:var(--brand-foreground)] min-[752px]:min-h-[clamp(31rem,64svh,40rem)]">
+          <p className="relative z-20 text-detail text-muted-foreground/70">
+            Light
+          </p>
           <LogoArtwork variant={variant} tone="light" />
         </div>
 
         <div className="relative grid min-h-[30rem] grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-sm border border-neutral-950 bg-neutral-950 p-4 text-white min-[752px]:min-h-[clamp(31rem,64svh,40rem)]">
-          <p className="relative z-20 text-detail opacity-[0.58]">Dark</p>
+          <p className="relative z-20 text-detail text-white/70">Dark</p>
           <LogoArtwork variant={variant} tone="dark" />
         </div>
 
         <div className="relative grid min-h-[30rem] grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-sm border border-(--brand-line) bg-(--brand-background) p-4 [color:var(--brand-foreground)] min-[752px]:min-h-[clamp(31rem,64svh,40rem)]">
-          <p className="relative z-20 text-detail opacity-[0.58]">
+          <p className="relative z-20 text-detail text-muted-foreground/70">
             Clear space
           </p>
 
-          <LogoArtwork variant={variant} tone="light" clearSpace />
+          <ClearSpaceArtwork variant={variant} />
           <div className="absolute bottom-4 start-4 z-20 grid max-w-96 gap-1 pt-6 text-subtle">
             <p className="[color:var(--brand-accent)]">
               {variant.clearSpaceLabel}

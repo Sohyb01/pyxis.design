@@ -1,0 +1,9 @@
+:root,
+[data-brand="evexa"] {
+  --evexa-ease-enter: cubic-bezier(0.18, 0.9, 0.24, 1);
+  --evexa-duration-enter: 640ms;
+  --evexa-stagger-enter: 70ms;
+  --evexa-ease-move: cubic-bezier(0.76, 0, 0.24, 1);
+  --evexa-duration-move: 840ms;
+  --evexa-stagger-move: 22ms;
+}

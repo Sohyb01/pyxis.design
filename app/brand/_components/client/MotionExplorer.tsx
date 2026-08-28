@@ -10,11 +10,13 @@ import type {
   BrandMotionExample,
   BrandMotionMedia,
 } from "@/lib/brand/types";
+import {
+  getBrandMotionSnippets,
+  type BrandMotionSnippetFormat,
+} from "@/lib/brand/values";
 import { cn } from "@/lib/utils";
 
 import { writeTextToClipboard } from "./clipboard";
-
-type SnippetFormat = "css" | "gsap" | "react";
 
 export interface MotionExplorerProps {
   brandSlug: string;
@@ -22,7 +24,7 @@ export interface MotionExplorerProps {
 }
 
 const snippetFormats: readonly {
-  value: SnippetFormat;
+  value: BrandMotionSnippetFormat;
   label: string;
 }[] = [
   { value: "css", label: "CSS" },
@@ -41,22 +43,6 @@ const moveOvalPositions = [
 
 function seconds(milliseconds: number) {
   return Number((milliseconds / 1000).toFixed(3));
-}
-
-function formatBezier(bezier: BrandMotionEase["bezier"]) {
-  return bezier.join(", ");
-}
-
-function snippetsForEase(brandSlug: string, ease: BrandMotionEase) {
-  const bezier = formatBezier(ease.bezier);
-  const easeName = `${brandSlug}-${ease.id}`;
-  const duration = seconds(ease.durationMs);
-
-  return {
-    css: `transition: transform ${ease.durationMs}ms cubic-bezier(${bezier});`,
-    gsap: `CustomEase.create("${easeName}", "M0,0 C${ease.bezier[0]},${ease.bezier[1]} ${ease.bezier[2]},${ease.bezier[3]} 1,1");\ngsap.to(target, { duration: ${duration}, ease: "${easeName}" });`,
-    react: `{ transition: { duration: ${duration}, ease: [${bezier}] } }`,
-  } satisfies Record<SnippetFormat, string>;
 }
 
 function MotionImage({
@@ -103,12 +89,12 @@ function EaseCodeDisclosure({
   ease: BrandMotionEase;
 }) {
   const [expanded, setExpanded] = useState(false);
-  const [format, setFormat] = useState<SnippetFormat>("css");
+  const [format, setFormat] = useState<BrandMotionSnippetFormat>("css");
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
   const resetTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const id = useId().replace(/:/g, "");
-  const snippets = snippetsForEase(brandSlug, ease);
+  const snippets = getBrandMotionSnippets(brandSlug, ease);
 
   useEffect(
     () => () => {
@@ -117,7 +103,7 @@ function EaseCodeDisclosure({
     [],
   );
 
-  const selectFormat = (nextFormat: SnippetFormat) => {
+  const selectFormat = (nextFormat: BrandMotionSnippetFormat) => {
     setFormat(nextFormat);
     setCopied(false);
     setCopyError(false);
@@ -254,7 +240,7 @@ function EnterStage({ ease }: { ease: BrandMotionEase }) {
     if (!tile) return;
 
     const styles = getComputedStyle(tile);
-    const accent = styles.getPropertyValue("--brand-accent").trim();
+    const accent = styles.getPropertyValue("--display-brand-accent").trim();
     const gray = styles.getPropertyValue("--brand-line").trim();
     const easing = `cubic-bezier(${ease.bezier.join(", ")})`;
 
@@ -306,14 +292,15 @@ function EnterStage({ ease }: { ease: BrandMotionEase }) {
   return (
     <div
       ref={stageRef}
-      className="grid aspect-square place-items-center overflow-hidden rounded-sm bg-(--brand-surface) p-6"
+      className="grid aspect-square place-items-center overflow-hidden rounded-sm bg-(--brand-surface)"
       role="img"
       aria-label={`${ease.name} motion demonstration`}
       data-motion-ease={ease.id}
     >
       <div
         ref={tileRef}
-        className="aspect-5/3 w-1/2 max-w-47 rounded-[2px] bg-(--brand-line)"
+        className="aspect-5/3 rounded-[2px] bg-(--brand-line)"
+        style={{ width: "43%" }}
       />
     </div>
   );
@@ -363,9 +350,12 @@ function MoveStage({ ease }: { ease: BrandMotionEase }) {
           <motion.span
             key={index}
             className={cn(
-              "absolute size-14 -translate-x-1/2 -translate-y-1/2 rounded-[2px] md:size-18",
-              index === 0 ? "bg-(--brand-accent)" : "bg-(--brand-line)",
+              "absolute -translate-x-1/2 -translate-y-1/2 rounded-[2px]",
+              index === 0
+                ? "bg-(--display-brand-accent)"
+                : "bg-(--brand-line)",
             )}
+            style={{ width: "16.5%", height: "16.5%" }}
             animate={{ left: position.left, top: position.top }}
             transition={
               shouldAnimate
@@ -557,7 +547,7 @@ function ExampleStage({
         <div className="grid h-full place-items-center">
           <div className="flex h-10 w-20 items-center rounded-[2px] bg-(--brand-background) p-1">
             <motion.span
-              className="block size-8 rounded-[2px] bg-(--brand-accent)"
+              className="block size-8 rounded-[2px] bg-(--display-brand-accent)"
               animate={shouldAnimate ? { x: [0, 40, 40, 0] } : { x: 40 }}
               transition={
                 shouldAnimate
@@ -652,7 +642,7 @@ function CurvePlot({ ease }: { ease: BrandMotionEase }) {
           stroke="var(--brand-foreground)"
           strokeWidth="0.004"
         />
-        <circle cx="1" cy="0" r="0.04" fill="var(--brand-accent)" />
+        <circle cx="1" cy="0" r="0.04" fill="var(--display-brand-accent)" />
       </svg>
     </div>
   );
@@ -668,7 +658,7 @@ function CurvePreview({ ease }: { ease: BrandMotionEase }) {
     <div ref={previewRef} className="relative h-4 w-39" aria-hidden="true">
       <span className="absolute top-1/2 right-0 left-0 h-px bg-(--brand-line)" />
       <motion.span
-        className="absolute top-0 size-3 rounded-[2px] bg-(--brand-accent)"
+        className="absolute top-0 size-3 rounded-[2px] bg-(--display-brand-accent)"
         animate={shouldAnimate ? { x: [0, 155] } : { x: 155 }}
         transition={
           shouldAnimate
