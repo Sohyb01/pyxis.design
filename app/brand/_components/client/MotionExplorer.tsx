@@ -292,7 +292,7 @@ function EnterStage({ ease }: { ease: BrandMotionEase }) {
   return (
     <div
       ref={stageRef}
-      className="grid aspect-square place-items-center overflow-hidden rounded-sm bg-(--brand-surface)"
+      className="grid aspect-square place-items-center overflow-clip rounded-sm bg-(--brand-surface)"
       role="img"
       aria-label={`${ease.name} motion demonstration`}
       data-motion-ease={ease.id}
@@ -336,7 +336,7 @@ function MoveStage({ ease }: { ease: BrandMotionEase }) {
   return (
     <div
       ref={stageRef}
-      className="relative aspect-square overflow-hidden rounded-sm bg-(--brand-surface)"
+      className="relative aspect-square overflow-clip rounded-sm bg-(--brand-surface)"
       role="img"
       aria-label={`${ease.name} motion demonstration`}
       data-motion-ease={ease.id}
@@ -351,9 +351,7 @@ function MoveStage({ ease }: { ease: BrandMotionEase }) {
             key={index}
             className={cn(
               "absolute -translate-x-1/2 -translate-y-1/2 rounded-[2px]",
-              index === 0
-                ? "bg-(--display-brand-accent)"
-                : "bg-(--brand-line)",
+              index === 0 ? "bg-(--display-brand-accent)" : "bg-(--brand-line)",
             )}
             style={{ width: "16.5%", height: "16.5%" }}
             animate={{ left: position.left, top: position.top }}
@@ -394,13 +392,7 @@ function CarouselExampleStage({
     const track = trackRef.current;
     if (!track) return;
 
-    const slideInsetUnits = 20;
-    const slideGapUnits = 3;
-    const stepCompensationUnits = slideInsetUnits - slideGapUnits;
-    const positionFor = (index: number) =>
-      index === 0
-        ? "translateX(0)"
-        : `translateX(calc(-${index * 100}% + var(--spacing) * ${index * stepCompensationUnits}))`;
+    const positionFor = (index: number) => `translateX(-${index * 45}%)`;
 
     if (reduceMotion) {
       track.style.transform = positionFor(1);
@@ -438,15 +430,16 @@ function CarouselExampleStage({
     <div className="absolute inset-0">
       <div
         ref={trackRef}
-        className="absolute inset-y-10 left-10 flex w-full items-center gap-3"
+        className="absolute inset-0 flex w-full items-center"
+        style={{ left: "30%" }}
       >
         {slides.map((media, index) => (
           <div
-            className="h-full shrink-0"
+            className="aspect-9/16 shrink-0"
             key={`${media.src}-${index}`}
-            style={{ width: "calc(100% - var(--spacing) * 20)" }}
+            style={{ width: "40%", marginRight: "5%" }}
           >
-            <div className="relative h-full overflow-hidden rounded-[2px]">
+            <div className="relative h-full overflow-clip rounded-sm">
               <MotionImage
                 media={media}
                 sizes="(min-width: 1280px) 14vw, 56vw"
@@ -499,43 +492,57 @@ function ExampleStage({
   return (
     <div
       ref={stageRef}
-      className="relative aspect-3/4 overflow-hidden rounded-sm bg-(--brand-surface)"
+      className="relative aspect-3/4 overflow-clip rounded-sm bg-(--brand-surface)"
       role="img"
       aria-label={`${example.label} motion example using the ${ease.name} ease`}
       data-motion-ease={ease.id}
     >
       {example.kind === "exchange" ? (
-        <div className="absolute inset-10 overflow-hidden rounded-[2px]">
-          {example.images.map((media, index) => (
-            <motion.div
-              key={media.src}
-              className="absolute inset-0 overflow-hidden rounded-[2px]"
-              animate={
-                shouldAnimate
-                  ? index === 0
-                    ? { x: ["0%", "0%", "-115%", "-115%", "0%", "0%"] }
-                    : {
-                        x: ["115%", "115%", "0%", "0%", "115%", "115%"],
-                      }
-                  : { x: index === 0 ? "0%" : "115%" }
-              }
-              transition={
-                shouldAnimate
-                  ? {
-                      duration: duration * 6,
-                      ease: easing,
-                      repeat: Number.POSITIVE_INFINITY,
-                      times: [0, 0.2, 0.3, 0.7, 0.8, 1],
-                    }
-                  : undefined
-              }
+        <div
+          className="absolute inset-0 grid place-items-center"
+          style={{ perspective: "1000px" }}
+        >
+          <motion.div
+            className="relative aspect-9/16 w-1/2"
+            style={{ transformStyle: "preserve-3d" }}
+            animate={
+              shouldAnimate
+                ? { rotateY: [0, 0, 180, 180, 360, 360] }
+                : { rotateY: 0 }
+            }
+            transition={
+              shouldAnimate
+                ? {
+                    duration: duration * 6,
+                    ease: easing,
+                    repeat: Number.POSITIVE_INFINITY,
+                    times: [0, 0.2, 0.34, 0.68, 0.82, 1],
+                  }
+                : undefined
+            }
+          >
+            <div
+              className="absolute inset-0 overflow-clip rounded-sm"
+              style={{ backfaceVisibility: "hidden" }}
             >
               <MotionImage
-                media={media}
+                media={example.images[0]}
                 sizes="(min-width: 1280px) 20vw, 70vw"
               />
-            </motion.div>
-          ))}
+            </div>
+            <div
+              className="absolute inset-0 overflow-clip rounded-sm"
+              style={{
+                backfaceVisibility: "hidden",
+                transform: "rotateY(180deg)",
+              }}
+            >
+              <MotionImage
+                media={example.images[1]}
+                sizes="(min-width: 1280px) 20vw, 70vw"
+              />
+            </div>
+          </motion.div>
         </div>
       ) : null}
 
@@ -545,17 +552,17 @@ function ExampleStage({
 
       {example.kind === "toggle" ? (
         <div className="grid h-full place-items-center">
-          <div className="flex h-10 w-20 items-center rounded-[2px] bg-(--brand-background) p-1">
+          <div className="flex h-12 w-28 items-center rounded-full bg-(--brand-background) p-1">
             <motion.span
-              className="block size-8 rounded-[2px] bg-(--display-brand-accent)"
-              animate={shouldAnimate ? { x: [0, 40, 40, 0] } : { x: 40 }}
+              className="block size-10 rounded-full bg-(--display-brand-accent)"
+              animate={shouldAnimate ? { x: [0, 64, 64, 0] } : { x: 64 }}
               transition={
                 shouldAnimate
                   ? {
-                      duration: duration * 4,
+                      duration: duration * 2,
                       ease: easing,
                       repeat: Number.POSITIVE_INFINITY,
-                      repeatDelay: 0.8,
+                      repeatDelay: 3,
                       times: [0, 0.35, 0.65, 1],
                     }
                   : undefined
@@ -567,10 +574,10 @@ function ExampleStage({
 
       {example.kind === "reveal" ? (
         <div className="flex h-full flex-col justify-center gap-3 px-12 py-16">
-          {example.images.slice(0, 4).map((media, index) => (
+          {Array.from({ length: 4 }, (_, index) => (
             <motion.div
               className="flex items-center gap-3"
-              key={media.src}
+              key={index}
               animate={
                 shouldAnimate
                   ? { y: [16, 0, 0, 16], opacity: [0, 1, 1, 0] }
@@ -590,12 +597,12 @@ function ExampleStage({
               }
             >
               <div
-                className="size-8 shrink-0 rounded-[2px] bg-(--brand-line)"
+                className="size-9 shrink-0 rounded-md bg-(--brand-line)"
                 aria-hidden="true"
               />
               <div className="grid flex-1 gap-2">
-                <span className="h-1 w-3/4 rounded-[2px] bg-(--brand-line)" />
-                <span className="h-1 w-1/2 rounded-[2px] bg-(--brand-line)" />
+                <span className="h-2 w-3/4 rounded-sm bg-(--brand-line)" />
+                <span className="h-2 w-1/2 rounded-sm bg-(--brand-line)" />
               </div>
             </motion.div>
           ))}

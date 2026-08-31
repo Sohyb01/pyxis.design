@@ -1,9 +1,11 @@
 import type {
   BrandConfig,
+  BrandDefinition,
   BrandLogoVariant,
   BrandMotionConfig,
   BrandTypographyConfig,
 } from "@/lib/brand/types";
+import { resolveBrandDefinition } from "@/lib/brand/assets";
 
 const EXPECTED_MOTION_EXAMPLE_KINDS = [
   "exchange",
@@ -258,6 +260,17 @@ function validateTypography(
           `typography system "${system.id}" scale role "${scaleItem.role}" must use positive metrics.`,
         );
       }
+      if (
+        scaleItem.letterSpacing !== undefined &&
+        !/^-?(?:\d+(?:\.\d+)?|\.\d+)(?:em|px)$/.test(
+          scaleItem.letterSpacing,
+        )
+      ) {
+        fail(
+          brandName,
+          `typography system "${system.id}" scale role "${scaleItem.role}" has invalid letter spacing "${scaleItem.letterSpacing}"; use an em or px value.`,
+        );
+      }
     }
   }
 }
@@ -406,8 +419,6 @@ export function assertValidBrandConfig(brand: BrandConfig): void {
     ["Introduction facts", brand.introduction.facts],
     ["voice principles", brand.voiceAndTone.principles],
     ["voice usage examples", brand.voiceAndTone.usageExamples],
-    ["Moodboard images", brand.moodboard.images],
-    ["Applications", brand.applications.items],
   ];
   requiredCollections.forEach(([label, values]) => {
     if (values.length === 0) fail(brand.name, `must provide ${label}.`);
@@ -443,8 +454,9 @@ export function assertValidBrandConfig(brand: BrandConfig): void {
 }
 
 export function defineBrand<const TSlug extends string>(
-  brand: BrandConfig<TSlug>,
+  definition: BrandDefinition<TSlug>,
 ): BrandConfig<TSlug> {
+  const brand = resolveBrandDefinition(definition);
   assertValidBrandConfig(brand);
   return brand;
 }

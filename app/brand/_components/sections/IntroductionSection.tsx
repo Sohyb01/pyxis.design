@@ -36,7 +36,7 @@ export function IntroductionSection({ brand }: IntroductionSectionProps) {
           />
         )}
         <div
-          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.58)_0%,transparent_38%),linear-gradient(0deg,rgba(0,0,0,0.82)_0%,transparent_62%)]"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.15)_0%),linear-gradient(0deg,rgba(0,0,0,0.72)_30%,transparent_62%)]"
           aria-hidden="true"
         />
 

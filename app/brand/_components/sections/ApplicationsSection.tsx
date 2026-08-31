@@ -29,24 +29,30 @@ export function ApplicationsSection({ brand }: ApplicationsSectionProps) {
           </p>
         </header>
 
-        <div className="grid gap-x-7 gap-y-8 md:grid-cols-2 min-[1280px]:grid-cols-3">
-          {applications.items.map((application) => (
-            <figure className="grid gap-3" key={application.title}>
-              <div className="relative aspect-4/3 overflow-hidden rounded-sm bg-(--brand-surface)">
-                <Image
-                  className="object-contain p-6"
-                  src={application.src}
-                  alt={`${brand.name} ${application.title} application`}
-                  fill
-                  sizes="(min-width: 1024px) 28vw, (min-width: 640px) 48vw, 100vw"
-                />
-              </div>
-              <figcaption className="text-body text-muted-foreground/70">
-                {application.title}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        {applications.items.length > 0 ? (
+          <div className="grid gap-x-7 gap-y-8 md:grid-cols-2 min-[1280px]:grid-cols-3">
+            {applications.items.map((application) => (
+              <figure className="grid gap-3" key={application.src}>
+                <div className="relative aspect-4/3 overflow-hidden rounded-sm bg-(--brand-surface)">
+                  <Image
+                    className="object-contain p-6"
+                    src={application.src}
+                    alt={`${brand.name} ${application.title} application`}
+                    fill
+                    sizes="(min-width: 1024px) 28vw, (min-width: 640px) 48vw, 100vw"
+                  />
+                </div>
+                {/* <figcaption className="text-body text-muted-foreground/70">
+                  {application.title}
+                </figcaption> */}
+              </figure>
+            ))}
+          </div>
+        ) : (
+          <p className="border-t border-(--brand-line) py-6 text-body text-muted-foreground/70">
+            No files provided
+          </p>
+        )}
       </div>
     </section>
   );

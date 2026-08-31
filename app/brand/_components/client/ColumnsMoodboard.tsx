@@ -77,7 +77,9 @@ export function ColumnsMoodboard({ items }: ColumnsMoodboardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const [viewportWidth, setViewportWidth] = useState(0);
-  const [failedImages, setFailedImages] = useState<Set<number>>(() => new Set());
+  const [failedImages, setFailedImages] = useState<Set<number>>(
+    () => new Set(),
+  );
 
   useEffect(() => {
     const container = containerRef.current;
@@ -130,7 +132,7 @@ export function ColumnsMoodboard({ items }: ColumnsMoodboardProps) {
         return (
           <figure
             key={`${item.src}-${index}`}
-            className="absolute top-0 left-0 m-0 overflow-hidden rounded-sm bg-(--brand-surface) transition-[width,height,transform] duration-200 motion-reduce:transition-none"
+            className="absolute top-0 left-0 m-0 overflow-clip rounded-sm bg-(--brand-surface) transition-[width,height,transform] duration-200 motion-reduce:transition-none"
             style={imageStyle}
             role="listitem"
           >

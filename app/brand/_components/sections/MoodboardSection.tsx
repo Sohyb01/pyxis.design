@@ -28,7 +28,13 @@ export function MoodboardSection({ brand }: MoodboardSectionProps) {
           </p>
         </header>
 
-        <ColumnsMoodboard items={moodboard.images} />
+        {moodboard.images.length > 0 ? (
+          <ColumnsMoodboard items={moodboard.images} />
+        ) : (
+          <p className="border-t border-(--brand-line) py-6 text-body text-muted-foreground/70">
+            No files provided
+          </p>
+        )}
       </div>
     </section>
   );

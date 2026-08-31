@@ -315,6 +315,12 @@ function ScaleSample({
       <span className="text-detail text-muted-foreground/70" dir="ltr">
         {item.role} <span aria-hidden="true">·</span> {item.sizePx}/
         {item.lineHeightPx}
+        {item.letterSpacing ? (
+          <>
+            {" "}
+            <span aria-hidden="true">·</span> {item.letterSpacing}
+          </>
+        ) : null}
       </span>
       <span
         className="min-w-0 break-words"
@@ -325,7 +331,9 @@ function ScaleSample({
           fontSize: item.sizePx,
           fontWeight: item.weight,
           lineHeight: `${item.lineHeightPx}px`,
-          letterSpacing: system.direction === "rtl" ? "normal" : undefined,
+          letterSpacing:
+            item.letterSpacing ??
+            (system.direction === "rtl" ? "normal" : undefined),
         }}
       >
         {item.sample}

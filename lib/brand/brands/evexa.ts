@@ -25,7 +25,6 @@ export const evexaBrand = defineBrand({
     border: "#333333",
   },
   introduction: {
-    heroSrc: `${basePath}/imagery/evexa-preview.png`,
     heroAlt:
       "White Evexa wordmark and blue signal dot on a black textured field",
     statement: "AI-Powered Systems for Businesses in MENA.",
@@ -48,8 +47,6 @@ export const evexaBrand = defineBrand({
       title: "Primary logo",
       description:
         "Use the complete logo as the default signature when horizontal space allows. Use black artwork on light fields and white artwork on dark fields.",
-      src: `${basePath}/logos/logo-black.svg`,
-      darkSrc: `${basePath}/logos/logo-white.svg`,
       alt: "Evexa primary logo",
       clearSpaceLabel: "1x = half the logo height",
     },
@@ -57,8 +54,6 @@ export const evexaBrand = defineBrand({
       title: "Logomark",
       description:
         "Use the signal mark in compact spaces, avatars, favicons, and product touchpoints where the Evexa name is already established.",
-      src: `${basePath}/logos/logomark-black.svg`,
-      darkSrc: `${basePath}/logos/logomark-white.svg`,
       alt: "Evexa logomark",
       clearSpaceLabel: "1x = half the logomark height",
     },
@@ -213,6 +208,7 @@ export const evexaBrand = defineBrand({
             usage: "heading",
             sizePx: 48,
             lineHeightPx: 48,
+            letterSpacing: "-0.04em",
             weight: 600,
             sample: "Intelligence with a job to do",
           },
@@ -221,6 +217,7 @@ export const evexaBrand = defineBrand({
             usage: "heading",
             sizePx: 40,
             lineHeightPx: 40,
+            letterSpacing: "-0.04em",
             weight: 600,
             sample: "AI-powered systems for MENA",
           },
@@ -229,6 +226,7 @@ export const evexaBrand = defineBrand({
             usage: "heading",
             sizePx: 30,
             lineHeightPx: 36,
+            letterSpacing: "-0.04em",
             weight: 600,
             sample: "Clear products, Scalable foundations",
           },
@@ -237,6 +235,7 @@ export const evexaBrand = defineBrand({
             usage: "heading",
             sizePx: 24,
             lineHeightPx: 32,
+            letterSpacing: "-0.04em",
             weight: 600,
             sample: "Build for real operations",
           },
@@ -245,18 +244,11 @@ export const evexaBrand = defineBrand({
             usage: "body",
             sizePx: 20,
             lineHeightPx: 28,
+            letterSpacing: "-0.04em",
             weight: 600,
             sample: "AI-assisted, human-led execution",
           },
-          {
-            role: "Body large",
-            usage: "body",
-            sizePx: 18,
-            lineHeightPx: 28,
-            weight: 600,
-            sample:
-              "Turn complex workflows into systems teams can use every day.",
-          },
+
           {
             role: "Body",
             usage: "body",
@@ -265,14 +257,6 @@ export const evexaBrand = defineBrand({
             weight: 500,
             sample:
               "Strategy, design, engineering, and practical AI adoption work as one product system.",
-          },
-          {
-            role: "UI",
-            usage: "body",
-            sizePx: 16,
-            lineHeightPx: 24,
-            weight: 500,
-            sample: "Request Free Consultation",
           },
           {
             role: "Detail",
@@ -341,30 +325,15 @@ export const evexaBrand = defineBrand({
             weight: 500,
             sample: "حلول عملية مصممة للشركات في المنطقة.",
           },
-          {
-            role: "Body large",
-            usage: "body",
-            sizePx: 18,
-            lineHeightPx: 28,
-            weight: 500,
-            sample: "نحوّل سير العمل المعقد إلى أنظمة يستخدمها فريقك كل يوم.",
-          },
+
           {
             role: "Body",
             usage: "body",
             sizePx: 16,
-            lineHeightPx: 28,
-            weight: 500,
-            sample:
-              "نربط الاستراتيجية والتصميم والهندسة بالذكاء الاصطناعي حيث يضيف قيمة حقيقية.",
-          },
-          {
-            role: "UI",
-            usage: "body",
-            sizePx: 16,
             lineHeightPx: 24,
             weight: 500,
-            sample: "اطلب استشارة مجانية",
+            sample:
+              "نربط الاستراتيجية والتصميم والهندسة بالذكاء الاصطناعي حيfث يضيف قيمة حقيقية.",
           },
           {
             role: "Detail",
@@ -412,15 +381,9 @@ export const evexaBrand = defineBrand({
         kind: "exchange",
         label: "Exchange",
         easeId: "move",
-        images: [
-          {
-            src: `${basePath}/moodboard/ai-circuit-eye.png`,
-            alt: "Blue artificial intelligence circuit artwork",
-          },
-          {
-            src: `${basePath}/moodboard/ai-systems.png`,
-            alt: "Evexa artificial intelligence systems artwork",
-          },
+        imageAlts: [
+          "Blue artificial intelligence circuit artwork",
+          "Evexa artificial intelligence systems artwork",
         ],
       },
       {
@@ -428,19 +391,10 @@ export const evexaBrand = defineBrand({
         kind: "carousel",
         label: "Carousel",
         easeId: "move",
-        images: [
-          {
-            src: `${basePath}/moodboard/ai-01.jpg`,
-            alt: "Artificial intelligence technology study",
-          },
-          {
-            src: `${basePath}/moodboard/ai-02.jpg`,
-            alt: "Artificial intelligence systems study",
-          },
-          {
-            src: `${basePath}/moodboard/architecture-03.png`,
-            alt: "Contemporary architecture in the MENA region",
-          },
+        imageAlts: [
+          "Artificial intelligence technology study",
+          "Artificial intelligence systems study",
+          "Contemporary architecture in the MENA region",
         ],
       },
       {
@@ -454,24 +408,6 @@ export const evexaBrand = defineBrand({
         kind: "reveal",
         label: "Reveal",
         easeId: "enter",
-        images: [
-          {
-            src: `${basePath}/imagery/evexa-preview.png`,
-            alt: "Evexa identity preview",
-          },
-          {
-            src: `${basePath}/moodboard/why-ai-now.png`,
-            alt: "Numeric eye artwork about artificial intelligence",
-          },
-          {
-            src: `${basePath}/moodboard/alexandria-01.png`,
-            alt: "Alexandria architectural study",
-          },
-          {
-            src: `${basePath}/moodboard/architecture-02.png`,
-            alt: "Regional architecture study",
-          },
-        ],
       },
     ],
     curveNarrative: [
@@ -536,88 +472,26 @@ export const evexaBrand = defineBrand({
     heading: "Moodboard",
     description:
       "Dark technical environments, electric signals, intelligent systems, and regional architecture create a focused visual world for Evexa.",
-    images: [
-      {
-        src: `${basePath}/imagery/evexa-preview.png`,
-        alt: "Evexa wordmark and blue signal dot on a dark textured field",
-        width: 1920,
-        height: 1080,
-      },
-      {
-        src: `${basePath}/moodboard/why-ai-now.png`,
-        alt: "Monochrome eye formed from numbers and symbols",
-        width: 979,
-        height: 976,
-      },
-      {
-        src: `${basePath}/moodboard/ai-circuit-eye.png`,
-        alt: "Blue artificial intelligence circuit eye",
-        width: 992,
-        height: 992,
-      },
-      {
-        src: `${basePath}/moodboard/ai-systems.png`,
-        alt: "Blue artificial intelligence systems artwork",
-        width: 1200,
-        height: 1200,
-      },
-      {
-        src: `${basePath}/moodboard/ai-01.jpg`,
-        alt: "Artificial intelligence technology study",
-        width: 2000,
-        height: 1333,
-      },
-      {
-        src: `${basePath}/moodboard/ai-02.jpg`,
-        alt: "Artificial intelligence systems study",
-        width: 2000,
-        height: 1333,
-      },
-      {
-        src: `${basePath}/moodboard/alexandria-01.png`,
-        alt: "Alexandria architectural study",
-        width: 1878,
-        height: 1878,
-      },
-      {
-        src: `${basePath}/moodboard/architecture-02.png`,
-        alt: "Regional architecture study",
-        width: 1333,
-        height: 1333,
-      },
-      {
-        src: `${basePath}/moodboard/architecture-03.png`,
-        alt: "Contemporary architecture in the MENA region",
-        width: 1921,
-        height: 2048,
-      },
+    imageAlts: [
+      "Evexa wordmark and blue signal dot on a dark textured field",
+      "Monochrome eye formed from numbers and symbols",
+      "Blue artificial intelligence circuit eye",
+      "Blue artificial intelligence systems artwork",
+      "Alexandria architectural study",
+      "Regional architecture study",
+      "Contemporary architecture in the MENA region",
     ],
   },
   applications: {
     heading: "Applications",
     description:
       "The Evexa identity scales from company positioning and thought leadership to service education and focused consultation journeys.",
-    items: [
-      {
-        title: "Homepage",
-        src: `${basePath}/applications/homepage.png`,
-      },
-      {
-        title: "About",
-        src: `${basePath}/applications/about.png`,
-      },
-      {
-        title: "AI Assistants",
-        src: `${basePath}/applications/ai-assistants.png`,
-      },
-      {
-        title: "Blog",
-        src: `${basePath}/applications/blog.png`,
-      },
-      {
-        title: "Free AI Consultation",
-        src: `${basePath}/applications/free-ai-consultation.png`,
-      },
+    titles: [
+      "Homepage",
+      "About",
+      "AI Assistants",
+      "Blog",
+      "Free AI Consultation",
     ],
   },
   assets: {
@@ -627,25 +501,14 @@ export const evexaBrand = defineBrand({
     fontStylesheetSrc: `${basePath}/fonts.css`,
     motionStylesheetSrc: `${basePath}/motion.css`,
     completePackSrc: `${basePath}/evexa-brand-assets.zip`,
-    logoFiles: [
-      { name: "Full logo", src: `${basePath}/logos/logo-black.svg` },
-      // { name: "Primary logo — white", src: `${basePath}/logos/logo-white.svg` },
-      {
-        name: "Logomark",
-        src: `${basePath}/logos/logomark-black.svg`,
-      },
-      // {
-      //   name: "Logomark — white",
-      //   src: `${basePath}/logos/logomark-white.svg`,
-      // },
-      {
-        name: "Wordmark",
-        src: `${basePath}/logos/logotext-black.svg`,
-      },
-      // {
-      //   name: "Wordmark — white",
-      //   src: `${basePath}/logos/logotext-white.svg`,
-      // },
+    imageryLabels: [
+      "Evexa identity preview",
+      "Why AI Now",
+      "AI circuit eye",
+      "AI systems artwork",
+      "Alexandria architecture",
+      "Regional architecture",
+      "Contemporary MENA architecture",
     ],
     typefaces: [
       { label: "Mayeka Thin", src: `${basePath}/fonts/MayekaThin.otf` },
@@ -679,38 +542,6 @@ export const evexaBrand = defineBrand({
     colorFiles: [
       { label: "CSS color variables", src: `${basePath}/colors.css` },
       { label: "Design tokens", src: `${basePath}/tokens.json` },
-    ],
-    imagery: [
-      {
-        label: "Evexa identity preview",
-        src: `${basePath}/imagery/evexa-preview.png`,
-      },
-      {
-        label: "Why AI Now",
-        src: `${basePath}/moodboard/why-ai-now.png`,
-      },
-      {
-        label: "AI circuit eye",
-        src: `${basePath}/moodboard/ai-circuit-eye.png`,
-      },
-      {
-        label: "AI systems artwork",
-        src: `${basePath}/moodboard/ai-systems.png`,
-      },
-      { label: "AI study 01", src: `${basePath}/moodboard/ai-01.jpg` },
-      { label: "AI study 02", src: `${basePath}/moodboard/ai-02.jpg` },
-      {
-        label: "Alexandria architecture",
-        src: `${basePath}/moodboard/alexandria-01.png`,
-      },
-      {
-        label: "Regional architecture",
-        src: `${basePath}/moodboard/architecture-02.png`,
-      },
-      {
-        label: "Contemporary MENA architecture",
-        src: `${basePath}/moodboard/architecture-03.png`,
-      },
     ],
   },
 });

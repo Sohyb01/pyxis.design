@@ -7,17 +7,18 @@ Use [Brainbots](./brands/brainbots.ts) as the complete example. Complete this ch
 ## 1. Create the brand scaffold
 
 - [ ] Choose a lowercase, URL-safe slug such as `new-brand`.
-- [ ] Create `public/brand/<slug>/` and only the asset folders the brand needs: `logos/`, `fonts/`, `moodboard/`, `applications/`, and `imagery/`.
+- [ ] Create `public/brand/<slug>/` with `logos/`, `motion/`, `fonts/`, `moodboard/`, and `applications/` folders.
+- [ ] Add the required convention files: `introduction.png`; `logos/primary-logo.svg`, `logos/primary-logo-dark.svg`, `logos/logomark.svg`, `logos/logomark-dark.svg`; `motion/exchange-1.png`, `motion/exchange-2.png`, and `motion/carousel-1.png` through `motion/carousel-3.png`.
 - [ ] Create `lib/brand/brands/<slug>.ts`.
 - [ ] Define `const basePath = "/brand/<slug>" as const`.
 - [ ] Export the config with `defineBrand({ ... })`. This preserves the literal slug type and runs structural validation immediately.
 - [ ] Add the brand name, guidelines label, summary, year, metadata, and seven semantic theme colors.
 
-All configured local paths must begin with `basePath`. Keep private, licensed, or unpublished material out of the config because every value is public.
+`defineBrand()` derives these paths and throws when any required convention file is missing. Keep private, licensed, or unpublished material out of the public brand folder because every discovered file is public.
 
 ## 2. Introduction
 
-- [ ] Add `heroSrc` or deliberately use `null` for the placeholder.
+- [ ] Add the hero artwork as the required `public/brand/<slug>/introduction.png` file; do not configure its source path.
 - [ ] Write useful `heroAlt`, statement, heading, lead, and body copy.
 - [ ] Add the compact facts shown over the hero.
 - [ ] Check the full-height hero and editorial block on small and large screens.
@@ -25,9 +26,8 @@ All configured local paths must begin with `basePath`. Keep private, licensed, o
 ## 3. Logo
 
 - [ ] Configure the primary logo and logomark independently.
-- [ ] Add light and optional dark SVG sources, alt text, usage guidance, and clear-space labels.
-- [ ] Use `null` sources when artwork is intentionally unavailable; the page will retain its placeholder layout.
-- [ ] Add every downloadable SVG to `assets.logoFiles` with its human-readable name.
+- [ ] Put the light and dark SVGs at the four required logo convention paths; do not configure their source paths.
+- [ ] Add alt text, usage guidance, and clear-space labels. The four SVG downloads are generated automatically.
 - [ ] Verify light, dark, and calculated clear-space presentations for both variants.
 
 ## 4. Color
@@ -47,6 +47,7 @@ RGB, HSL, and CMYK values in public brand data are derived from HEX and must not
 - [ ] Add each writing system with a label, BCP 47 language code, `ltr` or `rtl` direction, heading specimen, charset, glyph, and specimen weights.
 - [ ] Choose `body.mode: "shared"` when headings and body use the same family. Use `"separate"` only when a second family introduction is required.
 - [ ] Add the complete scale and explicitly mark every row as `heading` or `body` usage.
+- [ ] Optionally set `letterSpacing` on any scale row using a CSS `em` or `px` value such as `-0.03em` or `0.5px`.
 - [ ] Place font files and licenses in `fonts/`, create `fonts.css`, and set `assets.fontStylesheetSrc`.
 - [ ] Add downloadable font files to `assets.typefaces`.
 - [ ] Verify every configured weight exists and native-script text uses the intended font, language, and direction.
@@ -56,7 +57,7 @@ RGB, HSL, and CMYK values in public brand data are derived from HEX and must not
 - [ ] Configure exactly two primary eases with unique IDs, names, descriptions, Bézier tuples, durations, and optional stagger values.
 - [ ] Configure exactly one `exchange`, `carousel`, `toggle`, and `reveal` example.
 - [ ] Reference `easeId` from every example; never copy an ease tuple into an example.
-- [ ] Add descriptive alt text for temporary or final example media.
+- [ ] Put Exchange and Carousel PNGs at the five required motion convention paths and configure only their descriptive alt text.
 - [ ] Set `assets.motionStylesheetSrc` when a downloadable motion stylesheet exists.
 - [ ] Keep that stylesheet and any downloadable tokens aligned with the config.
 - [ ] Verify demonstrations, examples, curve graphs, and CSS/GSAP/React copy output.
@@ -69,21 +70,23 @@ RGB, HSL, and CMYK values in public brand data are derived from HEX and must not
 
 ## 8. Moodboard
 
-- [ ] Add approved images in presentation order.
-- [ ] Supply descriptive alt text and the true intrinsic width and height for each image.
+- [ ] Add approved images as sequential `1.png`, `2.png`, `3.png`, and so on in `public/brand/<slug>/moodboard/`.
+- [ ] Configure optional alt text in matching order. Intrinsic dimensions and source paths are read automatically.
+- [ ] Leave the folder empty to render `No files provided`.
 - [ ] Verify image loading, aspect ratios, and column balance at each responsive breakpoint.
 
 ## 9. Applications
 
-- [ ] Add applications as `{ title, src }` objects in presentation order.
-- [ ] Keep the title short enough to work as the visible label.
+- [ ] Add previews as sequential `1.png`, `2.png`, `3.png`, and so on in `public/brand/<slug>/applications/`.
+- [ ] Configure optional titles in matching order; source paths are generated automatically.
+- [ ] Leave the folder empty to render `No files provided`.
 - [ ] Verify all previews and their one-, two-, and three-column layouts.
 
 ## 10. Assets
 
 - [ ] Add the optional complete-pack archive.
 - [ ] Declare `fontStylesheetSrc` and `motionStylesheetSrc`, using `null` when one is intentionally unavailable.
-- [ ] Add logo SVGs, typefaces, color/token files, and approved imagery to their corresponding arrays.
+- [ ] Add typefaces and color/token files to their corresponding arrays. Logo downloads and numbered moodboard imagery are generated automatically.
 - [ ] Confirm every declared file exists below `public/brand/<slug>/` and every download works from the deployed origin.
 
 ## 11. Register and publish

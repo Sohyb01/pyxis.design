@@ -25,7 +25,6 @@ export const brainbotsBrand = defineBrand({
     border: "#D8D8D8",
   },
   introduction: {
-    heroSrc: `${basePath}/moodboard/collaborative-workshop.png`,
     heroAlt: "A Brainbots learner seated in a workshop",
     statement: "Curious minds create what comes next.",
     facts: [
@@ -46,8 +45,6 @@ export const brainbotsBrand = defineBrand({
       title: "Primary logo",
       description:
         "Use the complete wordmark for introductions, campaign sign-offs, and layouts with enough horizontal space.",
-      src: `${basePath}/logos/brainbots-primary-logo.svg`,
-      darkSrc: `${basePath}/logos/brainbots-primary-logo-white.svg`,
       alt: "Brainbots primary logo",
       clearSpaceLabel: "1x = half the logo height",
     },
@@ -55,8 +52,6 @@ export const brainbotsBrand = defineBrand({
       title: "Logomark",
       description:
         "Use the compact mark only where the brand is already established or available space is constrained.",
-      src: `${basePath}/logos/brainbots-logomark.svg`,
-      darkSrc: `${basePath}/logos/brainbots-logomark-white.svg`,
       alt: "Brainbots logomark",
       clearSpaceLabel: "1x = half the logo height",
     },
@@ -189,6 +184,7 @@ export const brainbotsBrand = defineBrand({
             usage: "heading",
             sizePx: 48,
             lineHeightPx: 48,
+            letterSpacing: "-0.04em",
             weight: 700,
             sample: "Future in every idea.",
           },
@@ -197,6 +193,7 @@ export const brainbotsBrand = defineBrand({
             usage: "heading",
             sizePx: 30,
             lineHeightPx: 36,
+            letterSpacing: "-0.04em",
             weight: 700,
             sample: "Little minds, big bots.",
           },
@@ -205,6 +202,7 @@ export const brainbotsBrand = defineBrand({
             usage: "heading",
             sizePx: 24,
             lineHeightPx: 32,
+            letterSpacing: "-0.04em",
             weight: 700,
             sample: "Create something real.",
           },
@@ -213,6 +211,7 @@ export const brainbotsBrand = defineBrand({
             usage: "heading",
             sizePx: 20,
             lineHeightPx: 28,
+            letterSpacing: "-0.04em",
             weight: 600,
             sample: "Start with curiosity.",
           },
@@ -385,35 +384,17 @@ export const brainbotsBrand = defineBrand({
         kind: "exchange",
         label: "Exchange",
         easeId: "move",
-        images: [
-          {
-            src: `${basePath}/moodboard/student-portrait-01.png`,
-            alt: "Brainbots student portrait",
-          },
-          {
-            src: `${basePath}/moodboard/student-portrait-02.png`,
-            alt: "Brainbots student portrait",
-          },
-        ],
+        imageAlts: ["Brainbots student portrait", "Brainbots student portrait"],
       },
       {
         id: "carousel",
         kind: "carousel",
         label: "Carousel",
         easeId: "move",
-        images: [
-          {
-            src: `${basePath}/moodboard/website-creation.png`,
-            alt: "Brainbots website creation artwork",
-          },
-          {
-            src: `${basePath}/moodboard/image-creation.png`,
-            alt: "Brainbots image creation artwork",
-          },
-          {
-            src: `${basePath}/moodboard/plans-creation.png`,
-            alt: "Brainbots planning artwork",
-          },
+        imageAlts: [
+          "Brainbots website creation artwork",
+          "Brainbots image creation artwork",
+          "Brainbots planning artwork",
         ],
       },
       {
@@ -427,24 +408,6 @@ export const brainbotsBrand = defineBrand({
         kind: "reveal",
         label: "Reveal",
         easeId: "enter",
-        images: [
-          {
-            src: `${basePath}/moodboard/student-portrait-01.png`,
-            alt: "Brainbots student portrait",
-          },
-          {
-            src: `${basePath}/moodboard/website-creation.png`,
-            alt: "Brainbots website creation artwork",
-          },
-          {
-            src: `${basePath}/moodboard/dashboards-creation.png`,
-            alt: "Brainbots dashboard creation artwork",
-          },
-          {
-            src: `${basePath}/moodboard/image-creation.png`,
-            alt: "Brainbots image creation artwork",
-          },
-        ],
       },
     ],
     curveNarrative: [
@@ -509,94 +472,29 @@ export const brainbotsBrand = defineBrand({
     heading: "Moodboard",
     description:
       "Warm, candid learning moments alongside bold product imagery and graphic expressions.",
-    images: [
-      {
-        src: `${basePath}/moodboard/student-portrait-01.png`,
-        alt: "Brainbots student portrait",
-        width: 1800,
-        height: 2400,
-      },
-      {
-        src: `${basePath}/moodboard/collaborative-workshop.png`,
-        alt: "A Brainbots learner seated in a workshop",
-        width: 1800,
-        height: 2400,
-      },
-      {
-        src: `${basePath}/moodboard/student-portrait-02.png`,
-        alt: "Student participating in a Brainbots session",
-        width: 1801,
-        height: 2400,
-      },
-      {
-        src: `${basePath}/moodboard/website-creation.png`,
-        alt: "Website creation learning category",
-        width: 1983,
-        height: 793,
-      },
-      {
-        src: `${basePath}/moodboard/image-creation.png`,
-        alt: "Image creation learning category",
-        width: 1983,
-        height: 793,
-      },
-      {
-        src: `${basePath}/moodboard/plans-creation.png`,
-        alt: "Plan creation learning category",
-        width: 1983,
-        height: 793,
-      },
-      {
-        src: `${basePath}/moodboard/dashboards-creation.png`,
-        alt: "Dashboard creation learning category",
-        width: 1983,
-        height: 793,
-      },
-      {
-        src: `${basePath}/moodboard/websites-and-web-apps.png`,
-        alt: "Websites and web apps graphic",
-        width: 1000,
-        height: 640,
-      },
-      {
-        src: `${basePath}/moodboard/images-and-graphic-designs.png`,
-        alt: "Images and graphic designs graphic",
-        width: 1000,
-        height: 640,
-      },
-      {
-        src: `${basePath}/moodboard/dashboards-and-ai-helpers.png`,
-        alt: "Dashboards and AI helpers graphic",
-        width: 1000,
-        height: 640,
-      },
+    imageAlts: [
+      "Brainbots student portrait",
+      "A Brainbots learner seated in a workshop",
+      "Student participating in a Brainbots session",
+      "Website creation learning category",
+      "Image creation learning category",
+      "Plan creation learning category",
+      "Dashboard creation learning category",
+      "Websites and web apps graphic",
+      "Images and graphic designs graphic",
+      "Dashboards and AI helpers graphic",
     ],
   },
   applications: {
     heading: "Applications",
     description:
       "The Brainbots identity supports public discovery, focused learning, and clear operational tools across every role.",
-    items: [
-      {
-        title: "Track catalog",
-        src: `${basePath}/applications/track-catalog.png`,
-      },
-      {
-        title: "Student dashboard",
-        src: `${basePath}/applications/student-dashboard.png`,
-      },
-      {
-        title: "Parent dashboard",
-        src: `${basePath}/applications/parent-dashboard.png`,
-      },
-      {
-        title: "Instructor dashboard",
-        src: `${basePath}/applications/instructor-dashboard.png`,
-      },
-      {
-        title: "Admin classes",
-        src: `${basePath}/applications/admin-classes.png`,
-      },
+    titles: [
+      "Track catalog",
+      "Student dashboard",
+      "Parent dashboard",
+      "Instructor dashboard",
+      "Admin classes",
     ],
   },
   assets: {
@@ -606,15 +504,17 @@ export const brainbotsBrand = defineBrand({
     fontStylesheetSrc: `${basePath}/fonts.css`,
     motionStylesheetSrc: `${basePath}/motion.css`,
     completePackSrc: `${basePath}/brainbots-brand-assets.zip`,
-    logoFiles: [
-      {
-        name: "Primary logo",
-        src: `${basePath}/logos/brainbots-primary-logo.svg`,
-      },
-      {
-        name: "Logomark",
-        src: `${basePath}/logos/brainbots-logomark.svg`,
-      },
+    imageryLabels: [
+      // "Student portrait",
+      // "Collaborative workshop",
+      // "Student workshop portrait",
+      // "Website creation",
+      // "Image creation",
+      // "Planning creation",
+      // "Dashboard creation",
+      // "Websites and web apps",
+      // "Images and graphic designs",
+      // "Dashboards and AI helpers",
     ],
     typefaces: [
       { label: "Sora variable", src: `${basePath}/fonts/Sora-Variable.ttf` },
@@ -632,20 +532,6 @@ export const brainbotsBrand = defineBrand({
     colorFiles: [
       { label: "CSS color variables", src: `${basePath}/colors.css` },
       { label: "Design tokens", src: `${basePath}/tokens.json` },
-    ],
-    imagery: [
-      {
-        label: "Student portrait",
-        src: `${basePath}/imagery/student-portrait.png`,
-      },
-      {
-        label: "Website creation",
-        src: `${basePath}/imagery/website-creation.png`,
-      },
-      {
-        label: "Dashboards creation",
-        src: `${basePath}/imagery/dashboards-creation.png`,
-      },
     ],
   },
 });

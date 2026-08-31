@@ -91,6 +91,8 @@ export interface BrandFontWeight {
   value: number;
 }
 
+export type BrandLetterSpacing = `${number}em` | `${number}px`;
+
 export interface BrandTypeface {
   id: string;
   displayName: string;
@@ -106,6 +108,7 @@ export interface BrandTypeScaleItem {
   usage: "heading" | "body";
   sizePx: number;
   lineHeightPx: number;
+  letterSpacing?: BrandLetterSpacing;
   weight: number;
   sample: string;
 }
@@ -195,13 +198,6 @@ export interface BrandMotionToggleExample extends BrandMotionExampleBase {
 
 export interface BrandMotionRevealExample extends BrandMotionExampleBase {
   kind: "reveal";
-  images: readonly [
-    BrandMotionMedia,
-    BrandMotionMedia,
-    BrandMotionMedia,
-    BrandMotionMedia,
-    ...BrandMotionMedia[],
-  ];
 }
 
 export type BrandMotionExample =
@@ -311,4 +307,100 @@ export interface BrandConfig<TSlug extends string = string> {
   moodboard: BrandMoodboardConfig;
   applications: BrandApplicationsConfig;
   assets: BrandAssetsConfig;
+}
+
+export type BrandIntroductionDefinition = Omit<
+  BrandIntroduction,
+  "heroSrc"
+>;
+
+export type BrandLogoVariantDefinition = Omit<
+  BrandLogoVariant,
+  "src" | "darkSrc"
+>;
+
+export interface BrandLogoDefinition extends Omit<
+  BrandLogoConfig,
+  "primary" | "mark"
+> {
+  primary: BrandLogoVariantDefinition;
+  mark: BrandLogoVariantDefinition;
+}
+
+type BrandMotionExampleDefinitionBase = Omit<
+  BrandMotionExampleBase,
+  "kind"
+>;
+
+export interface BrandMotionExchangeExampleDefinition
+  extends BrandMotionExampleDefinitionBase {
+  kind: "exchange";
+  imageAlts: readonly [string, string];
+}
+
+export interface BrandMotionCarouselExampleDefinition
+  extends BrandMotionExampleDefinitionBase {
+  kind: "carousel";
+  imageAlts: readonly [string, string, string];
+}
+
+export interface BrandMotionToggleExampleDefinition
+  extends BrandMotionExampleDefinitionBase {
+  kind: "toggle";
+}
+
+export interface BrandMotionRevealExampleDefinition
+  extends BrandMotionExampleDefinitionBase {
+  kind: "reveal";
+}
+
+export type BrandMotionExampleDefinition =
+  | BrandMotionExchangeExampleDefinition
+  | BrandMotionCarouselExampleDefinition
+  | BrandMotionToggleExampleDefinition
+  | BrandMotionRevealExampleDefinition;
+
+export interface BrandMotionDefinition extends Omit<
+  BrandMotionConfig,
+  "examples"
+> {
+  examples: readonly [
+    BrandMotionExampleDefinition,
+    BrandMotionExampleDefinition,
+    BrandMotionExampleDefinition,
+    BrandMotionExampleDefinition,
+  ];
+}
+
+export interface BrandMoodboardDefinition extends Omit<
+  BrandMoodboardConfig,
+  "images"
+> {
+  imageAlts?: readonly string[];
+}
+
+export interface BrandApplicationsDefinition extends Omit<
+  BrandApplicationsConfig,
+  "items"
+> {
+  titles?: readonly string[];
+}
+
+export interface BrandAssetsDefinition extends Omit<
+  BrandAssetsConfig,
+  "logoFiles" | "imagery"
+> {
+  imageryLabels?: readonly string[];
+}
+
+export interface BrandDefinition<TSlug extends string = string> extends Omit<
+  BrandConfig<TSlug>,
+  "introduction" | "logo" | "motion" | "moodboard" | "applications" | "assets"
+> {
+  introduction: BrandIntroductionDefinition;
+  logo: BrandLogoDefinition;
+  motion: BrandMotionDefinition;
+  moodboard: BrandMoodboardDefinition;
+  applications: BrandApplicationsDefinition;
+  assets: BrandAssetsDefinition;
 }
